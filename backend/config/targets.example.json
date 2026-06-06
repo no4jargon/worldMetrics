@@ -1,0 +1,22 @@
+{
+  "targets": [
+    {
+      "code": "example_government_release",
+      "url": "https://example.gov.in/latest-releases",
+      "wait_until": "networkidle",
+      "wait_for_selector": "body",
+      "follow_link_text_regex": "latest|press release|monthly",
+      "screenshot": true,
+      "metrics": [
+        {
+          "metric_code": "example_metric",
+          "unit": "units",
+          "selector": "body",
+          "value_regex": "Example Metric[^0-9]*(?P<value>[0-9,]+(?:\\.[0-9]+)?)",
+          "period_regex": "(?:for|month of)\\s+(?P<period>[A-Za-z]+\\s+20[0-9]{2})",
+          "release_date_regex": "(?:released on|date)[:\\s]+(?P<release_date>[0-9]{1,2} [A-Za-z]+,? 20[0-9]{2})"
+        }
+      ]
+    }
+  ]
+}
