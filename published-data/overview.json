@@ -3,12 +3,12 @@
     {
       "metric_code": "power_output_total",
       "title": "Power output",
-      "latest_period": "2026-09",
-      "latest_value": 143562.33,
+      "latest_period": "2026-10",
+      "latest_value": 144413.41,
       "unit": "GWh",
-      "change_prev": -0.42,
+      "change_prev": 0.59,
       "change_prev_unit": "percent",
-      "change_yoy": 10.51,
+      "change_yoy": 20.5,
       "change_yoy_unit": "percent",
       "sparkline": [
         {
@@ -262,26 +262,30 @@
         {
           "period": "2026-09",
           "value": 143562.33
+        },
+        {
+          "period": "2026-10",
+          "value": 144413.41
         }
       ],
       "source": "NPP",
-      "release_date": "2026-10-22",
-      "latest_retrieved_for": "2026-09-30",
+      "release_date": "2026-11-20",
+      "latest_retrieved_for": "2026-10-31",
       "segment": null,
       "status": "available",
       "status_note": null,
       "retrieval_skill": null,
-      "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/SEP//18_col_act-1_2026-SEP.xls"
+      "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/OCT//18_col_act-1_2026-OCT.xls"
     },
     {
       "metric_code": "power_utilization_plf",
       "title": "Power utilization",
-      "latest_period": "2026-09",
-      "latest_value": 61.791194481835696,
+      "latest_period": "2026-10",
+      "latest_value": 57.641708438919736,
       "unit": "percent",
-      "change_prev": 0.2,
+      "change_prev": -6.72,
       "change_prev_unit": "percent",
-      "change_yoy": 1.17,
+      "change_yoy": -13.04,
       "change_yoy_unit": "percent",
       "sparkline": [
         {
@@ -535,16 +539,20 @@
         {
           "period": "2026-09",
           "value": 61.79
+        },
+        {
+          "period": "2026-10",
+          "value": 57.64
         }
       ],
       "source": "NPP",
-      "release_date": "2026-10-22",
-      "latest_retrieved_for": "2026-09-30",
+      "release_date": "2026-11-20",
+      "latest_retrieved_for": "2026-10-31",
       "segment": null,
       "status": "available",
       "status_note": null,
       "retrieval_skill": null,
-      "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/SEP//18_col_act-1_2026-SEP.xls"
+      "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/OCT//18_col_act-1_2026-OCT.xls"
     },
     {
       "metric_code": "cement_output",
@@ -759,10 +767,9 @@
       "latest_retrieved_for": "2026-09-30",
       "segment": null,
       "status": "available",
-      "status_note": "ICRA reports 9.8% YoY; the displayed calculated rate uses cached historical levels.",
+      "status_note": "Latest source check failed; retained the last known figures.",
       "retrieval_skill": null,
-      "source_url": "https://www.icra.in/Research/ViewResearchReport/7184",
-      "reported_change_yoy": 9.8
+      "source_url": "https://www.icra.in/Research/ViewResearchReport/7184"
     },
     {
       "metric_code": "cement_utilization_est",
@@ -780,7 +787,7 @@
       "latest_retrieved_for": null,
       "segment": null,
       "status": "missing",
-      "status_note": "Connector ran, but emitted no observation for this metric.",
+      "status_note": "Connector failed: HTTPError: HTTP Error 404: Not Found",
       "retrieval_skill": null,
       "source_url": null
     },
@@ -795,6 +802,18 @@
       "change_yoy": 12.07,
       "change_yoy_unit": "percent",
       "sparkline": [
+        {
+          "period": "2024-Q3",
+          "value": 75016.0
+        },
+        {
+          "period": "2025-Q1",
+          "value": 65246.0
+        },
+        {
+          "period": "2025-Q2",
+          "value": 69530.0
+        },
         {
           "period": "2025-Q3",
           "value": 67974.0
@@ -813,11 +832,11 @@
         }
       ],
       "source": "JLL India",
-      "release_date": "2026-11-05",
+      "release_date": "2026-11-08",
       "latest_retrieved_for": "2026-09-30",
       "segment": null,
       "status": "available",
-      "status_note": "JLL REIS table reproduced by EquityBulls; apartment sales in seven cities.",
+      "status_note": null,
       "retrieval_skill": null,
       "source_url": "https://www.equitybulls.com/news/378755/premium-homes-take-centre-stage-as-india-s-housing-market-rebounds-during-januar"
     },
@@ -1118,7 +1137,7 @@
       "latest_retrieved_for": "2026-10-31",
       "segment": "domestic",
       "status": "available",
-      "status_note": null,
+      "status_note": "Latest source check failed; retained the last known figures.",
       "retrieval_skill": "vahan-dashboard",
       "source_url": "https://vahan.parivahan.gov.in/vahan4dashboard/"
     },
@@ -1419,7 +1438,7 @@
       "latest_retrieved_for": "2026-10-31",
       "segment": "domestic",
       "status": "available",
-      "status_note": null,
+      "status_note": "Latest source check failed; retained the last known figures.",
       "retrieval_skill": "vahan-dashboard",
       "source_url": "https://vahan.parivahan.gov.in/vahan4dashboard/"
     },
@@ -1458,8 +1477,8 @@
       "status": "available",
       "status_note": null,
       "retrieval_skill": null,
-      "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335416&lang=1&reg=3"
+      "source_url": "https://www.mospi.gov.in/uploads/latestReleases/latest_release_1794478693814_7c90e80f-9e64-4aa4-b44a-1dc727b0fed9_Press_Release_of_CPI_for_October_2026_.pdf"
     }
   ],
-  "summary": "Power softened, cement softened, housing remains firm, two-wheelers improved, four-wheelers improved, inflation ticked up."
+  "summary": "Power is accelerating, cement softened, housing remains firm, two-wheelers improved, four-wheelers improved, inflation ticked up."
 }

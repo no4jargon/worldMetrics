@@ -1,20 +1,19 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-18T11:36:55.980932+00:00",
-  "last_attempt_at": "2026-11-18T11:36:55.980932+00:00",
-  "last_success_at": "2026-11-18T11:36:55.980932+00:00",
-  "update_status": "success",
+  "generated_at": "2026-11-25T07:20:12.982149+00:00",
+  "last_attempt_at": "2026-11-25T07:20:12.982149+00:00",
+  "last_success_at": "2026-11-25T07:20:12.982149+00:00",
   "overview": {
     "cards": [
       {
         "metric_code": "power_output_total",
         "title": "Power output",
-        "latest_period": "2026-09",
-        "latest_value": 143562.33,
+        "latest_period": "2026-10",
+        "latest_value": 144413.41,
         "unit": "GWh",
-        "change_prev": -0.42,
+        "change_prev": 0.59,
         "change_prev_unit": "percent",
-        "change_yoy": 10.51,
+        "change_yoy": 20.5,
         "change_yoy_unit": "percent",
         "sparkline": [
           {
@@ -268,26 +267,30 @@
           {
             "period": "2026-09",
             "value": 143562.33
+          },
+          {
+            "period": "2026-10",
+            "value": 144413.41
           }
         ],
         "source": "NPP",
-        "release_date": "2026-10-22",
-        "latest_retrieved_for": "2026-09-30",
+        "release_date": "2026-11-20",
+        "latest_retrieved_for": "2026-10-31",
         "segment": null,
         "status": "available",
         "status_note": null,
         "retrieval_skill": null,
-        "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/SEP//18_col_act-1_2026-SEP.xls"
+        "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/OCT//18_col_act-1_2026-OCT.xls"
       },
       {
         "metric_code": "power_utilization_plf",
         "title": "Power utilization",
-        "latest_period": "2026-09",
-        "latest_value": 61.791194481835696,
+        "latest_period": "2026-10",
+        "latest_value": 57.641708438919736,
         "unit": "percent",
-        "change_prev": 0.2,
+        "change_prev": -6.72,
         "change_prev_unit": "percent",
-        "change_yoy": 1.17,
+        "change_yoy": -13.04,
         "change_yoy_unit": "percent",
         "sparkline": [
           {
@@ -541,16 +544,20 @@
           {
             "period": "2026-09",
             "value": 61.79
+          },
+          {
+            "period": "2026-10",
+            "value": 57.64
           }
         ],
         "source": "NPP",
-        "release_date": "2026-10-22",
-        "latest_retrieved_for": "2026-09-30",
+        "release_date": "2026-11-20",
+        "latest_retrieved_for": "2026-10-31",
         "segment": null,
         "status": "available",
         "status_note": null,
         "retrieval_skill": null,
-        "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/SEP//18_col_act-1_2026-SEP.xls"
+        "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/OCT//18_col_act-1_2026-OCT.xls"
       },
       {
         "metric_code": "cement_output",
@@ -765,10 +772,9 @@
         "latest_retrieved_for": "2026-09-30",
         "segment": null,
         "status": "available",
-        "status_note": "ICRA reports 9.8% YoY; the displayed calculated rate uses cached historical levels.",
+        "status_note": "Latest source check failed; retained the last known figures.",
         "retrieval_skill": null,
-        "source_url": "https://www.icra.in/Research/ViewResearchReport/7184",
-        "reported_change_yoy": 9.8
+        "source_url": "https://www.icra.in/Research/ViewResearchReport/7184"
       },
       {
         "metric_code": "cement_utilization_est",
@@ -786,7 +792,7 @@
         "latest_retrieved_for": null,
         "segment": null,
         "status": "missing",
-        "status_note": "Connector ran, but emitted no observation for this metric.",
+        "status_note": "Connector failed: HTTPError: HTTP Error 404: Not Found",
         "retrieval_skill": null,
         "source_url": null
       },
@@ -801,6 +807,18 @@
         "change_yoy": 12.07,
         "change_yoy_unit": "percent",
         "sparkline": [
+          {
+            "period": "2024-Q3",
+            "value": 75016.0
+          },
+          {
+            "period": "2025-Q1",
+            "value": 65246.0
+          },
+          {
+            "period": "2025-Q2",
+            "value": 69530.0
+          },
           {
             "period": "2025-Q3",
             "value": 67974.0
@@ -819,11 +837,11 @@
           }
         ],
         "source": "JLL India",
-        "release_date": "2026-11-05",
+        "release_date": "2026-11-08",
         "latest_retrieved_for": "2026-09-30",
         "segment": null,
         "status": "available",
-        "status_note": "JLL REIS table reproduced by EquityBulls; apartment sales in seven cities.",
+        "status_note": null,
         "retrieval_skill": null,
         "source_url": "https://www.equitybulls.com/news/378755/premium-homes-take-centre-stage-as-india-s-housing-market-rebounds-during-januar"
       },
@@ -1124,7 +1142,7 @@
         "latest_retrieved_for": "2026-10-31",
         "segment": "domestic",
         "status": "available",
-        "status_note": null,
+        "status_note": "Latest source check failed; retained the last known figures.",
         "retrieval_skill": "vahan-dashboard",
         "source_url": "https://vahan.parivahan.gov.in/vahan4dashboard/"
       },
@@ -1425,7 +1443,7 @@
         "latest_retrieved_for": "2026-10-31",
         "segment": "domestic",
         "status": "available",
-        "status_note": null,
+        "status_note": "Latest source check failed; retained the last known figures.",
         "retrieval_skill": "vahan-dashboard",
         "source_url": "https://vahan.parivahan.gov.in/vahan4dashboard/"
       },
@@ -1464,10 +1482,10 @@
         "status": "available",
         "status_note": null,
         "retrieval_skill": null,
-        "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335416&lang=1&reg=3"
+        "source_url": "https://www.mospi.gov.in/uploads/latestReleases/latest_release_1794478693814_7c90e80f-9e64-4aa4-b44a-1dc727b0fed9_Press_Release_of_CPI_for_October_2026_.pdf"
       }
     ],
-    "summary": "Power softened, cement softened, housing remains firm, two-wheelers improved, four-wheelers improved, inflation ticked up."
+    "summary": "Power is accelerating, cement softened, housing remains firm, two-wheelers improved, four-wheelers improved, inflation ticked up."
   },
   "series": {
     "power_output_total": {
@@ -1726,13 +1744,17 @@
           {
             "period": "2026-09",
             "value": 143562.33
+          },
+          {
+            "period": "2026-10",
+            "value": 144413.41
           }
         ],
         "source": "NPP",
         "status": "available",
         "status_note": null,
         "retrieval_skill": null,
-        "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/SEP//18_col_act-1_2026-SEP.xls"
+        "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/OCT//18_col_act-1_2026-OCT.xls"
       },
       "yoy": {
         "metric_code": "power_output_total",
@@ -1941,13 +1963,17 @@
           {
             "period": "2026-09",
             "value": 10.51
+          },
+          {
+            "period": "2026-10",
+            "value": 20.5
           }
         ],
         "source": "NPP",
         "status": "available",
         "status_note": null,
         "retrieval_skill": null,
-        "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/SEP//18_col_act-1_2026-SEP.xls"
+        "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/OCT//18_col_act-1_2026-OCT.xls"
       },
       "indexed_100": {
         "metric_code": "power_output_total",
@@ -2204,13 +2230,17 @@
           {
             "period": "2026-09",
             "value": 123.78
+          },
+          {
+            "period": "2026-10",
+            "value": 124.51
           }
         ],
         "source": "NPP",
         "status": "available",
         "status_note": null,
         "retrieval_skill": null,
-        "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/SEP//18_col_act-1_2026-SEP.xls"
+        "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/OCT//18_col_act-1_2026-OCT.xls"
       },
       "change_prev_pct": {
         "metric_code": "power_output_total",
@@ -2463,13 +2493,17 @@
           {
             "period": "2026-09",
             "value": -0.42
+          },
+          {
+            "period": "2026-10",
+            "value": 0.59
           }
         ],
         "source": "NPP",
         "status": "available",
         "status_note": null,
         "retrieval_skill": null,
-        "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/SEP//18_col_act-1_2026-SEP.xls"
+        "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/OCT//18_col_act-1_2026-OCT.xls"
       },
       "rolling_3p_avg": {
         "metric_code": "power_output_total",
@@ -2718,13 +2752,17 @@
           {
             "period": "2026-09",
             "value": 143916.57
+          },
+          {
+            "period": "2026-10",
+            "value": 144045.83
           }
         ],
         "source": "NPP",
         "status": "available",
         "status_note": null,
         "retrieval_skill": null,
-        "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/SEP//18_col_act-1_2026-SEP.xls"
+        "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/OCT//18_col_act-1_2026-OCT.xls"
       }
     },
     "power_consumed_total": {
@@ -2995,13 +3033,17 @@
           {
             "period": "2026-09",
             "value": 61.791194481835696
+          },
+          {
+            "period": "2026-10",
+            "value": 57.641708438919736
           }
         ],
         "source": "NPP",
         "status": "available",
         "status_note": null,
         "retrieval_skill": null,
-        "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/SEP//18_col_act-1_2026-SEP.xls"
+        "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/OCT//18_col_act-1_2026-OCT.xls"
       },
       "yoy": {
         "metric_code": "power_utilization_plf",
@@ -3210,13 +3252,17 @@
           {
             "period": "2026-09",
             "value": 1.17
+          },
+          {
+            "period": "2026-10",
+            "value": -13.04
           }
         ],
         "source": "NPP",
         "status": "available",
         "status_note": null,
         "retrieval_skill": null,
-        "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/SEP//18_col_act-1_2026-SEP.xls"
+        "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/OCT//18_col_act-1_2026-OCT.xls"
       },
       "indexed_100": {
         "metric_code": "power_utilization_plf",
@@ -3473,13 +3519,17 @@
           {
             "period": "2026-09",
             "value": 127.87
+          },
+          {
+            "period": "2026-10",
+            "value": 119.29
           }
         ],
         "source": "NPP",
         "status": "available",
         "status_note": null,
         "retrieval_skill": null,
-        "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/SEP//18_col_act-1_2026-SEP.xls"
+        "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/OCT//18_col_act-1_2026-OCT.xls"
       },
       "change_prev_pct": {
         "metric_code": "power_utilization_plf",
@@ -3732,13 +3782,17 @@
           {
             "period": "2026-09",
             "value": 0.2
+          },
+          {
+            "period": "2026-10",
+            "value": -6.72
           }
         ],
         "source": "NPP",
         "status": "available",
         "status_note": null,
         "retrieval_skill": null,
-        "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/SEP//18_col_act-1_2026-SEP.xls"
+        "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/OCT//18_col_act-1_2026-OCT.xls"
       },
       "rolling_3p_avg": {
         "metric_code": "power_utilization_plf",
@@ -3987,13 +4041,17 @@
           {
             "period": "2026-09",
             "value": 62.05
+          },
+          {
+            "period": "2026-10",
+            "value": 60.37
           }
         ],
         "source": "NPP",
         "status": "available",
         "status_note": null,
         "retrieval_skill": null,
-        "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/SEP//18_col_act-1_2026-SEP.xls"
+        "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/OCT//18_col_act-1_2026-OCT.xls"
       }
     },
     "cement_output": {
@@ -4976,7 +5034,7 @@
         "points": [],
         "source": "Estimated",
         "status": "missing",
-        "status_note": "Connector ran, but emitted no observation for this metric.",
+        "status_note": "Connector failed: HTTPError: HTTP Error 404: Not Found",
         "retrieval_skill": null,
         "source_url": null
       }
@@ -4986,6 +5044,18 @@
         "metric_code": "home_sales_jll",
         "transform": "level",
         "points": [
+          {
+            "period": "2024-Q3",
+            "value": 75016.0
+          },
+          {
+            "period": "2025-Q1",
+            "value": 65246.0
+          },
+          {
+            "period": "2025-Q2",
+            "value": 69530.0
+          },
           {
             "period": "2025-Q3",
             "value": 67974.0
@@ -5014,6 +5084,18 @@
         "transform": "yoy",
         "points": [
           {
+            "period": "2025-Q3",
+            "value": -9.39
+          },
+          {
+            "period": "2026-Q1",
+            "value": 8.25
+          },
+          {
+            "period": "2026-Q2",
+            "value": -2.56
+          },
+          {
             "period": "2026-Q3",
             "value": 12.07
           }
@@ -5029,20 +5111,32 @@
         "transform": "indexed_100",
         "points": [
           {
-            "period": "2025-Q3",
+            "period": "2024-Q3",
             "value": 100.0
           },
           {
+            "period": "2025-Q1",
+            "value": 86.98
+          },
+          {
+            "period": "2025-Q2",
+            "value": 92.69
+          },
+          {
+            "period": "2025-Q3",
+            "value": 90.61
+          },
+          {
             "period": "2026-Q1",
-            "value": 103.91
+            "value": 94.15
           },
           {
             "period": "2026-Q2",
-            "value": 99.67
+            "value": 90.32
           },
           {
             "period": "2026-Q3",
-            "value": 112.07
+            "value": 101.55
           }
         ],
         "source": "JLL India",
@@ -5055,6 +5149,18 @@
         "metric_code": "home_sales_jll",
         "transform": "change_prev_pct",
         "points": [
+          {
+            "period": "2025-Q1",
+            "value": -13.02
+          },
+          {
+            "period": "2025-Q2",
+            "value": 6.57
+          },
+          {
+            "period": "2025-Q3",
+            "value": -2.24
+          },
           {
             "period": "2026-Q1",
             "value": 3.91
@@ -5079,6 +5185,18 @@
         "transform": "rolling_3p_avg",
         "points": [
           {
+            "period": "2025-Q2",
+            "value": 69930.67
+          },
+          {
+            "period": "2025-Q3",
+            "value": 67583.33
+          },
+          {
+            "period": "2026-Q1",
+            "value": 69378.33
+          },
+          {
             "period": "2026-Q2",
             "value": 68785.33
           },
@@ -5101,7 +5219,7 @@
         "points": [],
         "source": "VAHAN registration proxy",
         "status": "missing",
-        "status_note": "Connector ran, but emitted no observation for this metric. Use /skill:vahan-dashboard for the manual VAHAN retrieval workflow.",
+        "status_note": "Connector failed: URLError: <urlopen error [Errno 104] Connection reset by peer> Use /skill:vahan-dashboard for the manual VAHAN retrieval workflow.",
         "retrieval_skill": "vahan-dashboard",
         "source_url": "https://vahan.parivahan.gov.in/vahan4dashboard/"
       }
@@ -7926,7 +8044,7 @@
         "status": "available",
         "status_note": null,
         "retrieval_skill": null,
-        "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335416&lang=1&reg=3"
+        "source_url": "https://www.mospi.gov.in/uploads/latestReleases/latest_release_1794478693814_7c90e80f-9e64-4aa4-b44a-1dc727b0fed9_Press_Release_of_CPI_for_October_2026_.pdf"
       },
       "indexed_100": {
         "metric_code": "cpi_headline",
@@ -7953,7 +8071,7 @@
         "status": "available",
         "status_note": null,
         "retrieval_skill": null,
-        "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335416&lang=1&reg=3"
+        "source_url": "https://www.mospi.gov.in/uploads/latestReleases/latest_release_1794478693814_7c90e80f-9e64-4aa4-b44a-1dc727b0fed9_Press_Release_of_CPI_for_October_2026_.pdf"
       },
       "change_prev_pct": {
         "metric_code": "cpi_headline",
@@ -7976,7 +8094,7 @@
         "status": "available",
         "status_note": null,
         "retrieval_skill": null,
-        "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335416&lang=1&reg=3"
+        "source_url": "https://www.mospi.gov.in/uploads/latestReleases/latest_release_1794478693814_7c90e80f-9e64-4aa4-b44a-1dc727b0fed9_Press_Release_of_CPI_for_October_2026_.pdf"
       },
       "rolling_3p_avg": {
         "metric_code": "cpi_headline",
@@ -7995,7 +8113,7 @@
         "status": "available",
         "status_note": null,
         "retrieval_skill": null,
-        "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335416&lang=1&reg=3"
+        "source_url": "https://www.mospi.gov.in/uploads/latestReleases/latest_release_1794478693814_7c90e80f-9e64-4aa4-b44a-1dc727b0fed9_Press_Release_of_CPI_for_October_2026_.pdf"
       }
     },
     "cpi_index": {
@@ -8024,7 +8142,7 @@
         "status": "available",
         "status_note": null,
         "retrieval_skill": null,
-        "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335416&lang=1&reg=3"
+        "source_url": "https://www.mospi.gov.in/uploads/latestReleases/latest_release_1794478693814_7c90e80f-9e64-4aa4-b44a-1dc727b0fed9_Press_Release_of_CPI_for_October_2026_.pdf"
       },
       "indexed_100": {
         "metric_code": "cpi_index",
@@ -8051,7 +8169,7 @@
         "status": "available",
         "status_note": null,
         "retrieval_skill": null,
-        "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335416&lang=1&reg=3"
+        "source_url": "https://www.mospi.gov.in/uploads/latestReleases/latest_release_1794478693814_7c90e80f-9e64-4aa4-b44a-1dc727b0fed9_Press_Release_of_CPI_for_October_2026_.pdf"
       },
       "change_prev_pct": {
         "metric_code": "cpi_index",
@@ -8074,7 +8192,7 @@
         "status": "available",
         "status_note": null,
         "retrieval_skill": null,
-        "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335416&lang=1&reg=3"
+        "source_url": "https://www.mospi.gov.in/uploads/latestReleases/latest_release_1794478693814_7c90e80f-9e64-4aa4-b44a-1dc727b0fed9_Press_Release_of_CPI_for_October_2026_.pdf"
       },
       "rolling_3p_avg": {
         "metric_code": "cpi_index",
@@ -8093,7 +8211,7 @@
         "status": "available",
         "status_note": null,
         "retrieval_skill": null,
-        "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335416&lang=1&reg=3"
+        "source_url": "https://www.mospi.gov.in/uploads/latestReleases/latest_release_1794478693814_7c90e80f-9e64-4aa4-b44a-1dc727b0fed9_Press_Release_of_CPI_for_October_2026_.pdf"
       }
     }
   },
@@ -8101,11 +8219,11 @@
     {
       "dataset_code": "npp_monthly_generation",
       "status": "success",
-      "last_successful_period": "2026-09",
-      "last_release_date": "2026-10-22",
+      "last_successful_period": "2026-10",
+      "last_release_date": "2026-11-20",
       "cadence": "monthly",
       "next_expected_window": "based on release_lag_days metadata",
-      "observations_emitted": 2,
+      "observations_emitted": 4,
       "error_message": null
     },
     {
@@ -8120,33 +8238,33 @@
     },
     {
       "dataset_code": "oea_core_industries",
-      "status": "success",
+      "status": "failed",
       "last_successful_period": "2026-09",
       "last_release_date": "2026-10-28",
       "cadence": "monthly",
       "next_expected_window": "based on release_lag_days metadata",
-      "observations_emitted": 1,
-      "error_message": null
+      "observations_emitted": 0,
+      "error_message": "HTTPError: HTTP Error 404: Not Found"
     },
     {
       "dataset_code": "jll_residential_sales",
       "status": "success",
       "last_successful_period": "2026-Q3",
-      "last_release_date": "2026-11-05",
+      "last_release_date": "2026-11-08",
       "cadence": "quarterly",
       "next_expected_window": "based on release_lag_days metadata",
-      "observations_emitted": 2,
+      "observations_emitted": 6,
       "error_message": null
     },
     {
       "dataset_code": "vahan_vehicle_registrations",
-      "status": "success",
+      "status": "failed",
       "last_successful_period": "2026-10",
       "last_release_date": null,
       "cadence": "monthly",
       "next_expected_window": "based on release_lag_days metadata",
-      "observations_emitted": 20,
-      "error_message": null
+      "observations_emitted": 0,
+      "error_message": "URLError: <urlopen error [Errno 104] Connection reset by peer>"
     },
     {
       "dataset_code": "mospi_cpi",
@@ -9509,10 +9627,10 @@
     "source_name": "NSE",
     "source_url": "https://www.nseindia.com/reports/fii-dii",
     "scope": "Combined NSE, BSE and MSEI equity cash market",
-    "unit": "\u20b9 crore",
+    "unit": "₹ crore",
     "is_provisional": true,
-    "last_checked_at": "2026-11-25T01:22:57.450790+00:00",
-    "last_success_at": "2026-11-25T01:22:57.450790+00:00",
+    "last_checked_at": "2026-11-25T07:20:12.982149+00:00",
+    "last_success_at": "2026-11-25T07:20:12.982149+00:00",
     "error": null,
     "status": "available",
     "coverage_start": "2025-11-03",
@@ -9580,9 +9698,9 @@
   "sources": {
     "npp_monthly_generation": {
       "status": "success",
-      "last_checked_at": "2026-11-18T11:36:55.980932+00:00",
-      "last_success_at": "2026-11-18T11:36:55.980932+00:00",
-      "last_successful_period": "2026-09",
+      "last_checked_at": "2026-11-25T07:20:12.982149+00:00",
+      "last_success_at": "2026-11-25T07:20:12.982149+00:00",
+      "last_successful_period": "2026-10",
       "error": null
     },
     "playwright_power_consumption": {
@@ -9593,39 +9711,40 @@
       "error": "No connector registered in default connector set."
     },
     "oea_core_industries": {
-      "status": "success",
-      "last_checked_at": "2026-11-18T11:36:55.980932+00:00",
+      "status": "failed",
+      "last_checked_at": "2026-11-25T07:20:12.982149+00:00",
       "last_success_at": "2026-11-18T11:36:55.980932+00:00",
       "last_successful_period": "2026-09",
-      "error": null
+      "error": "HTTPError: HTTP Error 404: Not Found"
     },
     "jll_residential_sales": {
       "status": "success",
-      "last_checked_at": "2026-11-18T11:36:55.980932+00:00",
-      "last_success_at": "2026-11-18T11:36:55.980932+00:00",
+      "last_checked_at": "2026-11-25T07:20:12.982149+00:00",
+      "last_success_at": "2026-11-25T07:20:12.982149+00:00",
       "last_successful_period": "2026-Q3",
       "error": null
     },
     "vahan_vehicle_registrations": {
-      "status": "success",
-      "last_checked_at": "2026-11-18T11:36:55.980932+00:00",
+      "status": "failed",
+      "last_checked_at": "2026-11-25T07:20:12.982149+00:00",
       "last_success_at": "2026-11-18T11:36:55.980932+00:00",
       "last_successful_period": "2026-10",
-      "error": null
+      "error": "URLError: <urlopen error [Errno 104] Connection reset by peer>"
     },
     "mospi_cpi": {
       "status": "success",
-      "last_checked_at": "2026-11-18T11:36:55.980932+00:00",
-      "last_success_at": "2026-11-18T11:36:55.980932+00:00",
+      "last_checked_at": "2026-11-25T07:20:12.982149+00:00",
+      "last_success_at": "2026-11-25T07:20:12.982149+00:00",
       "last_successful_period": "2026-10",
       "error": null
     },
     "nse_fii_flows": {
       "status": "success",
-      "last_checked_at": "2026-11-25T01:22:57.450790+00:00",
-      "last_success_at": "2026-11-25T01:22:57.450790+00:00",
+      "last_checked_at": "2026-11-25T07:20:12.982149+00:00",
+      "last_success_at": "2026-11-25T07:20:12.982149+00:00",
       "last_successful_period": "2026-11-23",
       "error": null
     }
-  }
+  },
+  "update_status": "partial"
 }

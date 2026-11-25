@@ -255,13 +255,17 @@
         {
           "period": "2026-09",
           "value": 143562.33
+        },
+        {
+          "period": "2026-10",
+          "value": 144413.41
         }
       ],
       "source": "NPP",
       "status": "available",
       "status_note": null,
       "retrieval_skill": null,
-      "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/SEP//18_col_act-1_2026-SEP.xls"
+      "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/OCT//18_col_act-1_2026-OCT.xls"
     },
     "yoy": {
       "metric_code": "power_output_total",
@@ -470,13 +474,17 @@
         {
           "period": "2026-09",
           "value": 10.51
+        },
+        {
+          "period": "2026-10",
+          "value": 20.5
         }
       ],
       "source": "NPP",
       "status": "available",
       "status_note": null,
       "retrieval_skill": null,
-      "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/SEP//18_col_act-1_2026-SEP.xls"
+      "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/OCT//18_col_act-1_2026-OCT.xls"
     },
     "indexed_100": {
       "metric_code": "power_output_total",
@@ -733,13 +741,17 @@
         {
           "period": "2026-09",
           "value": 123.78
+        },
+        {
+          "period": "2026-10",
+          "value": 124.51
         }
       ],
       "source": "NPP",
       "status": "available",
       "status_note": null,
       "retrieval_skill": null,
-      "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/SEP//18_col_act-1_2026-SEP.xls"
+      "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/OCT//18_col_act-1_2026-OCT.xls"
     },
     "change_prev_pct": {
       "metric_code": "power_output_total",
@@ -992,13 +1004,17 @@
         {
           "period": "2026-09",
           "value": -0.42
+        },
+        {
+          "period": "2026-10",
+          "value": 0.59
         }
       ],
       "source": "NPP",
       "status": "available",
       "status_note": null,
       "retrieval_skill": null,
-      "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/SEP//18_col_act-1_2026-SEP.xls"
+      "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/OCT//18_col_act-1_2026-OCT.xls"
     },
     "rolling_3p_avg": {
       "metric_code": "power_output_total",
@@ -1247,13 +1263,17 @@
         {
           "period": "2026-09",
           "value": 143916.57
+        },
+        {
+          "period": "2026-10",
+          "value": 144045.83
         }
       ],
       "source": "NPP",
       "status": "available",
       "status_note": null,
       "retrieval_skill": null,
-      "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/SEP//18_col_act-1_2026-SEP.xls"
+      "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/OCT//18_col_act-1_2026-OCT.xls"
     }
   },
   "power_consumed_total": {
@@ -1524,13 +1544,17 @@
         {
           "period": "2026-09",
           "value": 61.791194481835696
+        },
+        {
+          "period": "2026-10",
+          "value": 57.641708438919736
         }
       ],
       "source": "NPP",
       "status": "available",
       "status_note": null,
       "retrieval_skill": null,
-      "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/SEP//18_col_act-1_2026-SEP.xls"
+      "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/OCT//18_col_act-1_2026-OCT.xls"
     },
     "yoy": {
       "metric_code": "power_utilization_plf",
@@ -1739,13 +1763,17 @@
         {
           "period": "2026-09",
           "value": 1.17
+        },
+        {
+          "period": "2026-10",
+          "value": -13.04
         }
       ],
       "source": "NPP",
       "status": "available",
       "status_note": null,
       "retrieval_skill": null,
-      "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/SEP//18_col_act-1_2026-SEP.xls"
+      "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/OCT//18_col_act-1_2026-OCT.xls"
     },
     "indexed_100": {
       "metric_code": "power_utilization_plf",
@@ -2002,13 +2030,17 @@
         {
           "period": "2026-09",
           "value": 127.87
+        },
+        {
+          "period": "2026-10",
+          "value": 119.29
         }
       ],
       "source": "NPP",
       "status": "available",
       "status_note": null,
       "retrieval_skill": null,
-      "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/SEP//18_col_act-1_2026-SEP.xls"
+      "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/OCT//18_col_act-1_2026-OCT.xls"
     },
     "change_prev_pct": {
       "metric_code": "power_utilization_plf",
@@ -2261,13 +2293,17 @@
         {
           "period": "2026-09",
           "value": 0.2
+        },
+        {
+          "period": "2026-10",
+          "value": -6.72
         }
       ],
       "source": "NPP",
       "status": "available",
       "status_note": null,
       "retrieval_skill": null,
-      "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/SEP//18_col_act-1_2026-SEP.xls"
+      "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/OCT//18_col_act-1_2026-OCT.xls"
     },
     "rolling_3p_avg": {
       "metric_code": "power_utilization_plf",
@@ -2516,13 +2552,17 @@
         {
           "period": "2026-09",
           "value": 62.05
+        },
+        {
+          "period": "2026-10",
+          "value": 60.37
         }
       ],
       "source": "NPP",
       "status": "available",
       "status_note": null,
       "retrieval_skill": null,
-      "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/SEP//18_col_act-1_2026-SEP.xls"
+      "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/OCT//18_col_act-1_2026-OCT.xls"
     }
   },
   "cement_output": {
@@ -3505,7 +3545,7 @@
       "points": [],
       "source": "Estimated",
       "status": "missing",
-      "status_note": "Connector ran, but emitted no observation for this metric.",
+      "status_note": "Connector failed: HTTPError: HTTP Error 404: Not Found",
       "retrieval_skill": null,
       "source_url": null
     }
@@ -3515,6 +3555,18 @@
       "metric_code": "home_sales_jll",
       "transform": "level",
       "points": [
+        {
+          "period": "2024-Q3",
+          "value": 75016.0
+        },
+        {
+          "period": "2025-Q1",
+          "value": 65246.0
+        },
+        {
+          "period": "2025-Q2",
+          "value": 69530.0
+        },
         {
           "period": "2025-Q3",
           "value": 67974.0
@@ -3543,6 +3595,18 @@
       "transform": "yoy",
       "points": [
         {
+          "period": "2025-Q3",
+          "value": -9.39
+        },
+        {
+          "period": "2026-Q1",
+          "value": 8.25
+        },
+        {
+          "period": "2026-Q2",
+          "value": -2.56
+        },
+        {
           "period": "2026-Q3",
           "value": 12.07
         }
@@ -3558,20 +3622,32 @@
       "transform": "indexed_100",
       "points": [
         {
-          "period": "2025-Q3",
+          "period": "2024-Q3",
           "value": 100.0
         },
         {
+          "period": "2025-Q1",
+          "value": 86.98
+        },
+        {
+          "period": "2025-Q2",
+          "value": 92.69
+        },
+        {
+          "period": "2025-Q3",
+          "value": 90.61
+        },
+        {
           "period": "2026-Q1",
-          "value": 103.91
+          "value": 94.15
         },
         {
           "period": "2026-Q2",
-          "value": 99.67
+          "value": 90.32
         },
         {
           "period": "2026-Q3",
-          "value": 112.07
+          "value": 101.55
         }
       ],
       "source": "JLL India",
@@ -3584,6 +3660,18 @@
       "metric_code": "home_sales_jll",
       "transform": "change_prev_pct",
       "points": [
+        {
+          "period": "2025-Q1",
+          "value": -13.02
+        },
+        {
+          "period": "2025-Q2",
+          "value": 6.57
+        },
+        {
+          "period": "2025-Q3",
+          "value": -2.24
+        },
         {
           "period": "2026-Q1",
           "value": 3.91
@@ -3608,6 +3696,18 @@
       "transform": "rolling_3p_avg",
       "points": [
         {
+          "period": "2025-Q2",
+          "value": 69930.67
+        },
+        {
+          "period": "2025-Q3",
+          "value": 67583.33
+        },
+        {
+          "period": "2026-Q1",
+          "value": 69378.33
+        },
+        {
           "period": "2026-Q2",
           "value": 68785.33
         },
@@ -3630,7 +3730,7 @@
       "points": [],
       "source": "VAHAN registration proxy",
       "status": "missing",
-      "status_note": "Connector ran, but emitted no observation for this metric. Use /skill:vahan-dashboard for the manual VAHAN retrieval workflow.",
+      "status_note": "Connector failed: URLError: <urlopen error [Errno 104] Connection reset by peer> Use /skill:vahan-dashboard for the manual VAHAN retrieval workflow.",
       "retrieval_skill": "vahan-dashboard",
       "source_url": "https://vahan.parivahan.gov.in/vahan4dashboard/"
     }
@@ -6455,7 +6555,7 @@
       "status": "available",
       "status_note": null,
       "retrieval_skill": null,
-      "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335416&lang=1&reg=3"
+      "source_url": "https://www.mospi.gov.in/uploads/latestReleases/latest_release_1794478693814_7c90e80f-9e64-4aa4-b44a-1dc727b0fed9_Press_Release_of_CPI_for_October_2026_.pdf"
     },
     "indexed_100": {
       "metric_code": "cpi_headline",
@@ -6482,7 +6582,7 @@
       "status": "available",
       "status_note": null,
       "retrieval_skill": null,
-      "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335416&lang=1&reg=3"
+      "source_url": "https://www.mospi.gov.in/uploads/latestReleases/latest_release_1794478693814_7c90e80f-9e64-4aa4-b44a-1dc727b0fed9_Press_Release_of_CPI_for_October_2026_.pdf"
     },
     "change_prev_pct": {
       "metric_code": "cpi_headline",
@@ -6505,7 +6605,7 @@
       "status": "available",
       "status_note": null,
       "retrieval_skill": null,
-      "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335416&lang=1&reg=3"
+      "source_url": "https://www.mospi.gov.in/uploads/latestReleases/latest_release_1794478693814_7c90e80f-9e64-4aa4-b44a-1dc727b0fed9_Press_Release_of_CPI_for_October_2026_.pdf"
     },
     "rolling_3p_avg": {
       "metric_code": "cpi_headline",
@@ -6524,7 +6624,7 @@
       "status": "available",
       "status_note": null,
       "retrieval_skill": null,
-      "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335416&lang=1&reg=3"
+      "source_url": "https://www.mospi.gov.in/uploads/latestReleases/latest_release_1794478693814_7c90e80f-9e64-4aa4-b44a-1dc727b0fed9_Press_Release_of_CPI_for_October_2026_.pdf"
     }
   },
   "cpi_index": {
@@ -6553,7 +6653,7 @@
       "status": "available",
       "status_note": null,
       "retrieval_skill": null,
-      "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335416&lang=1&reg=3"
+      "source_url": "https://www.mospi.gov.in/uploads/latestReleases/latest_release_1794478693814_7c90e80f-9e64-4aa4-b44a-1dc727b0fed9_Press_Release_of_CPI_for_October_2026_.pdf"
     },
     "indexed_100": {
       "metric_code": "cpi_index",
@@ -6580,7 +6680,7 @@
       "status": "available",
       "status_note": null,
       "retrieval_skill": null,
-      "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335416&lang=1&reg=3"
+      "source_url": "https://www.mospi.gov.in/uploads/latestReleases/latest_release_1794478693814_7c90e80f-9e64-4aa4-b44a-1dc727b0fed9_Press_Release_of_CPI_for_October_2026_.pdf"
     },
     "change_prev_pct": {
       "metric_code": "cpi_index",
@@ -6603,7 +6703,7 @@
       "status": "available",
       "status_note": null,
       "retrieval_skill": null,
-      "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335416&lang=1&reg=3"
+      "source_url": "https://www.mospi.gov.in/uploads/latestReleases/latest_release_1794478693814_7c90e80f-9e64-4aa4-b44a-1dc727b0fed9_Press_Release_of_CPI_for_October_2026_.pdf"
     },
     "rolling_3p_avg": {
       "metric_code": "cpi_index",
@@ -6622,7 +6722,7 @@
       "status": "available",
       "status_note": null,
       "retrieval_skill": null,
-      "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335416&lang=1&reg=3"
+      "source_url": "https://www.mospi.gov.in/uploads/latestReleases/latest_release_1794478693814_7c90e80f-9e64-4aa4-b44a-1dc727b0fed9_Press_Release_of_CPI_for_October_2026_.pdf"
     }
   }
 }

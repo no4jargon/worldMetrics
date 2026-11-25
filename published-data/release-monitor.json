@@ -2,11 +2,11 @@
   {
     "dataset_code": "npp_monthly_generation",
     "status": "success",
-    "last_successful_period": "2026-09",
-    "last_release_date": "2026-10-22",
+    "last_successful_period": "2026-10",
+    "last_release_date": "2026-11-20",
     "cadence": "monthly",
     "next_expected_window": "based on release_lag_days metadata",
-    "observations_emitted": 2,
+    "observations_emitted": 4,
     "error_message": null
   },
   {
@@ -21,33 +21,33 @@
   },
   {
     "dataset_code": "oea_core_industries",
-    "status": "success",
+    "status": "failed",
     "last_successful_period": "2026-09",
     "last_release_date": "2026-10-28",
     "cadence": "monthly",
     "next_expected_window": "based on release_lag_days metadata",
-    "observations_emitted": 1,
-    "error_message": null
+    "observations_emitted": 0,
+    "error_message": "HTTPError: HTTP Error 404: Not Found"
   },
   {
     "dataset_code": "jll_residential_sales",
     "status": "success",
     "last_successful_period": "2026-Q3",
-    "last_release_date": "2026-11-05",
+    "last_release_date": "2026-11-08",
     "cadence": "quarterly",
     "next_expected_window": "based on release_lag_days metadata",
-    "observations_emitted": 2,
+    "observations_emitted": 6,
     "error_message": null
   },
   {
     "dataset_code": "vahan_vehicle_registrations",
-    "status": "success",
+    "status": "failed",
     "last_successful_period": "2026-10",
     "last_release_date": null,
     "cadence": "monthly",
     "next_expected_window": "based on release_lag_days metadata",
-    "observations_emitted": 20,
-    "error_message": null
+    "observations_emitted": 0,
+    "error_message": "URLError: <urlopen error [Errno 104] Connection reset by peer>"
   },
   {
     "dataset_code": "mospi_cpi",
