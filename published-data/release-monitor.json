@@ -21,13 +21,13 @@
   },
   {
     "dataset_code": "oea_core_industries",
-    "status": "failed",
+    "status": "success",
     "last_successful_period": "2026-09",
     "last_release_date": "2026-10-28",
     "cadence": "monthly",
     "next_expected_window": "based on release_lag_days metadata",
-    "observations_emitted": 0,
-    "error_message": "ValueError: No ICRA monthly cement report parsed: ICRA report https://beta.icra.in/Research/ViewResearchReport/6798: No explicit named-calendar-month cement production level found; ICRA report https://www.icra.in/Research/ViewResearchReport/6798: No explicit named-calendar-month cement production level found; ICRA report https://beta.icra.in/Research/ViewResearchReport/6748: No explicit named-calendar-month cement production level found; ICRA report https://www.icra.in/Research/ViewResearchReport/6748: No explicit named-calendar-month cement production level found; ICRA report https://beta.icr"
+    "observations_emitted": 3,
+    "error_message": null
   },
   {
     "dataset_code": "jll_residential_sales",
@@ -47,7 +47,7 @@
     "cadence": "monthly",
     "next_expected_window": "based on release_lag_days metadata",
     "observations_emitted": 0,
-    "error_message": "URLError: <urlopen error [Errno 104] Connection reset by peer>"
+    "error_message": "Error: Page.goto: net::ERR_CONNECTION_RESET at https://vahan.parivahan.gov.in/vahan4dashboard/"
   },
   {
     "dataset_code": "mospi_cpi",

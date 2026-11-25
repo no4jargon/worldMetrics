@@ -652,10 +652,10 @@
     "unit": "MT",
     "geography": "India",
     "segment": null,
-    "source_release_date": null,
+    "source_release_date": "2026-08-27",
     "is_preliminary": false,
-    "notes": "Imported cached level series; individual historical release provenance was not retained in the snapshot.",
-    "source_url": "https://www.icra.in/Research/ViewResearchReport/7184"
+    "notes": "Cement production volumes increased by 13.1% year-on-year (YoY) in July 2026 to 42.3 million metric tonnes",
+    "source_url": "https://www.icra.in/Research/ViewResearchReport/7076"
   },
   {
     "metric_code": "cement_output",
@@ -666,10 +666,10 @@
     "unit": "MT",
     "geography": "India",
     "segment": null,
-    "source_release_date": null,
+    "source_release_date": "2026-09-30",
     "is_preliminary": false,
-    "notes": "Imported cached level series; individual historical release provenance was not retained in the snapshot.",
-    "source_url": "https://www.icra.in/Research/ViewResearchReport/7184"
+    "notes": "Cement production volumes increased by 12.5% Year-on-Year (YoY) in August 2026 to 39.7 million metric tonnes",
+    "source_url": "https://www.icra.in/Research/ViewResearchReport/7143"
   },
   {
     "metric_code": "cement_output",
@@ -682,7 +682,7 @@
     "segment": null,
     "source_release_date": "2026-10-28",
     "is_preliminary": false,
-    "notes": "Imported cached level series; individual historical release provenance was not retained in the snapshot.",
+    "notes": "Cement production volumes increased by 9.8% year-on-year (YoY) to 39.2 million metric tonnes (MT) in September 2026",
     "source_url": "https://www.icra.in/Research/ViewResearchReport/7184"
   },
   {

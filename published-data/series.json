@@ -3545,7 +3545,7 @@
       "points": [],
       "source": "Estimated",
       "status": "missing",
-      "status_note": "Connector failed: ValueError: No ICRA monthly cement report parsed: ICRA report https://beta.icra.in/Research/ViewResearchReport/6798: No explicit named-calendar-month cement production level found; ICRA report https://www.icra.in/Research/ViewResearchReport/6798: No explicit named-calendar-month cement production level found; ICRA report https://beta.icra.in/Research/ViewResearchReport/6748: No explicit named-calendar-month cement production level found; ICRA report https://www.icra.in/Research/ViewResearchReport/6748: No explicit named-calendar-month cement production level found; ICRA report https://beta.icr",
+      "status_note": "Connector ran, but emitted no observation for this metric.",
       "retrieval_skill": null,
       "source_url": null
     }
@@ -3730,7 +3730,7 @@
       "points": [],
       "source": "VAHAN registration proxy",
       "status": "missing",
-      "status_note": "Connector failed: URLError: <urlopen error [Errno 104] Connection reset by peer> Use /skill:vahan-dashboard for the manual VAHAN retrieval workflow.",
+      "status_note": "Connector failed: Error: Page.goto: net::ERR_CONNECTION_RESET at https://vahan.parivahan.gov.in/vahan4dashboard/ Use /skill:vahan-dashboard for the manual VAHAN retrieval workflow.",
       "retrieval_skill": "vahan-dashboard",
       "source_url": "https://vahan.parivahan.gov.in/vahan4dashboard/"
     }

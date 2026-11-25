@@ -767,7 +767,7 @@
       "latest_retrieved_for": "2026-09-30",
       "segment": null,
       "status": "available",
-      "status_note": "Latest source check failed; retained the last known figures.",
+      "status_note": null,
       "retrieval_skill": null,
       "source_url": "https://www.icra.in/Research/ViewResearchReport/7184"
     },
@@ -787,7 +787,7 @@
       "latest_retrieved_for": null,
       "segment": null,
       "status": "missing",
-      "status_note": "Connector failed: ValueError: No ICRA monthly cement report parsed: ICRA report https://beta.icra.in/Research/ViewResearchReport/6798: No explicit named-calendar-month cement production level found; ICRA report https://www.icra.in/Research/ViewResearchReport/6798: No explicit named-calendar-month cement production level found; ICRA report https://beta.icra.in/Research/ViewResearchReport/6748: No explicit named-calendar-month cement production level found; ICRA report https://www.icra.in/Research/ViewResearchReport/6748: No explicit named-calendar-month cement production level found; ICRA report https://beta.icr",
+      "status_note": "Connector ran, but emitted no observation for this metric.",
       "retrieval_skill": null,
       "source_url": null
     },
