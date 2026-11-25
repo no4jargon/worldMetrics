@@ -41,13 +41,13 @@
   },
   {
     "dataset_code": "vahan_vehicle_registrations",
-    "status": "failed",
+    "status": "success",
     "last_successful_period": "2026-10",
     "last_release_date": null,
     "cadence": "monthly",
     "next_expected_window": "based on release_lag_days metadata",
-    "observations_emitted": 0,
-    "error_message": "Error: Page.goto: net::ERR_CONNECTION_RESET at https://vahan.parivahan.gov.in/vahan4dashboard/"
+    "observations_emitted": 44,
+    "error_message": null
   },
   {
     "dataset_code": "mospi_cpi",

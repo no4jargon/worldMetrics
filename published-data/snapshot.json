@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T08:38:40.365660+00:00",
-  "last_attempt_at": "2026-11-25T08:38:40.365660+00:00",
-  "last_success_at": "2026-11-25T08:38:40.365660+00:00",
+  "generated_at": "2026-11-25T10:30:57.383812+00:00",
+  "last_attempt_at": "2026-11-25T10:30:57.383812+00:00",
+  "last_success_at": "2026-11-25T10:30:57.383812+00:00",
   "overview": {
     "cards": [
       {
@@ -849,11 +849,11 @@
         "metric_code": "two_wheeler_sales",
         "title": "Two-wheeler sales",
         "latest_period": "2026-10",
-        "latest_value": 2330741.0,
+        "latest_value": 2332786.0,
         "unit": "units",
-        "change_prev": 29.22,
+        "change_prev": 29.31,
         "change_prev_unit": "percent",
-        "change_yoy": -28.08,
+        "change_yoy": -28.02,
         "change_yoy_unit": "percent",
         "sparkline": [
           {
@@ -1050,91 +1050,91 @@
           },
           {
             "period": "2025-01",
-            "value": 1593155.0
+            "value": 1593124.0
           },
           {
             "period": "2025-02",
-            "value": 1413361.0
+            "value": 1413324.0
           },
           {
             "period": "2025-03",
-            "value": 1577297.0
+            "value": 1577270.0
           },
           {
             "period": "2025-04",
-            "value": 1752064.0
+            "value": 1752023.0
           },
           {
             "period": "2025-05",
-            "value": 1717206.0
+            "value": 1717174.0
           },
           {
             "period": "2025-06",
-            "value": 1509293.0
+            "value": 1509244.0
           },
           {
             "period": "2025-07",
-            "value": 1418793.0
+            "value": 1418778.0
           },
           {
             "period": "2025-08",
-            "value": 1433251.0
+            "value": 1433222.0
           },
           {
             "period": "2025-09",
-            "value": 1346197.0
+            "value": 1346162.0
           },
           {
             "period": "2025-10",
-            "value": 3240758.0
+            "value": 3240674.0
           },
           {
             "period": "2025-11",
-            "value": 2647015.0
+            "value": 2646012.0
           },
           {
             "period": "2025-12",
-            "value": 1395641.0
+            "value": 1395550.0
           },
           {
             "period": "2026-01",
-            "value": 1925379.0
+            "value": 1925351.0
           },
           {
             "period": "2026-02",
-            "value": 1774432.0
+            "value": 1774397.0
           },
           {
             "period": "2026-03",
-            "value": 2028532.0
+            "value": 2028493.0
           },
           {
             "period": "2026-04",
-            "value": 1991877.0
+            "value": 1991825.0
           },
           {
             "period": "2026-05",
-            "value": 1863002.0
+            "value": 1862957.0
           },
           {
             "period": "2026-06",
-            "value": 1844037.0
+            "value": 1844025.0
           },
           {
             "period": "2026-07",
-            "value": 1832177.0
+            "value": 1832176.0
           },
           {
             "period": "2026-08",
-            "value": 1729009.0
+            "value": 1729048.0
           },
           {
             "period": "2026-09",
-            "value": 1803764.0
+            "value": 1804000.0
           },
           {
             "period": "2026-10",
-            "value": 2330741.0
+            "value": 2332786.0
           }
         ],
         "source": "VAHAN registration proxy",
@@ -1142,19 +1142,19 @@
         "latest_retrieved_for": "2026-10-31",
         "segment": "domestic",
         "status": "available",
-        "status_note": "Latest source check failed; retained the last known figures.",
+        "status_note": null,
         "retrieval_skill": "vahan-dashboard",
-        "source_url": "https://vahan.parivahan.gov.in/vahan4dashboard/"
+        "source_url": "https://analytics.parivahan.gov.in/analytics/publicdashboard/vahandashboard/vahanYearWiseRegistrationComparisonChart?fromYear=2025&toYear=2026&stateCode=&rtoCode=0&vehicleClasses=&vehicleSubCategories=TWO+WHEELER%28NT%29%2CTWO+WHEELER%28T%29%2CTWO+WHEELER+%28Invalid+Carriage%29&timePeriod=0&vehicleCategoryGroup=&vehicleType="
       },
       {
         "metric_code": "four_wheeler_sales",
         "title": "Four-wheeler sales",
         "latest_period": "2026-10",
-        "latest_value": 559080.0,
+        "latest_value": 561085.0,
         "unit": "units",
-        "change_prev": 16.06,
+        "change_prev": 16.42,
         "change_prev_unit": "percent",
-        "change_yoy": -10.96,
+        "change_yoy": -10.65,
         "change_yoy_unit": "percent",
         "sparkline": [
           {
@@ -1351,91 +1351,91 @@
           },
           {
             "period": "2025-01",
-            "value": 558895.0
+            "value": 558880.0
           },
           {
             "period": "2025-02",
-            "value": 366501.0
+            "value": 366482.0
           },
           {
             "period": "2025-03",
-            "value": 419405.0
+            "value": 419372.0
           },
           {
             "period": "2025-04",
-            "value": 411431.0
+            "value": 411392.0
           },
           {
             "period": "2025-05",
-            "value": 372758.0
+            "value": 372716.0
           },
           {
             "period": "2025-06",
-            "value": 371909.0
+            "value": 371864.0
           },
           {
             "period": "2025-07",
-            "value": 406782.0
+            "value": 406733.0
           },
           {
             "period": "2025-08",
-            "value": 402032.0
+            "value": 402015.0
           },
           {
             "period": "2025-09",
-            "value": 366542.0
+            "value": 366509.0
           },
           {
             "period": "2025-10",
-            "value": 627922.0
+            "value": 627928.0
           },
           {
             "period": "2025-11",
-            "value": 524372.0
+            "value": 524291.0
           },
           {
             "period": "2025-12",
-            "value": 492274.0
+            "value": 492200.0
           },
           {
             "period": "2026-01",
-            "value": 630452.0
+            "value": 630404.0
           },
           {
             "period": "2026-02",
-            "value": 473850.0
+            "value": 473794.0
           },
           {
             "period": "2026-03",
-            "value": 518291.0
+            "value": 518267.0
           },
           {
             "period": "2026-04",
-            "value": 472448.0
+            "value": 472432.0
           },
           {
             "period": "2026-05",
-            "value": 467464.0
+            "value": 467434.0
           },
           {
             "period": "2026-06",
-            "value": 489695.0
+            "value": 489654.0
           },
           {
             "period": "2026-07",
-            "value": 508437.0
+            "value": 508416.0
           },
           {
             "period": "2026-08",
-            "value": 467023.0
+            "value": 467097.0
           },
           {
             "period": "2026-09",
-            "value": 481700.0
+            "value": 481950.0
           },
           {
             "period": "2026-10",
-            "value": 559080.0
+            "value": 561085.0
           }
         ],
         "source": "VAHAN registration proxy",
@@ -1443,9 +1443,9 @@
         "latest_retrieved_for": "2026-10-31",
         "segment": "domestic",
         "status": "available",
-        "status_note": "Latest source check failed; retained the last known figures.",
+        "status_note": null,
         "retrieval_skill": "vahan-dashboard",
-        "source_url": "https://vahan.parivahan.gov.in/vahan4dashboard/"
+        "source_url": "https://analytics.parivahan.gov.in/analytics/publicdashboard/vahandashboard/vahanYearWiseRegistrationComparisonChart?fromYear=2025&toYear=2026&stateCode=&rtoCode=0&vehicleClasses=&vehicleSubCategories=LIGHT+MOTOR+VEHICLE%2CMEDIUM+MOTOR+VEHICLE%2CHEAVY+MOTOR+VEHICLE%2CFOUR+WHEELER+%28Invalid+Carriage%29&timePeriod=0&vehicleCategoryGroup=&vehicleType="
       },
       {
         "metric_code": "cpi_headline",
@@ -5219,7 +5219,7 @@
         "points": [],
         "source": "VAHAN registration proxy",
         "status": "missing",
-        "status_note": "Connector failed: Error: Page.goto: net::ERR_CONNECTION_RESET at https://vahan.parivahan.gov.in/vahan4dashboard/ Use /skill:vahan-dashboard for the manual VAHAN retrieval workflow.",
+        "status_note": "Connector ran, but emitted no observation for this metric. Use /skill:vahan-dashboard for the manual VAHAN retrieval workflow.",
         "retrieval_skill": "vahan-dashboard",
         "source_url": "https://vahan.parivahan.gov.in/vahan4dashboard/"
       }
@@ -5423,98 +5423,98 @@
           },
           {
             "period": "2025-01",
-            "value": 1593155.0
+            "value": 1593124.0
           },
           {
             "period": "2025-02",
-            "value": 1413361.0
+            "value": 1413324.0
           },
           {
             "period": "2025-03",
-            "value": 1577297.0
+            "value": 1577270.0
           },
           {
             "period": "2025-04",
-            "value": 1752064.0
+            "value": 1752023.0
           },
           {
             "period": "2025-05",
-            "value": 1717206.0
+            "value": 1717174.0
           },
           {
             "period": "2025-06",
-            "value": 1509293.0
+            "value": 1509244.0
           },
           {
             "period": "2025-07",
-            "value": 1418793.0
+            "value": 1418778.0
           },
           {
             "period": "2025-08",
-            "value": 1433251.0
+            "value": 1433222.0
           },
           {
             "period": "2025-09",
-            "value": 1346197.0
+            "value": 1346162.0
           },
           {
             "period": "2025-10",
-            "value": 3240758.0
+            "value": 3240674.0
           },
           {
             "period": "2025-11",
-            "value": 2647015.0
+            "value": 2646012.0
           },
           {
             "period": "2025-12",
-            "value": 1395641.0
+            "value": 1395550.0
           },
           {
             "period": "2026-01",
-            "value": 1925379.0
+            "value": 1925351.0
           },
           {
             "period": "2026-02",
-            "value": 1774432.0
+            "value": 1774397.0
           },
           {
             "period": "2026-03",
-            "value": 2028532.0
+            "value": 2028493.0
           },
           {
             "period": "2026-04",
-            "value": 1991877.0
+            "value": 1991825.0
           },
           {
             "period": "2026-05",
-            "value": 1863002.0
+            "value": 1862957.0
           },
           {
             "period": "2026-06",
-            "value": 1844037.0
+            "value": 1844025.0
           },
           {
             "period": "2026-07",
-            "value": 1832177.0
+            "value": 1832176.0
           },
           {
             "period": "2026-08",
-            "value": 1729009.0
+            "value": 1729048.0
           },
           {
             "period": "2026-09",
-            "value": 1803764.0
+            "value": 1804000.0
           },
           {
             "period": "2026-10",
-            "value": 2330741.0
+            "value": 2332786.0
           }
         ],
         "source": "VAHAN registration proxy",
         "status": "available",
         "status_note": null,
         "retrieval_skill": "vahan-dashboard",
-        "source_url": "https://vahan.parivahan.gov.in/vahan4dashboard/"
+        "source_url": "https://analytics.parivahan.gov.in/analytics/publicdashboard/vahandashboard/vahanYearWiseRegistrationComparisonChart?fromYear=2025&toYear=2026&stateCode=&rtoCode=0&vehicleClasses=&vehicleSubCategories=TWO+WHEELER%28NT%29%2CTWO+WHEELER%28T%29%2CTWO+WHEELER+%28Invalid+Carriage%29&timePeriod=0&vehicleCategoryGroup=&vehicleType="
       },
       "yoy": {
         "metric_code": "two_wheeler_sales",
@@ -5686,7 +5686,7 @@
           },
           {
             "period": "2025-06",
-            "value": 5.0
+            "value": 4.99
           },
           {
             "period": "2025-07",
@@ -5694,11 +5694,11 @@
           },
           {
             "period": "2025-08",
-            "value": 2.5
+            "value": 2.49
           },
           {
             "period": "2025-09",
-            "value": 6.6
+            "value": 6.59
           },
           {
             "period": "2025-10",
@@ -5706,11 +5706,11 @@
           },
           {
             "period": "2025-11",
-            "value": -2.51
+            "value": -2.54
           },
           {
             "period": "2025-12",
-            "value": 10.85
+            "value": 10.84
           },
           {
             "period": "2026-01",
@@ -5746,18 +5746,18 @@
           },
           {
             "period": "2026-09",
-            "value": 33.99
+            "value": 34.01
           },
           {
             "period": "2026-10",
-            "value": -28.08
+            "value": -28.02
           }
         ],
         "source": "VAHAN registration proxy",
         "status": "available",
         "status_note": null,
         "retrieval_skill": "vahan-dashboard",
-        "source_url": "https://vahan.parivahan.gov.in/vahan4dashboard/"
+        "source_url": "https://analytics.parivahan.gov.in/analytics/publicdashboard/vahandashboard/vahanYearWiseRegistrationComparisonChart?fromYear=2025&toYear=2026&stateCode=&rtoCode=0&vehicleClasses=&vehicleSubCategories=TWO+WHEELER%28NT%29%2CTWO+WHEELER%28T%29%2CTWO+WHEELER+%28Invalid+Carriage%29&timePeriod=0&vehicleCategoryGroup=&vehicleType="
       },
       "indexed_100": {
         "metric_code": "two_wheeler_sales",
@@ -5957,7 +5957,7 @@
           },
           {
             "period": "2025-01",
-            "value": 111.89
+            "value": 111.88
           },
           {
             "period": "2025-02",
@@ -5969,7 +5969,7 @@
           },
           {
             "period": "2025-04",
-            "value": 123.05
+            "value": 123.04
           },
           {
             "period": "2025-05",
@@ -5977,7 +5977,7 @@
           },
           {
             "period": "2025-06",
-            "value": 106.0
+            "value": 105.99
           },
           {
             "period": "2025-07",
@@ -5985,7 +5985,7 @@
           },
           {
             "period": "2025-08",
-            "value": 100.66
+            "value": 100.65
           },
           {
             "period": "2025-09",
@@ -5993,11 +5993,11 @@
           },
           {
             "period": "2025-10",
-            "value": 227.6
+            "value": 227.59
           },
           {
             "period": "2025-11",
-            "value": 185.9
+            "value": 185.83
           },
           {
             "period": "2025-12",
@@ -6009,7 +6009,7 @@
           },
           {
             "period": "2026-02",
-            "value": 124.62
+            "value": 124.61
           },
           {
             "period": "2026-03",
@@ -6017,15 +6017,15 @@
           },
           {
             "period": "2026-04",
-            "value": 139.89
+            "value": 139.88
           },
           {
             "period": "2026-05",
-            "value": 130.84
+            "value": 130.83
           },
           {
             "period": "2026-06",
-            "value": 129.51
+            "value": 129.5
           },
           {
             "period": "2026-07",
@@ -6037,18 +6037,18 @@
           },
           {
             "period": "2026-09",
-            "value": 126.68
+            "value": 126.69
           },
           {
             "period": "2026-10",
-            "value": 163.69
+            "value": 163.83
           }
         ],
         "source": "VAHAN registration proxy",
         "status": "available",
         "status_note": null,
         "retrieval_skill": "vahan-dashboard",
-        "source_url": "https://vahan.parivahan.gov.in/vahan4dashboard/"
+        "source_url": "https://analytics.parivahan.gov.in/analytics/publicdashboard/vahandashboard/vahanYearWiseRegistrationComparisonChart?fromYear=2025&toYear=2026&stateCode=&rtoCode=0&vehicleClasses=&vehicleSubCategories=TWO+WHEELER%28NT%29%2CTWO+WHEELER%28T%29%2CTWO+WHEELER+%28Invalid+Carriage%29&timePeriod=0&vehicleCategoryGroup=&vehicleType="
       },
       "change_prev_pct": {
         "metric_code": "two_wheeler_sales",
@@ -6244,7 +6244,7 @@
           },
           {
             "period": "2025-01",
-            "value": 26.54
+            "value": 26.53
           },
           {
             "period": "2025-02",
@@ -6268,7 +6268,7 @@
           },
           {
             "period": "2025-07",
-            "value": -6.0
+            "value": -5.99
           },
           {
             "period": "2025-08",
@@ -6284,11 +6284,11 @@
           },
           {
             "period": "2025-11",
-            "value": -18.32
+            "value": -18.35
           },
           {
             "period": "2025-12",
-            "value": -47.27
+            "value": -47.26
           },
           {
             "period": "2026-01",
@@ -6324,18 +6324,18 @@
           },
           {
             "period": "2026-09",
-            "value": 4.32
+            "value": 4.33
           },
           {
             "period": "2026-10",
-            "value": 29.22
+            "value": 29.31
           }
         ],
         "source": "VAHAN registration proxy",
         "status": "available",
         "status_note": null,
         "retrieval_skill": "vahan-dashboard",
-        "source_url": "https://vahan.parivahan.gov.in/vahan4dashboard/"
+        "source_url": "https://analytics.parivahan.gov.in/analytics/publicdashboard/vahandashboard/vahanYearWiseRegistrationComparisonChart?fromYear=2025&toYear=2026&stateCode=&rtoCode=0&vehicleClasses=&vehicleSubCategories=TWO+WHEELER%28NT%29%2CTWO+WHEELER%28T%29%2CTWO+WHEELER+%28Invalid+Carriage%29&timePeriod=0&vehicleCategoryGroup=&vehicleType="
       },
       "rolling_3p_avg": {
         "metric_code": "two_wheeler_sales",
@@ -6527,98 +6527,98 @@
           },
           {
             "period": "2025-01",
-            "value": 1855768.33
+            "value": 1855758.0
           },
           {
             "period": "2025-02",
-            "value": 1421857.33
+            "value": 1421834.67
           },
           {
             "period": "2025-03",
-            "value": 1527937.67
+            "value": 1527906.0
           },
           {
             "period": "2025-04",
-            "value": 1580907.33
+            "value": 1580872.33
           },
           {
             "period": "2025-05",
-            "value": 1682189.0
+            "value": 1682155.67
           },
           {
             "period": "2025-06",
-            "value": 1659521.0
+            "value": 1659480.33
           },
           {
             "period": "2025-07",
-            "value": 1548430.67
+            "value": 1548398.67
           },
           {
             "period": "2025-08",
-            "value": 1453779.0
+            "value": 1453748.0
           },
           {
             "period": "2025-09",
-            "value": 1399413.67
+            "value": 1399387.33
           },
           {
             "period": "2025-10",
-            "value": 2006735.33
+            "value": 2006686.0
           },
           {
             "period": "2025-11",
-            "value": 2411323.33
+            "value": 2410949.33
           },
           {
             "period": "2025-12",
-            "value": 2427804.67
+            "value": 2427412.0
           },
           {
             "period": "2026-01",
-            "value": 1989345.0
+            "value": 1988971.0
           },
           {
             "period": "2026-02",
-            "value": 1698484.0
+            "value": 1698432.67
           },
           {
             "period": "2026-03",
-            "value": 1909447.67
+            "value": 1909413.67
           },
           {
             "period": "2026-04",
-            "value": 1931613.67
+            "value": 1931571.67
           },
           {
             "period": "2026-05",
-            "value": 1961137.0
+            "value": 1961091.67
           },
           {
             "period": "2026-06",
-            "value": 1899638.67
+            "value": 1899602.33
           },
           {
             "period": "2026-07",
-            "value": 1846405.33
+            "value": 1846386.0
           },
           {
             "period": "2026-08",
-            "value": 1801741.0
+            "value": 1801749.67
           },
           {
             "period": "2026-09",
-            "value": 1788316.67
+            "value": 1788408.0
           },
           {
             "period": "2026-10",
-            "value": 1954504.67
+            "value": 1955278.0
           }
         ],
         "source": "VAHAN registration proxy",
         "status": "available",
         "status_note": null,
         "retrieval_skill": "vahan-dashboard",
-        "source_url": "https://vahan.parivahan.gov.in/vahan4dashboard/"
+        "source_url": "https://analytics.parivahan.gov.in/analytics/publicdashboard/vahandashboard/vahanYearWiseRegistrationComparisonChart?fromYear=2025&toYear=2026&stateCode=&rtoCode=0&vehicleClasses=&vehicleSubCategories=TWO+WHEELER%28NT%29%2CTWO+WHEELER%28T%29%2CTWO+WHEELER+%28Invalid+Carriage%29&timePeriod=0&vehicleCategoryGroup=&vehicleType="
       }
     },
     "four_wheeler_sales": {
@@ -6820,98 +6820,98 @@
           },
           {
             "period": "2025-01",
-            "value": 558895.0
+            "value": 558880.0
           },
           {
             "period": "2025-02",
-            "value": 366501.0
+            "value": 366482.0
           },
           {
             "period": "2025-03",
-            "value": 419405.0
+            "value": 419372.0
           },
           {
             "period": "2025-04",
-            "value": 411431.0
+            "value": 411392.0
           },
           {
             "period": "2025-05",
-            "value": 372758.0
+            "value": 372716.0
           },
           {
             "period": "2025-06",
-            "value": 371909.0
+            "value": 371864.0
           },
           {
             "period": "2025-07",
-            "value": 406782.0
+            "value": 406733.0
           },
           {
             "period": "2025-08",
-            "value": 402032.0
+            "value": 402015.0
           },
           {
             "period": "2025-09",
-            "value": 366542.0
+            "value": 366509.0
           },
           {
             "period": "2025-10",
-            "value": 627922.0
+            "value": 627928.0
           },
           {
             "period": "2025-11",
-            "value": 524372.0
+            "value": 524291.0
           },
           {
             "period": "2025-12",
-            "value": 492274.0
+            "value": 492200.0
           },
           {
             "period": "2026-01",
-            "value": 630452.0
+            "value": 630404.0
           },
           {
             "period": "2026-02",
-            "value": 473850.0
+            "value": 473794.0
           },
           {
             "period": "2026-03",
-            "value": 518291.0
+            "value": 518267.0
           },
           {
             "period": "2026-04",
-            "value": 472448.0
+            "value": 472432.0
           },
           {
             "period": "2026-05",
-            "value": 467464.0
+            "value": 467434.0
           },
           {
             "period": "2026-06",
-            "value": 489695.0
+            "value": 489654.0
           },
           {
             "period": "2026-07",
-            "value": 508437.0
+            "value": 508416.0
           },
           {
             "period": "2026-08",
-            "value": 467023.0
+            "value": 467097.0
           },
           {
             "period": "2026-09",
-            "value": 481700.0
+            "value": 481950.0
           },
           {
             "period": "2026-10",
-            "value": 559080.0
+            "value": 561085.0
           }
         ],
         "source": "VAHAN registration proxy",
         "status": "available",
         "status_note": null,
         "retrieval_skill": "vahan-dashboard",
-        "source_url": "https://vahan.parivahan.gov.in/vahan4dashboard/"
+        "source_url": "https://analytics.parivahan.gov.in/analytics/publicdashboard/vahandashboard/vahanYearWiseRegistrationComparisonChart?fromYear=2025&toYear=2026&stateCode=&rtoCode=0&vehicleClasses=&vehicleSubCategories=LIGHT+MOTOR+VEHICLE%2CMEDIUM+MOTOR+VEHICLE%2CHEAVY+MOTOR+VEHICLE%2CFOUR+WHEELER+%28Invalid+Carriage%29&timePeriod=0&vehicleCategoryGroup=&vehicleType="
       },
       "yoy": {
         "metric_code": "four_wheeler_sales",
@@ -7063,7 +7063,7 @@
           },
           {
             "period": "2025-01",
-            "value": 15.44
+            "value": 15.43
           },
           {
             "period": "2025-02",
@@ -7071,31 +7071,31 @@
           },
           {
             "period": "2025-03",
-            "value": 6.19
+            "value": 6.18
           },
           {
             "period": "2025-04",
-            "value": 5.62
+            "value": 5.61
           },
           {
             "period": "2025-05",
-            "value": 0.87
+            "value": 0.86
           },
           {
             "period": "2025-06",
-            "value": 5.96
+            "value": 5.94
           },
           {
             "period": "2025-07",
-            "value": 2.62
+            "value": 2.61
           },
           {
             "period": "2025-08",
-            "value": 7.98
+            "value": 7.97
           },
           {
             "period": "2025-09",
-            "value": 9.37
+            "value": 9.36
           },
           {
             "period": "2025-10",
@@ -7103,11 +7103,11 @@
           },
           {
             "period": "2025-11",
-            "value": 28.38
+            "value": 28.36
           },
           {
             "period": "2025-12",
-            "value": 25.26
+            "value": 25.24
           },
           {
             "period": "2026-01",
@@ -7115,7 +7115,7 @@
           },
           {
             "period": "2026-02",
-            "value": 29.29
+            "value": 29.28
           },
           {
             "period": "2026-03",
@@ -7123,7 +7123,7 @@
           },
           {
             "period": "2026-04",
-            "value": 14.83
+            "value": 14.84
           },
           {
             "period": "2026-05",
@@ -7131,30 +7131,30 @@
           },
           {
             "period": "2026-06",
-            "value": 31.67
+            "value": 31.68
           },
           {
             "period": "2026-07",
-            "value": 24.99
+            "value": 25.0
           },
           {
             "period": "2026-08",
-            "value": 16.17
+            "value": 16.19
           },
           {
             "period": "2026-09",
-            "value": 31.42
+            "value": 31.5
           },
           {
             "period": "2026-10",
-            "value": -10.96
+            "value": -10.65
           }
         ],
         "source": "VAHAN registration proxy",
         "status": "available",
         "status_note": null,
         "retrieval_skill": "vahan-dashboard",
-        "source_url": "https://vahan.parivahan.gov.in/vahan4dashboard/"
+        "source_url": "https://analytics.parivahan.gov.in/analytics/publicdashboard/vahandashboard/vahanYearWiseRegistrationComparisonChart?fromYear=2025&toYear=2026&stateCode=&rtoCode=0&vehicleClasses=&vehicleSubCategories=LIGHT+MOTOR+VEHICLE%2CMEDIUM+MOTOR+VEHICLE%2CHEAVY+MOTOR+VEHICLE%2CFOUR+WHEELER+%28Invalid+Carriage%29&timePeriod=0&vehicleCategoryGroup=&vehicleType="
       },
       "indexed_100": {
         "metric_code": "four_wheeler_sales",
@@ -7362,51 +7362,51 @@
           },
           {
             "period": "2025-03",
-            "value": 102.41
+            "value": 102.4
           },
           {
             "period": "2025-04",
-            "value": 100.46
+            "value": 100.45
           },
           {
             "period": "2025-05",
-            "value": 91.02
+            "value": 91.01
           },
           {
             "period": "2025-06",
-            "value": 90.81
+            "value": 90.8
           },
           {
             "period": "2025-07",
-            "value": 99.33
+            "value": 99.31
           },
           {
             "period": "2025-08",
-            "value": 98.17
+            "value": 98.16
           },
           {
             "period": "2025-09",
-            "value": 89.5
+            "value": 89.49
           },
           {
             "period": "2025-10",
-            "value": 153.32
+            "value": 153.33
           },
           {
             "period": "2025-11",
-            "value": 128.04
+            "value": 128.02
           },
           {
             "period": "2025-12",
-            "value": 120.2
+            "value": 120.18
           },
           {
             "period": "2026-01",
-            "value": 153.94
+            "value": 153.93
           },
           {
             "period": "2026-02",
-            "value": 115.7
+            "value": 115.69
           },
           {
             "period": "2026-03",
@@ -7422,30 +7422,30 @@
           },
           {
             "period": "2026-06",
-            "value": 119.57
+            "value": 119.56
           },
           {
             "period": "2026-07",
-            "value": 124.15
+            "value": 124.14
           },
           {
             "period": "2026-08",
-            "value": 114.04
+            "value": 114.05
           },
           {
             "period": "2026-09",
-            "value": 117.62
+            "value": 117.68
           },
           {
             "period": "2026-10",
-            "value": 136.51
+            "value": 137.0
           }
         ],
         "source": "VAHAN registration proxy",
         "status": "available",
         "status_note": null,
         "retrieval_skill": "vahan-dashboard",
-        "source_url": "https://vahan.parivahan.gov.in/vahan4dashboard/"
+        "source_url": "https://analytics.parivahan.gov.in/analytics/publicdashboard/vahandashboard/vahanYearWiseRegistrationComparisonChart?fromYear=2025&toYear=2026&stateCode=&rtoCode=0&vehicleClasses=&vehicleSubCategories=LIGHT+MOTOR+VEHICLE%2CMEDIUM+MOTOR+VEHICLE%2CHEAVY+MOTOR+VEHICLE%2CFOUR+WHEELER+%28Invalid+Carriage%29&timePeriod=0&vehicleCategoryGroup=&vehicleType="
       },
       "change_prev_pct": {
         "metric_code": "four_wheeler_sales",
@@ -7641,11 +7641,11 @@
           },
           {
             "period": "2025-01",
-            "value": 42.22
+            "value": 42.21
           },
           {
             "period": "2025-02",
-            "value": -34.42
+            "value": -34.43
           },
           {
             "period": "2025-03",
@@ -7669,7 +7669,7 @@
           },
           {
             "period": "2025-08",
-            "value": -1.17
+            "value": -1.16
           },
           {
             "period": "2025-09",
@@ -7677,11 +7677,11 @@
           },
           {
             "period": "2025-10",
-            "value": 71.31
+            "value": 71.33
           },
           {
             "period": "2025-11",
-            "value": -16.49
+            "value": -16.5
           },
           {
             "period": "2025-12",
@@ -7689,7 +7689,7 @@
           },
           {
             "period": "2026-01",
-            "value": 28.07
+            "value": 28.08
           },
           {
             "period": "2026-02",
@@ -7697,19 +7697,19 @@
           },
           {
             "period": "2026-03",
-            "value": 9.38
+            "value": 9.39
           },
           {
             "period": "2026-04",
-            "value": -8.85
+            "value": -8.84
           },
           {
             "period": "2026-05",
-            "value": -1.05
+            "value": -1.06
           },
           {
             "period": "2026-06",
-            "value": 4.76
+            "value": 4.75
           },
           {
             "period": "2026-07",
@@ -7717,22 +7717,22 @@
           },
           {
             "period": "2026-08",
-            "value": -8.15
+            "value": -8.13
           },
           {
             "period": "2026-09",
-            "value": 3.14
+            "value": 3.18
           },
           {
             "period": "2026-10",
-            "value": 16.06
+            "value": 16.42
           }
         ],
         "source": "VAHAN registration proxy",
         "status": "available",
         "status_note": null,
         "retrieval_skill": "vahan-dashboard",
-        "source_url": "https://vahan.parivahan.gov.in/vahan4dashboard/"
+        "source_url": "https://analytics.parivahan.gov.in/analytics/publicdashboard/vahandashboard/vahanYearWiseRegistrationComparisonChart?fromYear=2025&toYear=2026&stateCode=&rtoCode=0&vehicleClasses=&vehicleSubCategories=LIGHT+MOTOR+VEHICLE%2CMEDIUM+MOTOR+VEHICLE%2CHEAVY+MOTOR+VEHICLE%2CFOUR+WHEELER+%28Invalid+Carriage%29&timePeriod=0&vehicleCategoryGroup=&vehicleType="
       },
       "rolling_3p_avg": {
         "metric_code": "four_wheeler_sales",
@@ -7924,98 +7924,98 @@
           },
           {
             "period": "2025-01",
-            "value": 453446.33
+            "value": 453441.33
           },
           {
             "period": "2025-02",
-            "value": 439462.67
+            "value": 439451.33
           },
           {
             "period": "2025-03",
-            "value": 448267.0
+            "value": 448244.67
           },
           {
             "period": "2025-04",
-            "value": 399112.33
+            "value": 399082.0
           },
           {
             "period": "2025-05",
-            "value": 401198.0
+            "value": 401160.0
           },
           {
             "period": "2025-06",
-            "value": 385366.0
+            "value": 385324.0
           },
           {
             "period": "2025-07",
-            "value": 383816.33
+            "value": 383771.0
           },
           {
             "period": "2025-08",
-            "value": 393574.33
+            "value": 393537.33
           },
           {
             "period": "2025-09",
-            "value": 391785.33
+            "value": 391752.33
           },
           {
             "period": "2025-10",
-            "value": 465498.67
+            "value": 465484.0
           },
           {
             "period": "2025-11",
-            "value": 506278.67
+            "value": 506242.67
           },
           {
             "period": "2025-12",
-            "value": 548189.33
+            "value": 548139.67
           },
           {
             "period": "2026-01",
-            "value": 549032.67
+            "value": 548965.0
           },
           {
             "period": "2026-02",
-            "value": 532192.0
+            "value": 532132.67
           },
           {
             "period": "2026-03",
-            "value": 540864.33
+            "value": 540821.67
           },
           {
             "period": "2026-04",
-            "value": 488196.33
+            "value": 488164.33
           },
           {
             "period": "2026-05",
-            "value": 486067.67
+            "value": 486044.33
           },
           {
             "period": "2026-06",
-            "value": 476535.67
+            "value": 476506.67
           },
           {
             "period": "2026-07",
-            "value": 488532.0
+            "value": 488501.33
           },
           {
             "period": "2026-08",
-            "value": 488385.0
+            "value": 488389.0
           },
           {
             "period": "2026-09",
-            "value": 485720.0
+            "value": 485821.0
           },
           {
             "period": "2026-10",
-            "value": 502601.0
+            "value": 503377.33
           }
         ],
         "source": "VAHAN registration proxy",
         "status": "available",
         "status_note": null,
         "retrieval_skill": "vahan-dashboard",
-        "source_url": "https://vahan.parivahan.gov.in/vahan4dashboard/"
+        "source_url": "https://analytics.parivahan.gov.in/analytics/publicdashboard/vahandashboard/vahanYearWiseRegistrationComparisonChart?fromYear=2025&toYear=2026&stateCode=&rtoCode=0&vehicleClasses=&vehicleSubCategories=LIGHT+MOTOR+VEHICLE%2CMEDIUM+MOTOR+VEHICLE%2CHEAVY+MOTOR+VEHICLE%2CFOUR+WHEELER+%28Invalid+Carriage%29&timePeriod=0&vehicleCategoryGroup=&vehicleType="
       }
     },
     "cpi_headline": {
@@ -8258,13 +8258,13 @@
     },
     {
       "dataset_code": "vahan_vehicle_registrations",
-      "status": "failed",
+      "status": "success",
       "last_successful_period": "2026-10",
       "last_release_date": null,
       "cadence": "monthly",
       "next_expected_window": "based on release_lag_days metadata",
-      "observations_emitted": 0,
-      "error_message": "Error: Page.goto: net::ERR_CONNECTION_RESET at https://vahan.parivahan.gov.in/vahan4dashboard/"
+      "observations_emitted": 44,
+      "error_message": null
     },
     {
       "dataset_code": "mospi_cpi",
@@ -9629,8 +9629,8 @@
     "scope": "Combined NSE, BSE and MSEI equity cash market",
     "unit": "₹ crore",
     "is_provisional": true,
-    "last_checked_at": "2026-11-25T08:38:40.365660+00:00",
-    "last_success_at": "2026-11-25T08:38:40.365660+00:00",
+    "last_checked_at": "2026-11-25T10:30:57.383812+00:00",
+    "last_success_at": "2026-11-25T10:30:57.383812+00:00",
     "error": null,
     "status": "available",
     "coverage_start": "2025-11-03",
@@ -9698,8 +9698,8 @@
   "sources": {
     "npp_monthly_generation": {
       "status": "success",
-      "last_checked_at": "2026-11-25T08:38:40.365660+00:00",
-      "last_success_at": "2026-11-25T08:38:40.365660+00:00",
+      "last_checked_at": "2026-11-25T10:30:57.383812+00:00",
+      "last_success_at": "2026-11-25T10:30:57.383812+00:00",
       "last_successful_period": "2026-10",
       "error": null
     },
@@ -9712,39 +9712,39 @@
     },
     "oea_core_industries": {
       "status": "success",
-      "last_checked_at": "2026-11-25T08:38:40.365660+00:00",
-      "last_success_at": "2026-11-25T08:38:40.365660+00:00",
+      "last_checked_at": "2026-11-25T10:30:57.383812+00:00",
+      "last_success_at": "2026-11-25T10:30:57.383812+00:00",
       "last_successful_period": "2026-09",
       "error": null
     },
     "jll_residential_sales": {
       "status": "success",
-      "last_checked_at": "2026-11-25T08:38:40.365660+00:00",
-      "last_success_at": "2026-11-25T08:38:40.365660+00:00",
+      "last_checked_at": "2026-11-25T10:30:57.383812+00:00",
+      "last_success_at": "2026-11-25T10:30:57.383812+00:00",
       "last_successful_period": "2026-Q3",
       "error": null
     },
     "vahan_vehicle_registrations": {
-      "status": "failed",
-      "last_checked_at": "2026-11-25T08:38:40.365660+00:00",
-      "last_success_at": "2026-11-18T11:36:55.980932+00:00",
+      "status": "success",
+      "last_checked_at": "2026-11-25T10:30:57.383812+00:00",
+      "last_success_at": "2026-11-25T10:30:57.383812+00:00",
       "last_successful_period": "2026-10",
-      "error": "Error: Page.goto: net::ERR_CONNECTION_RESET at https://vahan.parivahan.gov.in/vahan4dashboard/"
+      "error": null
     },
     "mospi_cpi": {
       "status": "success",
-      "last_checked_at": "2026-11-25T08:38:40.365660+00:00",
-      "last_success_at": "2026-11-25T08:38:40.365660+00:00",
+      "last_checked_at": "2026-11-25T10:30:57.383812+00:00",
+      "last_success_at": "2026-11-25T10:30:57.383812+00:00",
       "last_successful_period": "2026-10",
       "error": null
     },
     "nse_fii_flows": {
       "status": "success",
-      "last_checked_at": "2026-11-25T08:38:40.365660+00:00",
-      "last_success_at": "2026-11-25T08:38:40.365660+00:00",
+      "last_checked_at": "2026-11-25T10:30:57.383812+00:00",
+      "last_success_at": "2026-11-25T10:30:57.383812+00:00",
       "last_successful_period": "2026-11-23",
       "error": null
     }
   },
-  "update_status": "partial"
+  "update_status": "success"
 }
