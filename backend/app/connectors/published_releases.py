@@ -178,12 +178,12 @@ def parse_cement(contents: bytes | str, source_url: str, released: date | None =
 class _ICRAListing(ICRACementMonthlyUpdatesConnector):
     """Keep the verification cookie, token and AJAX request on the same origin.
 
-    ICRA maintains both www and beta public frontends. Some cloud egress routes
-    return 404 for one frontend even while the other serves its live listing.
+    The same helper also supports alternate-origin reads of a report already
+    discovered on WWW; the stale beta listing is never used for discovery.
     """
 
     def _read_url(self, url: str, opener=None) -> bytes:
-        request = Request(url, headers={'User-Agent': UA})
+        request = Request(url, headers={'User-Agent': UA, 'Cache-Control': 'no-cache', 'Pragma': 'no-cache'})
         try:
             with (opener.open(request, timeout=20) if opener else urlopen(request, timeout=20)) as response:
                 return response.read(8 * 1024 * 1024)
@@ -205,19 +205,79 @@ class _ICRAListing(ICRACementMonthlyUpdatesConnector):
             raise ValueError(f'ICRA POST {url}: {error}') from error
 
 
-def _cement_reports() -> list:
+def _cement_reports_browser() -> list:
+    """Read the current WWW form using a fresh browser session when HTTP fails.
+
+    This follows the site's own public form workflow. It does not solve access
+    challenges or accept the stale report list on ICRA's beta frontend.
+    """
+    from playwright.sync_api import sync_playwright
+    origin = ICRA_ORIGINS[0]
     errors = []
-    for origin in ICRA_ORIGINS:
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch(headless=True)
         try:
-            listing = _ICRAListing(source_url=origin + '/Research/ResearchDetails/1', max_pages=1,
-                                   request_delay_seconds=0)
-            reports = listing._fetch_report_listing()[0]
-            if reports:
-                return reports
-            errors.append(f'{origin}: live cement listing returned no reports')
-        except Exception as error:
-            errors.append(str(error))
-    raise ValueError('ICRA live listing unavailable on both official origins: ' + '; '.join(errors))
+            context = browser.new_context(user_agent=(
+                'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) '
+                f'Chrome/{browser.version} Safari/537.36'))
+            page = context.new_page()
+            page.set_default_timeout(20_000)
+            page.route('**/*', lambda route: route.abort() if route.request.resource_type in
+                       ('image', 'font', 'media') else route.continue_())
+            for landing in [origin + '/Research/ResearchDetails/1',
+                            origin + '/Research/ResearchDetails/1?SectorId=40']:
+                try:
+                    response = page.goto(landing, wait_until='domcontentloaded', timeout=20_000)
+                    if response is None or not response.ok:
+                        raise ValueError(f'GET HTTP {response.status if response else "no response"}')
+                    token = page.locator('input[name="__RequestVerificationToken"]').first.input_value()
+                    result = page.evaluate('''async ({ token }) => {
+                        const controller = new AbortController();
+                        const timer = setTimeout(() => controller.abort(), 20000);
+                        try {
+                            const url = '/Research/GetSectorResearchReportDetails?IndustryId=1&page=1&isSpecialComments=false';
+                            const body = new URLSearchParams({
+                                __RequestVerificationToken: token, 'SelectedSector.SectorId': '40',
+                                ResearchReportCategoryId: '6', DateFrom: '', DateTo: '', KeyWord: ''
+                            });
+                            const response = await fetch(url, { method: 'POST', body,
+                                headers: { 'X-Requested-With': 'XMLHttpRequest' },
+                                credentials: 'same-origin', cache: 'no-store', signal: controller.signal });
+                            return { status: response.status, url: response.url, html: await response.text() };
+                        } finally { clearTimeout(timer); }
+                    }''', {'token': token})
+                    if result['status'] != 200:
+                        raise ValueError(f'POST {result["url"]}: HTTP {result["status"]}')
+                    listing = _ICRAListing(source_url=landing)
+                    reports = listing._parse_listing_page(result['html'], 1)
+                    if not reports:
+                        raise ValueError('WWW browser cement listing returned no reports')
+                    return reports
+                except Exception as error:
+                    errors.append(f'ICRA browser {landing}: {error}')
+        finally:
+            browser.close()
+    raise ValueError('; '.join(errors))
+
+
+def _cement_reports(errors: list[str] | None = None) -> list:
+    errors = errors if errors is not None else []
+    # The beta listing is not a current mirror (its latest record can be months
+    # old), so only current WWW discovery is eligible for an automated update.
+    try:
+        listing = _ICRAListing(source_url=ICRA_ORIGINS[0] + '/Research/ResearchDetails/1', max_pages=1,
+                               request_delay_seconds=0)
+        reports = listing._fetch_report_listing()[0]
+        if reports:
+            return reports
+        errors.append('ICRA WWW HTTP listing returned no reports')
+    except Exception as error:
+        errors.append(str(error))
+    try:
+        return _cement_reports_browser()
+    except Exception as error:
+        errors.append(str(error))
+    raise ValueError('ICRA current WWW listing unavailable: ' + '; '.join(errors))
 
 
 def _icra_report_urls(url: str) -> list[str]:
@@ -230,10 +290,11 @@ def _icra_report_urls(url: str) -> list[str]:
 
 def fetch_cement(*, reader: Reader = _read, reports_loader=None) -> list[CanonicalObservation]:
     connector = ICRACementMonthlyUpdatesConnector(max_pages=1, request_delay_seconds=0)
-    reports = reports_loader() if reports_loader else _cement_reports()
+    discovery_errors = []
+    reports = reports_loader() if reports_loader else _cement_reports(discovery_errors)
     if not reports:
         raise ValueError('ICRA monthly cement listing returned no reports')
-    output, errors = [], []
+    output, errors = [], discovery_errors
     for report in sorted(reports, key=lambda item: connector._parse_release_date(item.release_date) or date.min, reverse=True)[:3]:
         for url in _icra_report_urls(report.report_url):
             try:

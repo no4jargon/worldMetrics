@@ -35,6 +35,7 @@ jobs:
         run: |
           python -m unittest discover -s backend/tests -p 'test_cloud_refresh.py'
           python -m unittest discover -s backend/tests -p 'test_published_releases.py'
+          python -m unittest discover -s backend/tests -p 'test_vahan_browser.py'
       - name: Collect published data
         id: collect
         continue-on-error: true

@@ -9,7 +9,7 @@ from urllib.error import HTTPError, URLError
 from app.core.models import CanonicalObservation, FetchResult
 from app.pipelines.build_snapshots import build_snapshots_from_observations
 from app.pipelines.cloud_refresh import (
-    FII_DATASET, SourceDeadline, _connector_runner, _recent_months, load_history, main, refresh_cloud_data,
+    FII_DATASET, SourceDeadline, _connector_runner, _network_then_browser, _recent_months, load_history, main, refresh_cloud_data,
 )
 
 
@@ -239,6 +239,29 @@ class CloudRefreshTests(unittest.TestCase):
                 _connector_runner(connector, network_attempts=3)()
         self.assertEqual(1, connector.fetch.call_count)
         sleep.assert_not_called()
+
+    def test_network_failure_gets_one_browser_attempt_and_parse_failures_do_not(self):
+        expected = [observation('two_wheeler_sales', '2026-10', 250)]
+        primary = Mock(side_effect=URLError('Connection reset by peer'))
+        browser = Mock(return_value=expected)
+        self.assertEqual(expected, _network_then_browser(primary, browser)())
+        primary.assert_called_once()
+        browser.assert_called_once()
+        for error in [ValueError('Table missing'), HTTPError(SOURCE_URL, 403, 'Forbidden', {}, None), SourceDeadline('Expired')]:
+            with self.subTest(error=type(error).__name__):
+                primary = Mock(side_effect=error)
+                browser = Mock()
+                with self.assertRaises(type(error)):
+                    _network_then_browser(primary, browser)()
+                browser.assert_not_called()
+
+    def test_browser_transport_failure_is_not_retried_again(self):
+        primary = Mock(side_effect=ConnectionResetError('Connection reset by peer'))
+        browser = Mock(side_effect=RuntimeError('Public portal blocked normal browser access'))
+        with self.assertRaisesRegex(RuntimeError, 'normal browser access'):
+            _network_then_browser(primary, browser)()
+        primary.assert_called_once()
+        browser.assert_called_once()
 
     def test_legacy_aggregate_timestamp_keeps_latest_actual_prior_source_success(self):
         self.seed([])
