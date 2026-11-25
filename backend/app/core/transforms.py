@@ -19,6 +19,7 @@ def compute_transforms(observations: Iterable[CanonicalObservation]) -> list[Der
 
     for (_, segment_key), series in grouped.items():
         series = sorted(series, key=lambda x: x.period_start)
+        by_period = {item.period_label: item for item in series}
         for i, obs in enumerate(series):
             if i >= 1 and series[i - 1].value != 0:
                 prev = series[i - 1].value
@@ -46,8 +47,10 @@ def compute_transforms(observations: Iterable[CanonicalObservation]) -> list[Der
                     )
                 )
 
-            if i >= 12 and series[i - 12].value != 0:
-                base = series[i - 12].value
+            year_ago_label = f"{int(obs.period_label[:4]) - 1}{obs.period_label[4:]}"
+            year_ago = by_period.get(year_ago_label)
+            if year_ago is not None and year_ago.value != 0:
+                base = year_ago.value
                 derived.append(
                     DerivedObservation(
                         metric_code=obs.metric_code,

@@ -1,0 +1,287 @@
+{
+  "metric_code": "two_wheeler_sales",
+  "transform": "change_prev_pct",
+  "points": [
+    {
+      "period": "2021-02",
+      "value": -8.37
+    },
+    {
+      "period": "2021-03",
+      "value": 8.4
+    },
+    {
+      "period": "2021-04",
+      "value": -28.88
+    },
+    {
+      "period": "2021-05",
+      "value": -53.14
+    },
+    {
+      "period": "2021-06",
+      "value": 136.82
+    },
+    {
+      "period": "2021-07",
+      "value": 20.95
+    },
+    {
+      "period": "2021-08",
+      "value": -14.37
+    },
+    {
+      "period": "2021-09",
+      "value": -6.2
+    },
+    {
+      "period": "2021-10",
+      "value": 9.11
+    },
+    {
+      "period": "2021-11",
+      "value": 40.51
+    },
+    {
+      "period": "2021-12",
+      "value": -18.27
+    },
+    {
+      "period": "2022-01",
+      "value": -11.4
+    },
+    {
+      "period": "2022-02",
+      "value": -4.09
+    },
+    {
+      "period": "2022-03",
+      "value": 16.1
+    },
+    {
+      "period": "2022-04",
+      "value": 2.74
+    },
+    {
+      "period": "2022-05",
+      "value": 2.75
+    },
+    {
+      "period": "2022-06",
+      "value": -9.67
+    },
+    {
+      "period": "2022-07",
+      "value": -7.28
+    },
+    {
+      "period": "2022-08",
+      "value": 3.51
+    },
+    {
+      "period": "2022-09",
+      "value": -7.96
+    },
+    {
+      "period": "2022-10",
+      "value": 57.58
+    },
+    {
+      "period": "2022-11",
+      "value": 8.23
+    },
+    {
+      "period": "2022-12",
+      "value": -38.22
+    },
+    {
+      "period": "2023-01",
+      "value": 11.12
+    },
+    {
+      "period": "2023-02",
+      "value": 0.03
+    },
+    {
+      "period": "2023-03",
+      "value": 13.83
+    },
+    {
+      "period": "2023-04",
+      "value": -14.8
+    },
+    {
+      "period": "2023-05",
+      "value": 20.76
+    },
+    {
+      "period": "2023-06",
+      "value": -11.87
+    },
+    {
+      "period": "2023-07",
+      "value": -6.02
+    },
+    {
+      "period": "2023-08",
+      "value": 2.76
+    },
+    {
+      "period": "2023-09",
+      "value": 3.94
+    },
+    {
+      "period": "2023-10",
+      "value": 14.39
+    },
+    {
+      "period": "2023-11",
+      "value": 48.38
+    },
+    {
+      "period": "2023-12",
+      "value": -34.58
+    },
+    {
+      "period": "2024-01",
+      "value": 0.37
+    },
+    {
+      "period": "2024-02",
+      "value": -1.13
+    },
+    {
+      "period": "2024-03",
+      "value": 5.9
+    },
+    {
+      "period": "2024-04",
+      "value": 6.49
+    },
+    {
+      "period": "2024-05",
+      "value": -6.06
+    },
+    {
+      "period": "2024-06",
+      "value": -10.13
+    },
+    {
+      "period": "2024-07",
+      "value": 5.49
+    },
+    {
+      "period": "2024-08",
+      "value": -7.78
+    },
+    {
+      "period": "2024-09",
+      "value": -9.69
+    },
+    {
+      "period": "2024-10",
+      "value": 69.2
+    },
+    {
+      "period": "2024-11",
+      "value": 27.06
+    },
+    {
+      "period": "2024-12",
+      "value": -53.63
+    },
+    {
+      "period": "2025-01",
+      "value": 26.54
+    },
+    {
+      "period": "2025-02",
+      "value": -11.29
+    },
+    {
+      "period": "2025-03",
+      "value": 11.6
+    },
+    {
+      "period": "2025-04",
+      "value": 11.08
+    },
+    {
+      "period": "2025-05",
+      "value": -1.99
+    },
+    {
+      "period": "2025-06",
+      "value": -12.11
+    },
+    {
+      "period": "2025-07",
+      "value": -6
+    },
+    {
+      "period": "2025-08",
+      "value": 1.02
+    },
+    {
+      "period": "2025-09",
+      "value": -6.07
+    },
+    {
+      "period": "2025-10",
+      "value": 140.73
+    },
+    {
+      "period": "2025-11",
+      "value": -18.32
+    },
+    {
+      "period": "2025-12",
+      "value": -47.27
+    },
+    {
+      "period": "2026-01",
+      "value": 37.96
+    },
+    {
+      "period": "2026-02",
+      "value": -7.84
+    },
+    {
+      "period": "2026-03",
+      "value": 14.32
+    },
+    {
+      "period": "2026-04",
+      "value": -1.81
+    },
+    {
+      "period": "2026-05",
+      "value": -6.47
+    },
+    {
+      "period": "2026-06",
+      "value": -1.02
+    },
+    {
+      "period": "2026-07",
+      "value": -0.64
+    },
+    {
+      "period": "2026-08",
+      "value": -5.63
+    },
+    {
+      "period": "2026-09",
+      "value": 4.32
+    },
+    {
+      "period": "2026-10",
+      "value": 29.22
+    }
+  ],
+  "source": "VAHAN registration proxy",
+  "status": "available",
+  "status_note": null,
+  "retrieval_skill": "vahan-dashboard",
+  "source_url": "https://vahan.parivahan.gov.in/vahan4dashboard/"
+}

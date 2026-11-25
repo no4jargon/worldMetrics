@@ -2,6 +2,26 @@
 
 This project now has a dev-local SQLite cache plus dashboard JSON snapshots.
 
+## Daily FII equity flows
+
+FII/FPI cash-equity flows have a separate lightweight refresh and do not run the monthly macro collectors:
+
+```bash
+npm run refresh:fii
+```
+
+Or run from `backend/`:
+
+```bash
+./.venv/bin/python -m app.main refresh-fii
+```
+
+The job atomically updates `web/data/fii-flows.json`, upserts revised trading dates, and retains previous records on an upstream failure. It uses a process lock to avoid concurrent writes. The first refresh requests 12 calendar months of history; subsequent refreshes revisit recent months and expand the window if the app was idle.
+
+The Overview loads this snapshot and polls `/api/fii-flows`. Source checks are throttled to 15 minutes after 15:30 IST on weekdays, six hours otherwise, and five minutes after a failure; a new India calendar day triggers a check. The browser polls every minute, or every five seconds while a refresh is in progress. Checks require the local app to be running and a page or API client to request the data. Set `WM_FII_AUTO_REFRESH=0` to disable these checks.
+
+The chart defaults to daily net flows in ₹ crore. Monthly values sum available daily records, with MTD and partial-history labels. The latest session is directly from NSE's combined provisional cash-market report; historical daily records are attributed to Groww, with overlap and calendar checks. The snapshot exposes the actual latest publication date and any coverage gaps. No missing day is treated as a zero flow.
+
 ## Default behavior
 
 When the website reads data, `web/app/lib/data.ts` checks for:
@@ -48,6 +68,7 @@ This removes:
 - `web/data/release-monitor.json`
 - `web/data/refresh-metadata.json`
 - `web/data/refresh-status.json`
+- `web/data/fii-flows.json`
 
 Then start/open the website:
 

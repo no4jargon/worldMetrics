@@ -1,0 +1,207 @@
+{
+  "metric_code": "cement_output",
+  "transform": "indexed_100",
+  "points": [
+    {
+      "period": "2022-05",
+      "value": 100
+    },
+    {
+      "period": "2022-06",
+      "value": 106.62
+    },
+    {
+      "period": "2022-08",
+      "value": 91.48
+    },
+    {
+      "period": "2022-09",
+      "value": 95.27
+    },
+    {
+      "period": "2022-10",
+      "value": 93.38
+    },
+    {
+      "period": "2022-12",
+      "value": 111.36
+    },
+    {
+      "period": "2023-01",
+      "value": 111.36
+    },
+    {
+      "period": "2023-02",
+      "value": 108.52
+    },
+    {
+      "period": "2023-03",
+      "value": 118.93
+    },
+    {
+      "period": "2023-04",
+      "value": 115.46
+    },
+    {
+      "period": "2023-05",
+      "value": 115.14
+    },
+    {
+      "period": "2023-06",
+      "value": 117.03
+    },
+    {
+      "period": "2023-07",
+      "value": 100.32
+    },
+    {
+      "period": "2023-08",
+      "value": 109.15
+    },
+    {
+      "period": "2023-09",
+      "value": 100.32
+    },
+    {
+      "period": "2023-10",
+      "value": 109.46
+    },
+    {
+      "period": "2023-11",
+      "value": 95.27
+    },
+    {
+      "period": "2023-12",
+      "value": 112.62
+    },
+    {
+      "period": "2024-01",
+      "value": 117.67
+    },
+    {
+      "period": "2024-02",
+      "value": 119.56
+    },
+    {
+      "period": "2024-03",
+      "value": 131.55
+    },
+    {
+      "period": "2024-04",
+      "value": 116.09
+    },
+    {
+      "period": "2024-05",
+      "value": 114.51
+    },
+    {
+      "period": "2024-06",
+      "value": 119.24
+    },
+    {
+      "period": "2024-07",
+      "value": 105.68
+    },
+    {
+      "period": "2024-08",
+      "value": 105.68
+    },
+    {
+      "period": "2024-09",
+      "value": 107.26
+    },
+    {
+      "period": "2024-10",
+      "value": 112.93
+    },
+    {
+      "period": "2024-11",
+      "value": 107.57
+    },
+    {
+      "period": "2024-12",
+      "value": 117.35
+    },
+    {
+      "period": "2025-01",
+      "value": 134.7
+    },
+    {
+      "period": "2025-03",
+      "value": 146.69
+    },
+    {
+      "period": "2025-04",
+      "value": 123.66
+    },
+    {
+      "period": "2025-05",
+      "value": 124.92
+    },
+    {
+      "period": "2025-06",
+      "value": 130.28
+    },
+    {
+      "period": "2025-07",
+      "value": 118.3
+    },
+    {
+      "period": "2025-08",
+      "value": 112.3
+    },
+    {
+      "period": "2025-09",
+      "value": 112.93
+    },
+    {
+      "period": "2025-10",
+      "value": 118.93
+    },
+    {
+      "period": "2025-11",
+      "value": 123.03
+    },
+    {
+      "period": "2025-12",
+      "value": 141.01
+    },
+    {
+      "period": "2026-01",
+      "value": 149.21
+    },
+    {
+      "period": "2026-02",
+      "value": 144.79
+    },
+    {
+      "period": "2026-03",
+      "value": 152.68
+    },
+    {
+      "period": "2026-04",
+      "value": 135.02
+    },
+    {
+      "period": "2026-06",
+      "value": 141.32
+    },
+    {
+      "period": "2026-07",
+      "value": 133.44
+    },
+    {
+      "period": "2026-08",
+      "value": 125.24
+    },
+    {
+      "period": "2026-09",
+      "value": 123.66
+    }
+  ],
+  "source": "ICRA",
+  "status": "available",
+  "status_note": null,
+  "retrieval_skill": null,
+  "source_url": "https://www.icra.in/Research/ViewResearchReport/7184"
+}

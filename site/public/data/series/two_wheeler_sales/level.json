@@ -1,0 +1,291 @@
+{
+  "metric_code": "two_wheeler_sales",
+  "transform": "level",
+  "points": [
+    {
+      "period": "2021-01",
+      "value": 1423907
+    },
+    {
+      "period": "2021-02",
+      "value": 1304743
+    },
+    {
+      "period": "2021-03",
+      "value": 1414368
+    },
+    {
+      "period": "2021-04",
+      "value": 1005938
+    },
+    {
+      "period": "2021-05",
+      "value": 471361
+    },
+    {
+      "period": "2021-06",
+      "value": 1116266
+    },
+    {
+      "period": "2021-07",
+      "value": 1350129
+    },
+    {
+      "period": "2021-08",
+      "value": 1156110
+    },
+    {
+      "period": "2021-09",
+      "value": 1084432
+    },
+    {
+      "period": "2021-10",
+      "value": 1183176
+    },
+    {
+      "period": "2021-11",
+      "value": 1662501
+    },
+    {
+      "period": "2021-12",
+      "value": 1358785
+    },
+    {
+      "period": "2022-01",
+      "value": 1203827
+    },
+    {
+      "period": "2022-02",
+      "value": 1154592
+    },
+    {
+      "period": "2022-03",
+      "value": 1340503
+    },
+    {
+      "period": "2022-04",
+      "value": 1377274
+    },
+    {
+      "period": "2022-05",
+      "value": 1415114
+    },
+    {
+      "period": "2022-06",
+      "value": 1278319
+    },
+    {
+      "period": "2022-07",
+      "value": 1185203
+    },
+    {
+      "period": "2022-08",
+      "value": 1226745
+    },
+    {
+      "period": "2022-09",
+      "value": 1129094
+    },
+    {
+      "period": "2022-10",
+      "value": 1779243
+    },
+    {
+      "period": "2022-11",
+      "value": 1925681
+    },
+    {
+      "period": "2022-12",
+      "value": 1189726
+    },
+    {
+      "period": "2023-01",
+      "value": 1322082
+    },
+    {
+      "period": "2023-02",
+      "value": 1322535
+    },
+    {
+      "period": "2023-03",
+      "value": 1505413
+    },
+    {
+      "period": "2023-04",
+      "value": 1282593
+    },
+    {
+      "period": "2023-05",
+      "value": 1548888
+    },
+    {
+      "period": "2023-06",
+      "value": 1365032
+    },
+    {
+      "period": "2023-07",
+      "value": 1282828
+    },
+    {
+      "period": "2023-08",
+      "value": 1318287
+    },
+    {
+      "period": "2023-09",
+      "value": 1370233
+    },
+    {
+      "period": "2023-10",
+      "value": 1567371
+    },
+    {
+      "period": "2023-11",
+      "value": 2325689
+    },
+    {
+      "period": "2023-12",
+      "value": 1521455
+    },
+    {
+      "period": "2024-01",
+      "value": 1527135
+    },
+    {
+      "period": "2024-02",
+      "value": 1509865
+    },
+    {
+      "period": "2024-03",
+      "value": 1598896
+    },
+    {
+      "period": "2024-04",
+      "value": 1702651
+    },
+    {
+      "period": "2024-05",
+      "value": 1599414
+    },
+    {
+      "period": "2024-06",
+      "value": 1437473
+    },
+    {
+      "period": "2024-07",
+      "value": 1516393
+    },
+    {
+      "period": "2024-08",
+      "value": 1398342
+    },
+    {
+      "period": "2024-09",
+      "value": 1262888
+    },
+    {
+      "period": "2024-10",
+      "value": 2136805
+    },
+    {
+      "period": "2024-11",
+      "value": 2715094
+    },
+    {
+      "period": "2024-12",
+      "value": 1259056
+    },
+    {
+      "period": "2025-01",
+      "value": 1593155
+    },
+    {
+      "period": "2025-02",
+      "value": 1413361
+    },
+    {
+      "period": "2025-03",
+      "value": 1577297
+    },
+    {
+      "period": "2025-04",
+      "value": 1752064
+    },
+    {
+      "period": "2025-05",
+      "value": 1717206
+    },
+    {
+      "period": "2025-06",
+      "value": 1509293
+    },
+    {
+      "period": "2025-07",
+      "value": 1418793
+    },
+    {
+      "period": "2025-08",
+      "value": 1433251
+    },
+    {
+      "period": "2025-09",
+      "value": 1346197
+    },
+    {
+      "period": "2025-10",
+      "value": 3240758
+    },
+    {
+      "period": "2025-11",
+      "value": 2647015
+    },
+    {
+      "period": "2025-12",
+      "value": 1395641
+    },
+    {
+      "period": "2026-01",
+      "value": 1925379
+    },
+    {
+      "period": "2026-02",
+      "value": 1774432
+    },
+    {
+      "period": "2026-03",
+      "value": 2028532
+    },
+    {
+      "period": "2026-04",
+      "value": 1991877
+    },
+    {
+      "period": "2026-05",
+      "value": 1863002
+    },
+    {
+      "period": "2026-06",
+      "value": 1844037
+    },
+    {
+      "period": "2026-07",
+      "value": 1832177
+    },
+    {
+      "period": "2026-08",
+      "value": 1729009
+    },
+    {
+      "period": "2026-09",
+      "value": 1803764
+    },
+    {
+      "period": "2026-10",
+      "value": 2330741
+    }
+  ],
+  "source": "VAHAN registration proxy",
+  "status": "available",
+  "status_note": null,
+  "retrieval_skill": "vahan-dashboard",
+  "source_url": "https://vahan.parivahan.gov.in/vahan4dashboard/"
+}

@@ -10,4 +10,15 @@ coverage/
 *.log
 backend/data/*.sqlite3
 web/data/*.json
+web/data/.fii-refresh.lock
+web/data/fii-flows.json.*.tmp
+web/tsconfig.tsbuildinfo
 artifacts/
+
+# Cloud collector runtime state; published JSON snapshots are intentionally tracked.
+published-data/.fii-refresh.lock
+published-data/.*.tmp
+site/node_modules
+site/.next/
+site/out/
+site/*.tsbuildinfo

@@ -6,7 +6,7 @@ export const dynamic = 'force-dynamic';
 
 export const metadata = {
   title: 'World Metrics',
-  description: 'India monthly macro-industrial tracker',
+  description: 'India macro-industrial tracker and daily equity flows',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <main>
           <h1>World Metrics</h1>
-          <p className="muted">A monthly macro-industrial tracker for India.</p>
+          <p className="muted">India macro-industrial indicators and daily equity flows.</p>
           <nav>
             <Link href="/">Overview</Link>
             <Link href="/power">Power</Link>

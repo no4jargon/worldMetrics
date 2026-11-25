@@ -3,10 +3,11 @@
   "scripts": {
     "dev": "npm --prefix web run dev",
     "dashboard": "npm --prefix web run dev",
-    "build": "WM_AUTO_REFRESH_ON_OPEN=0 npm --prefix web run build",
+    "build": "WM_AUTO_REFRESH_ON_OPEN=0 WM_FII_AUTO_REFRESH=0 npm --prefix web run build",
     "start": "npm --prefix web run start",
     "refresh": "backend/.venv/bin/python -m app.main refresh-dev --months 60",
     "refresh:16": "backend/.venv/bin/python -m app.main refresh-dev --months 16",
+    "refresh:fii": "PYTHONPATH=backend backend/.venv/bin/python -m app.main refresh-fii",
     "reset:data": "./scripts/reset-local-dev-data.sh"
   }
 }

@@ -1,0 +1,10 @@
+{
+  "metric_code": "cement_utilization_est",
+  "transform": "level",
+  "points": [],
+  "source": "Estimated",
+  "status": "missing",
+  "status_note": "Connector ran, but emitted no observation for this metric.",
+  "retrieval_skill": null,
+  "source_url": null
+}

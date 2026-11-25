@@ -1,0 +1,27 @@
+{
+  "metric_code": "cpi_index",
+  "transform": "indexed_100",
+  "points": [
+    {
+      "period": "2026-07",
+      "value": 100
+    },
+    {
+      "period": "2026-08",
+      "value": 100.73
+    },
+    {
+      "period": "2026-09",
+      "value": 101.43
+    },
+    {
+      "period": "2026-10",
+      "value": 101.95
+    }
+  ],
+  "source": "MoSPI",
+  "status": "available",
+  "status_note": null,
+  "retrieval_skill": null,
+  "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335416&lang=1&reg=3"
+}

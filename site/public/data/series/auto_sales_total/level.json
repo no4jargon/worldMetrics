@@ -1,0 +1,10 @@
+{
+  "metric_code": "auto_sales_total",
+  "transform": "level",
+  "points": [],
+  "source": "VAHAN registration proxy",
+  "status": "missing",
+  "status_note": "Connector ran, but emitted no observation for this metric. Use /skill:vahan-dashboard for the manual VAHAN retrieval workflow.",
+  "retrieval_skill": "vahan-dashboard",
+  "source_url": "https://vahan.parivahan.gov.in/vahan4dashboard/"
+}

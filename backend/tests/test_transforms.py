@@ -6,6 +6,19 @@ from app.core.transforms import compute_transforms
 
 
 class ComputeTransformsTests(unittest.TestCase):
+    def test_yoy_uses_same_calendar_period_with_gaps_and_quarters(self):
+        for labels in [('2025-08', '2026-07', '2026-08'),
+                       ('2025-Q2', '2026-Q1', '2026-Q2')]:
+            observations = [
+                CanonicalObservation('example', label, date(int(label[:4]), month, 1),
+                                     date(int(label[:4]), month, 28), value, 'units')
+                for label, month, value in zip(labels, [6, 3, 6] if 'Q' in labels[0] else [8, 7, 8], [100, 200, 120])
+            ]
+            yoy = [item for item in compute_transforms(observations) if item.transform == 'yoy']
+            self.assertEqual(1, len(yoy))
+            self.assertEqual(labels[-1], yoy[0].period_label)
+            self.assertAlmostEqual(20, yoy[0].value)
+
     def test_rolling_3_period_average_is_emitted_for_third_observation(self):
         observations = [
             CanonicalObservation(

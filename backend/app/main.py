@@ -86,7 +86,31 @@ def main(argv: list[str] | None = None) -> None:
     refresh_parser.add_argument('--reset-db', action='store_true')
     refresh_parser.add_argument('--end-month', default=None, help='Optional YYYY-MM month used as the end of the requested window')
 
+    fii_parser = subparsers.add_parser('refresh-fii', help='Refresh daily FII equity cash-market flows only')
+    fii_parser.add_argument('--output-dir', type=Path, default=None)
+    fii_parser.add_argument('--fixture', type=Path, default=None, help='Use a saved source JSON payload')
+
     args = parser.parse_args(argv)
+    if args.command == 'refresh-fii':
+        import json
+        from app.pipelines.fii_refresh import refresh_fii_flows
+
+        try:
+            result = refresh_fii_flows(output_dir=args.output_dir, fixture_path=args.fixture)
+        except Exception as error:
+            print(json.dumps({'status': 'failed', 'error': str(error)}))
+            raise SystemExit(1) from error
+        print(json.dumps({
+            'status': result['refresh_status'],
+            'records': len(result['records']),
+            'latest_date': result['records'][-1]['date'] if result['records'] else None,
+            'error': result.get('error'),
+            'skip_reason': result.get('skip_reason'),
+        }))
+        if result['refresh_status'] == 'failed':
+            raise SystemExit(1)
+        return
+
     if args.command == 'personal-tracker':
         run_personal_tracker(
             output_dir=args.output_dir,

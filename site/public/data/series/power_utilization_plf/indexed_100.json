@@ -1,0 +1,263 @@
+{
+  "metric_code": "power_utilization_plf",
+  "transform": "indexed_100",
+  "points": [
+    {
+      "period": "2021-07",
+      "value": 100
+    },
+    {
+      "period": "2021-08",
+      "value": 100.29
+    },
+    {
+      "period": "2021-09",
+      "value": 102.7
+    },
+    {
+      "period": "2021-10",
+      "value": 104.52
+    },
+    {
+      "period": "2021-11",
+      "value": 105.17
+    },
+    {
+      "period": "2021-12",
+      "value": 106.66
+    },
+    {
+      "period": "2022-01",
+      "value": 108.67
+    },
+    {
+      "period": "2022-02",
+      "value": 110.57
+    },
+    {
+      "period": "2022-03",
+      "value": 112.92
+    },
+    {
+      "period": "2022-04",
+      "value": 138.3
+    },
+    {
+      "period": "2022-05",
+      "value": 125.44
+    },
+    {
+      "period": "2022-06",
+      "value": 121.75
+    },
+    {
+      "period": "2022-07",
+      "value": 120.92
+    },
+    {
+      "period": "2022-08",
+      "value": 121.36
+    },
+    {
+      "period": "2022-09",
+      "value": 119.92
+    },
+    {
+      "period": "2022-10",
+      "value": 119.17
+    },
+    {
+      "period": "2022-11",
+      "value": 118.12
+    },
+    {
+      "period": "2022-12",
+      "value": 118.44
+    },
+    {
+      "period": "2023-01",
+      "value": 119.07
+    },
+    {
+      "period": "2023-02",
+      "value": 120.17
+    },
+    {
+      "period": "2023-03",
+      "value": 121.91
+    },
+    {
+      "period": "2023-04",
+      "value": 149.21
+    },
+    {
+      "period": "2023-05",
+      "value": 144.61
+    },
+    {
+      "period": "2023-06",
+      "value": 143.29
+    },
+    {
+      "period": "2023-07",
+      "value": 137.84
+    },
+    {
+      "period": "2023-08",
+      "value": 134.12
+    },
+    {
+      "period": "2023-09",
+      "value": 132.53
+    },
+    {
+      "period": "2023-10",
+      "value": 129.85
+    },
+    {
+      "period": "2023-11",
+      "value": 129.41
+    },
+    {
+      "period": "2023-12",
+      "value": 129.84
+    },
+    {
+      "period": "2024-01",
+      "value": 130.65
+    },
+    {
+      "period": "2024-02",
+      "value": 131.62
+    },
+    {
+      "period": "2024-03",
+      "value": 132.33
+    },
+    {
+      "period": "2024-04",
+      "value": 158.16
+    },
+    {
+      "period": "2024-05",
+      "value": 157.31
+    },
+    {
+      "period": "2024-06",
+      "value": 155.98
+    },
+    {
+      "period": "2024-07",
+      "value": 151.59
+    },
+    {
+      "period": "2024-08",
+      "value": 147.15
+    },
+    {
+      "period": "2024-09",
+      "value": 144.56
+    },
+    {
+      "period": "2024-10",
+      "value": 144.26
+    },
+    {
+      "period": "2024-11",
+      "value": 143.18
+    },
+    {
+      "period": "2024-12",
+      "value": 142.31
+    },
+    {
+      "period": "2025-01",
+      "value": 142.28
+    },
+    {
+      "period": "2025-02",
+      "value": 143.04
+    },
+    {
+      "period": "2025-03",
+      "value": 143.73
+    },
+    {
+      "period": "2025-04",
+      "value": 151.8
+    },
+    {
+      "period": "2025-05",
+      "value": 145.82
+    },
+    {
+      "period": "2025-06",
+      "value": 154.83
+    },
+    {
+      "period": "2025-07",
+      "value": 140.14
+    },
+    {
+      "period": "2025-08",
+      "value": 131.01
+    },
+    {
+      "period": "2025-09",
+      "value": 126.4
+    },
+    {
+      "period": "2025-10",
+      "value": 137.17
+    },
+    {
+      "period": "2025-11",
+      "value": 130.03
+    },
+    {
+      "period": "2025-12",
+      "value": 130.51
+    },
+    {
+      "period": "2026-01",
+      "value": 136.64
+    },
+    {
+      "period": "2026-02",
+      "value": 152.88
+    },
+    {
+      "period": "2026-03",
+      "value": 152.72
+    },
+    {
+      "period": "2026-04",
+      "value": 149.35
+    },
+    {
+      "period": "2026-05",
+      "value": 147.69
+    },
+    {
+      "period": "2026-06",
+      "value": 137.8
+    },
+    {
+      "period": "2026-07",
+      "value": 129.77
+    },
+    {
+      "period": "2026-08",
+      "value": 127.61
+    },
+    {
+      "period": "2026-09",
+      "value": 127.87
+    }
+  ],
+  "source": "NPP",
+  "status": "available",
+  "status_note": null,
+  "retrieval_skill": null,
+  "source_url": "https://npp.gov.in/public-reports/cea/monthly/generation/18_col_act/2026/SEP//18_col_act-1_2026-SEP.xls"
+}

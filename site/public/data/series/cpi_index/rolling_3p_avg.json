@@ -1,0 +1,19 @@
+{
+  "metric_code": "cpi_index",
+  "transform": "rolling_3p_avg",
+  "points": [
+    {
+      "period": "2026-09",
+      "value": 108.73
+    },
+    {
+      "period": "2026-10",
+      "value": 109.43
+    }
+  ],
+  "source": "MoSPI",
+  "status": "available",
+  "status_note": null,
+  "retrieval_skill": null,
+  "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335416&lang=1&reg=3"
+}

@@ -1,7 +1,19 @@
 import { getReleaseMonitor } from '../lib/data';
+import { getFiiFlows } from '../lib/fii-data';
 
 export default function ReleaseMonitorPage() {
   const rows = getReleaseMonitor();
+  const fii = getFiiFlows();
+  const latestFiiDate = fii.records.at(-1)?.date;
+  rows.push({
+    dataset_code: 'nse_fii_equity_flows',
+    status: fii.error ? (fii.records.length ? 'cached / refresh failed' : 'failed') : fii.refreshing ? 'refreshing' : fii.status,
+    last_successful_period: latestFiiDate || '—',
+    last_release_date: latestFiiDate || '—',
+    cadence: 'daily (trading days)',
+    next_expected_window: 'After the next trading session; publication time varies',
+    error_message: fii.error || 'Provisional combined cash-market flows in ₹ crore.',
+  });
 
   return (
     <div>

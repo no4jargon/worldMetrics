@@ -2,6 +2,7 @@
 
 import { useMemo, useState, type PointerEvent } from 'react';
 import type { OverviewCard } from './lib/data';
+import { formatAxisValue, periodTicks, valueTicks } from './lib/chart-axes';
 
 type ChartPoint = { period: string; value: number };
 type RangeKey = '10Y' | '5Y' | '3Y' | '1Y';
@@ -86,18 +87,21 @@ export function InteractiveCardChart({ points, unit }: { points: OverviewCard['s
     return <div className="chart-empty">No chart data</div>;
   }
 
-  const width = 280;
-  const height = 100;
-  const padding = 10;
+  const width = 360;
+  const height = 164;
+  const padding = { top: 16, right: 14, bottom: 34, left: 60 };
+  const plotWidth = width - padding.left - padding.right;
+  const plotBottom = height - padding.bottom;
+  const plotHeight = plotBottom - padding.top;
   const values = chartPoints.map((point) => point.value);
-  const min = Math.min(...values);
-  const max = Math.max(...values);
-  const rangeValue = max - min || 1;
-  const step = chartPoints.length > 1 ? (width - padding * 2) / (chartPoints.length - 1) : 0;
+  const scale = valueTicks(values);
+  const tickStep = scale.ticks[1] - scale.ticks[0];
+  const y = (value: number) => padding.top + (scale.max - value) / (scale.max - scale.min) * plotHeight;
+  const xTicks = periodTicks(chartPoints.map((point) => point.period));
+  const step = chartPoints.length > 1 ? plotWidth / (chartPoints.length - 1) : 0;
   const coordinates = chartPoints.map((point, index) => {
-    const x = padding + index * step;
-    const y = height - padding - ((point.value - min) / rangeValue) * (height - padding * 2);
-    return { x, y, point };
+    const x = chartPoints.length === 1 ? padding.left + plotWidth / 2 : padding.left + index * step;
+    return { x, y: y(point.value), point };
   });
   const polyline = coordinates.map(({ x, y }) => `${x.toFixed(2)},${y.toFixed(2)}`).join(' ');
   const active = hoverIndex === null ? null : coordinates[hoverIndex];
@@ -113,7 +117,7 @@ export function InteractiveCardChart({ points, unit }: { points: OverviewCard['s
   function nearestIndex(event: PointerEvent<SVGSVGElement>) {
     const rect = event.currentTarget.getBoundingClientRect();
     const relativeX = ((event.clientX - rect.left) / rect.width) * width;
-    return Math.max(0, Math.min(coordinates.length - 1, Math.round((relativeX - padding) / (step || 1))));
+    return Math.max(0, Math.min(coordinates.length - 1, Math.round((relativeX - padding.left) / (step || 1))));
   }
 
   function handlePointerMove(event: PointerEvent<SVGSVGElement>) {
@@ -174,7 +178,7 @@ export function InteractiveCardChart({ points, unit }: { points: OverviewCard['s
         className="mini-chart"
         viewBox={`0 0 ${width} ${height}`}
         role="img"
-        aria-label={`${range} metric chart`}
+        aria-label={`${range} metric chart. Horizontal axis: reporting period. Vertical axis: ${unit}.`}
         onPointerMove={handlePointerMove}
         onPointerDown={handlePointerDown}
         onPointerUp={handlePointerUp}
@@ -184,25 +188,44 @@ export function InteractiveCardChart({ points, unit }: { points: OverviewCard['s
           if (isDragging) clearSelection();
         }}
       >
+        <text x={padding.left - 8} y={10} textAnchor="end" className="chart-axis-unit">{unit === 'percent' ? '%' : unit}</text>
+        {scale.ticks.map((value) => (
+          <g key={value}>
+            <line x1={padding.left} x2={width - padding.right} y1={y(value)} y2={y(value)} className="chart-grid-line" />
+            <line x1={padding.left - 4} x2={padding.left} y1={y(value)} y2={y(value)} className="chart-axis-line" />
+            <text x={padding.left - 8} y={y(value)} textAnchor="end" dominantBaseline="middle" className="chart-axis-label chart-y-tick">
+              {formatAxisValue(value, unit, tickStep)}
+            </text>
+          </g>
+        ))}
+        <path d={`M ${padding.left} ${padding.top} V ${plotBottom} H ${width - padding.right}`} fill="none" className="chart-axis-line" />
+        {xTicks.map(({ index, label }, tickIndex) => (
+          <g key={index}>
+            <line x1={coordinates[index].x} x2={coordinates[index].x} y1={plotBottom} y2={plotBottom + 4} className="chart-axis-line" />
+            <text x={coordinates[index].x} y={plotBottom + 19} className="chart-axis-label chart-x-tick"
+              textAnchor={xTicks.length === 1 ? 'middle' : tickIndex === 0 ? 'start' : tickIndex === xTicks.length - 1 ? 'end' : 'middle'}>{label}</text>
+          </g>
+        ))}
         {selectedStart && selectedEnd ? (
           <rect
             x={selectionLeft}
-            y={padding}
+            y={padding.top}
             width={selectionWidth}
-            height={height - padding * 2}
+            height={plotHeight}
             className="selection-band"
           />
         ) : null}
         <polyline points={polyline} fill="none" stroke="currentColor" strokeWidth="2.5" />
+        {coordinates.length === 1 ? <circle cx={coordinates[0].x} cy={coordinates[0].y} r="3" fill="currentColor" /> : null}
         {selectedStart ? (
-          <line x1={selectedStart.x} x2={selectedStart.x} y1={padding} y2={height - padding} className="selection-line" />
+          <line x1={selectedStart.x} x2={selectedStart.x} y1={padding.top} y2={plotBottom} className="selection-line" />
         ) : null}
         {selectedEnd ? (
-          <line x1={selectedEnd.x} x2={selectedEnd.x} y1={padding} y2={height - padding} className="selection-line end" />
+          <line x1={selectedEnd.x} x2={selectedEnd.x} y1={padding.top} y2={plotBottom} className="selection-line end" />
         ) : null}
         {active ? (
           <>
-            <line x1={active.x} x2={active.x} y1={padding} y2={height - padding} className="hover-line" />
+            <line x1={active.x} x2={active.x} y1={padding.top} y2={plotBottom} className="hover-line" />
             <circle cx={active.x} cy={active.y} r="4" className="hover-dot" />
           </>
         ) : null}

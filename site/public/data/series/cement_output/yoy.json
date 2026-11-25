@@ -1,0 +1,155 @@
+{
+  "metric_code": "cement_output",
+  "transform": "yoy",
+  "points": [
+    {
+      "period": "2023-05",
+      "value": 15.14
+    },
+    {
+      "period": "2023-06",
+      "value": 9.76
+    },
+    {
+      "period": "2023-08",
+      "value": 19.31
+    },
+    {
+      "period": "2023-09",
+      "value": 5.3
+    },
+    {
+      "period": "2023-10",
+      "value": 17.23
+    },
+    {
+      "period": "2023-12",
+      "value": 1.13
+    },
+    {
+      "period": "2024-01",
+      "value": 5.67
+    },
+    {
+      "period": "2024-02",
+      "value": 10.17
+    },
+    {
+      "period": "2024-03",
+      "value": 10.61
+    },
+    {
+      "period": "2024-04",
+      "value": 0.55
+    },
+    {
+      "period": "2024-05",
+      "value": -0.55
+    },
+    {
+      "period": "2024-06",
+      "value": 1.89
+    },
+    {
+      "period": "2024-07",
+      "value": 5.35
+    },
+    {
+      "period": "2024-08",
+      "value": -3.18
+    },
+    {
+      "period": "2024-09",
+      "value": 6.92
+    },
+    {
+      "period": "2024-10",
+      "value": 3.17
+    },
+    {
+      "period": "2024-11",
+      "value": 12.91
+    },
+    {
+      "period": "2024-12",
+      "value": 4.2
+    },
+    {
+      "period": "2025-01",
+      "value": 14.48
+    },
+    {
+      "period": "2025-03",
+      "value": 11.51
+    },
+    {
+      "period": "2025-04",
+      "value": 6.52
+    },
+    {
+      "period": "2025-05",
+      "value": 9.09
+    },
+    {
+      "period": "2025-06",
+      "value": 9.26
+    },
+    {
+      "period": "2025-07",
+      "value": 11.94
+    },
+    {
+      "period": "2025-08",
+      "value": 6.27
+    },
+    {
+      "period": "2025-09",
+      "value": 5.29
+    },
+    {
+      "period": "2025-10",
+      "value": 5.31
+    },
+    {
+      "period": "2025-11",
+      "value": 14.37
+    },
+    {
+      "period": "2025-12",
+      "value": 20.16
+    },
+    {
+      "period": "2026-01",
+      "value": 10.77
+    },
+    {
+      "period": "2026-03",
+      "value": 4.09
+    },
+    {
+      "period": "2026-04",
+      "value": 9.18
+    },
+    {
+      "period": "2026-06",
+      "value": 8.47
+    },
+    {
+      "period": "2026-07",
+      "value": 12.8
+    },
+    {
+      "period": "2026-08",
+      "value": 11.52
+    },
+    {
+      "period": "2026-09",
+      "value": 9.5
+    }
+  ],
+  "source": "ICRA",
+  "status": "available",
+  "status_note": null,
+  "retrieval_skill": null,
+  "source_url": "https://www.icra.in/Research/ViewResearchReport/7184"
+}

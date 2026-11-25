@@ -1,0 +1,23 @@
+{
+  "metric_code": "home_sales_jll",
+  "transform": "change_prev_pct",
+  "points": [
+    {
+      "period": "2026-Q1",
+      "value": 3.91
+    },
+    {
+      "period": "2026-Q2",
+      "value": -4.08
+    },
+    {
+      "period": "2026-Q3",
+      "value": 12.44
+    }
+  ],
+  "source": "JLL India",
+  "status": "available",
+  "status_note": null,
+  "retrieval_skill": null,
+  "source_url": "https://www.equitybulls.com/news/378755/premium-homes-take-centre-stage-as-india-s-housing-market-rebounds-during-januar"
+}

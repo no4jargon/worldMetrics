@@ -9,6 +9,7 @@ rm -f "$ROOT_DIR/web/data/series.json"
 rm -f "$ROOT_DIR/web/data/release-monitor.json"
 rm -f "$ROOT_DIR/web/data/refresh-metadata.json"
 rm -f "$ROOT_DIR/web/data/refresh-status.json"
+rm -f "$ROOT_DIR/web/data/fii-flows.json"
 
 cat <<MSG
 Local dev database and dashboard snapshots removed.

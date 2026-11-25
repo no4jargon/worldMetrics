@@ -1,0 +1,10 @@
+{
+  "metric_code": "power_consumed_total",
+  "transform": "level",
+  "points": [],
+  "source": "Target website",
+  "status": "missing",
+  "status_note": "No connector is registered for this metric.",
+  "retrieval_skill": null,
+  "source_url": null
+}
