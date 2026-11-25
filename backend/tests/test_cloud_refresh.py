@@ -2,6 +2,8 @@ import json
 from datetime import date, datetime, timezone
 from pathlib import Path
 import tempfile
+import sys
+from types import SimpleNamespace
 import unittest
 from unittest.mock import Mock, patch
 from urllib.error import HTTPError, URLError
@@ -9,7 +11,8 @@ from urllib.error import HTTPError, URLError
 from app.core.models import CanonicalObservation, FetchResult
 from app.pipelines.build_snapshots import build_snapshots_from_observations
 from app.pipelines.cloud_refresh import (
-    FII_DATASET, SourceDeadline, _connector_runner, _network_then_browser, _recent_months, load_history, main, refresh_cloud_data,
+    FII_DATASET, SourceDeadline, _connector_runner, _network_then_browser, _recent_months,
+    default_collectors, load_history, main, refresh_cloud_data,
 )
 
 
@@ -262,6 +265,43 @@ class CloudRefreshTests(unittest.TestCase):
             _network_then_browser(primary, browser)()
         primary.assert_called_once()
         browser.assert_called_once()
+
+    def test_default_vahan_uses_official_replacement_api_and_preserves_history_revisions(self):
+        self.seed([
+            observation('two_wheeler_sales', '2024-10', 2136789, segment='domestic'),
+            observation('two_wheeler_sales', '2026-10', 2330741, segment='domestic'),
+            observation('four_wheeler_sales', '2026-10', 559080, segment='domestic'),
+        ], canonical=True)
+        api_url = 'https://analytics.parivahan.gov.in/analytics/publicdashboard/vahandashboard/vahanYearWiseRegistrationComparisonChart'
+        new_two = observation('two_wheeler_sales', '2026-10', 2332786, segment='domestic')
+        new_four = observation('four_wheeler_sales', '2026-10', 561085, segment='domestic')
+        new_two.source_url = new_four.source_url = api_url
+        fetch = Mock(return_value=[new_two, new_four])
+        # No network or obsolete JSF/browser portal is used by this test.
+        with patch.dict(sys.modules, {'app.connectors.vahan_public': SimpleNamespace(fetch_vahan_public=fetch)}):
+            active = default_collectors(NOW.date(), self.data / 'artifacts')
+            result = refresh_cloud_data(self.data, now=NOW, fii_refresher=good_fii, collectors={
+                'vahan_vehicle_registrations': active['vahan_vehicle_registrations'],
+            })
+        fetch.assert_called_once_with(years=[2025, 2026])
+        self.assertEqual('success', result['update_status'])
+        self.assertEqual([2136789, 2332786], [point['value'] for point in result['series']['two_wheeler_sales']['level']['points']])
+        self.assertEqual([{'period': '2026-10', 'value': 561085}], result['series']['four_wheeler_sales']['level']['points'])
+        self.assertEqual(api_url, result['series']['two_wheeler_sales']['level']['source_url'])
+        self.assertEqual(NOW.isoformat(), result['sources']['vahan_vehicle_registrations']['last_success_at'])
+
+    def test_official_vahan_api_failure_keeps_last_verified_figures(self):
+        self.seed([observation('two_wheeler_sales', '2026-10', 2330741, segment='domestic')], canonical=True)
+        fetch = Mock(side_effect=URLError('Official public API temporarily unavailable'))
+        with patch.dict(sys.modules, {'app.connectors.vahan_public': SimpleNamespace(fetch_vahan_public=fetch)}):
+            active = default_collectors(NOW.date(), self.data / 'artifacts')
+            result = refresh_cloud_data(self.data, now=NOW, fii_refresher=good_fii, collectors={
+                'vahan_vehicle_registrations': active['vahan_vehicle_registrations'],
+            })
+        self.assertEqual('partial', result['update_status'])
+        self.assertEqual('failed', result['sources']['vahan_vehicle_registrations']['status'])
+        self.assertEqual([{'period': '2026-10', 'value': 2330741}], result['series']['two_wheeler_sales']['level']['points'])
+        fetch.assert_called_once()
 
     def test_legacy_aggregate_timestamp_keeps_latest_actual_prior_source_success(self):
         self.seed([])

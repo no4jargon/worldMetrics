@@ -236,18 +236,16 @@ def _network_then_browser(primary: Collector, browser: Collector) -> Collector:
 
 def default_collectors(today: date, artifacts: Path) -> dict[str, Collector]:
     from app.connectors.npp_power import NPPMonthlyGenerationConnector
-    from app.connectors.vahan_skill import VAHANDashboardSkillConnector
-    from app.connectors.vahan_browser import VAHANBrowserConnector
+    from app.connectors.vahan_public import fetch_vahan_public
     from app.connectors.published_releases import fetch_cement, fetch_cpi, fetch_jll
 
-    vahan_options = {'live': True, 'years': [today.year - 1, today.year], 'include_current_month': False}
     return {
         'npp_monthly_generation': _connector_runner(NPPMonthlyGenerationConnector(
             months=_recent_months(today), artifact_dir=artifacts / 'npp')),
-        'vahan_vehicle_registrations': _network_then_browser(
-            _connector_runner(VAHANDashboardSkillConnector(**vahan_options),
-                              omit_blank_values=True, network_attempts=2),
-            _connector_runner(VAHANBrowserConnector(**vahan_options), omit_blank_values=True)),
+        # The replacement public dashboard exposes the same national vehicle
+        # categories through its documented-in-page year/month comparison API.
+        # Recheck both years for revisions without discarding older history.
+        'vahan_vehicle_registrations': lambda: fetch_vahan_public(years=[today.year - 1, today.year]),
         'oea_core_industries': fetch_cement,
         'mospi_cpi': fetch_cpi,
         'jll_residential_sales': fetch_jll,
