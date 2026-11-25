@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T10:30:57.383812+00:00",
-  "last_attempt_at": "2026-11-25T10:30:57.383812+00:00",
-  "last_success_at": "2026-11-25T10:30:57.383812+00:00",
+  "generated_at": "2026-11-25T23:32:45.735286+00:00",
+  "last_attempt_at": "2026-11-25T23:32:45.735286+00:00",
+  "last_success_at": "2026-11-25T23:32:45.735286+00:00",
   "overview": {
     "cards": [
       {
@@ -9622,6 +9622,12 @@
         "buy": 23473.67,
         "sell": 17800.68,
         "net": 5672.99
+      },
+      {
+        "date": "2026-11-25",
+        "buy": 24309.87,
+        "sell": 19830.79,
+        "net": 4479.08
       }
     ],
     "source_name": "NSE",
@@ -9629,12 +9635,12 @@
     "scope": "Combined NSE, BSE and MSEI equity cash market",
     "unit": "₹ crore",
     "is_provisional": true,
-    "last_checked_at": "2026-11-25T10:30:57.383812+00:00",
-    "last_success_at": "2026-11-25T10:30:57.383812+00:00",
+    "last_checked_at": "2026-11-25T23:32:45.735286+00:00",
+    "last_success_at": "2026-11-25T23:32:45.735286+00:00",
     "error": null,
     "status": "available",
     "coverage_start": "2025-11-03",
-    "coverage_end": "2026-11-23",
+    "coverage_end": "2026-11-25",
     "refresh_status": "success",
     "data_url": "https://www.nseindia.com/api/fiidiiTradeReact",
     "history_source_url": "https://groww.in/fii-dii-data",
@@ -9698,8 +9704,8 @@
   "sources": {
     "npp_monthly_generation": {
       "status": "success",
-      "last_checked_at": "2026-11-25T10:30:57.383812+00:00",
-      "last_success_at": "2026-11-25T10:30:57.383812+00:00",
+      "last_checked_at": "2026-11-25T23:32:45.735286+00:00",
+      "last_success_at": "2026-11-25T23:32:45.735286+00:00",
       "last_successful_period": "2026-10",
       "error": null
     },
@@ -9712,37 +9718,37 @@
     },
     "oea_core_industries": {
       "status": "success",
-      "last_checked_at": "2026-11-25T10:30:57.383812+00:00",
-      "last_success_at": "2026-11-25T10:30:57.383812+00:00",
+      "last_checked_at": "2026-11-25T23:32:45.735286+00:00",
+      "last_success_at": "2026-11-25T23:32:45.735286+00:00",
       "last_successful_period": "2026-09",
       "error": null
     },
     "jll_residential_sales": {
       "status": "success",
-      "last_checked_at": "2026-11-25T10:30:57.383812+00:00",
-      "last_success_at": "2026-11-25T10:30:57.383812+00:00",
+      "last_checked_at": "2026-11-25T23:32:45.735286+00:00",
+      "last_success_at": "2026-11-25T23:32:45.735286+00:00",
       "last_successful_period": "2026-Q3",
       "error": null
     },
     "vahan_vehicle_registrations": {
       "status": "success",
-      "last_checked_at": "2026-11-25T10:30:57.383812+00:00",
-      "last_success_at": "2026-11-25T10:30:57.383812+00:00",
+      "last_checked_at": "2026-11-25T23:32:45.735286+00:00",
+      "last_success_at": "2026-11-25T23:32:45.735286+00:00",
       "last_successful_period": "2026-10",
       "error": null
     },
     "mospi_cpi": {
       "status": "success",
-      "last_checked_at": "2026-11-25T10:30:57.383812+00:00",
-      "last_success_at": "2026-11-25T10:30:57.383812+00:00",
+      "last_checked_at": "2026-11-25T23:32:45.735286+00:00",
+      "last_success_at": "2026-11-25T23:32:45.735286+00:00",
       "last_successful_period": "2026-10",
       "error": null
     },
     "nse_fii_flows": {
       "status": "success",
-      "last_checked_at": "2026-11-25T10:30:57.383812+00:00",
-      "last_success_at": "2026-11-25T10:30:57.383812+00:00",
-      "last_successful_period": "2026-11-23",
+      "last_checked_at": "2026-11-25T23:32:45.735286+00:00",
+      "last_success_at": "2026-11-25T23:32:45.735286+00:00",
+      "last_successful_period": "2026-11-25",
       "error": null
     }
   },
