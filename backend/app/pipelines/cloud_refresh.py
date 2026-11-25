@@ -19,7 +19,9 @@ import re
 import signal
 import tempfile
 import threading
+import time
 from typing import Any, Callable, Mapping
+from urllib.error import HTTPError, URLError
 from zoneinfo import ZoneInfo
 
 from app.core.metric_registry import CANONICAL_METRIC_UNITS, canonicalize_observations
@@ -192,29 +194,44 @@ def _recent_months(today: date) -> list[str]:
     return [f'{(index - offset) // 12:04d}-{(index - offset) % 12 + 1:02d}' for offset in (2, 1, 0)]
 
 
+def _connector_runner(connector, *, omit_blank_values: bool = False, network_attempts: int = 1) -> Collector:
+    def collect():
+        attempts = max(1, min(3, network_attempts))
+        for attempt in range(attempts):
+            try:
+                raw = connector.fetch()
+                break
+            except (URLError, ConnectionError, TimeoutError) as exc:
+                # HTTPError subclasses URLError: authentication/client errors
+                # need a real fix, while a source's 5xx response may be transient.
+                if isinstance(exc, HTTPError) and not 500 <= exc.code < 600:
+                    raise
+                if attempt == attempts - 1:
+                    raise
+                time.sleep(attempt + 1)
+        if raw.status != 'success':
+            raise ValueError(f'Source returned {raw.status}; no validated release was retrieved.')
+        # Parsing and validation are deliberately outside the retry loop.
+        parsed = connector.parse(raw)
+        # VAHAN's year table includes blank/unpublished month cells as zero.
+        # These national aggregates are not evidence of actual zero sales.
+        if omit_blank_values:
+            parsed = [obs for obs in parsed if obs.value != 0]
+        return [obs if obs.source_url else replace(obs, source_url=raw.source_url) for obs in parsed]
+    return collect
+
+
 def default_collectors(today: date, artifacts: Path) -> dict[str, Collector]:
     from app.connectors.npp_power import NPPMonthlyGenerationConnector
     from app.connectors.vahan_skill import VAHANDashboardSkillConnector
     from app.connectors.published_releases import fetch_cement, fetch_cpi, fetch_jll
 
-    def connector_runner(connector, *, omit_blank_values: bool = False) -> Collector:
-        def collect():
-            raw = connector.fetch()
-            if raw.status != 'success':
-                raise ValueError(f'Source returned {raw.status}; no validated release was retrieved.')
-            parsed = connector.parse(raw)
-            # VAHAN's year table includes blank/unpublished month cells as zero.
-            # These national aggregates are not evidence of actual zero sales.
-            if omit_blank_values:
-                parsed = [obs for obs in parsed if obs.value != 0]
-            return [obs if obs.source_url else replace(obs, source_url=raw.source_url) for obs in parsed]
-        return collect
-
     return {
-        'npp_monthly_generation': connector_runner(NPPMonthlyGenerationConnector(
+        'npp_monthly_generation': _connector_runner(NPPMonthlyGenerationConnector(
             months=_recent_months(today), artifact_dir=artifacts / 'npp')),
-        'vahan_vehicle_registrations': connector_runner(VAHANDashboardSkillConnector(
-            live=True, years=[today.year - 1, today.year], include_current_month=False), omit_blank_values=True),
+        'vahan_vehicle_registrations': _connector_runner(VAHANDashboardSkillConnector(
+            live=True, years=[today.year - 1, today.year], include_current_month=False),
+            omit_blank_values=True, network_attempts=3),
         'oea_core_industries': fetch_cement,
         'mospi_cpi': fetch_cpi,
         'jll_residential_sales': fetch_jll,

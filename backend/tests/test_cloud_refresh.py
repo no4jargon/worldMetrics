@@ -3,12 +3,13 @@ from datetime import date, datetime, timezone
 from pathlib import Path
 import tempfile
 import unittest
-from unittest.mock import patch
+from unittest.mock import Mock, patch
+from urllib.error import HTTPError, URLError
 
-from app.core.models import CanonicalObservation
+from app.core.models import CanonicalObservation, FetchResult
 from app.pipelines.build_snapshots import build_snapshots_from_observations
 from app.pipelines.cloud_refresh import (
-    FII_DATASET, SourceDeadline, _recent_months, load_history, main, refresh_cloud_data,
+    FII_DATASET, SourceDeadline, _connector_runner, _recent_months, load_history, main, refresh_cloud_data,
 )
 
 
@@ -171,6 +172,73 @@ class CloudRefreshTests(unittest.TestCase):
         self.assertEqual('partial', result['update_status'])
         self.assertIn('deadline', result['sources']['npp_monthly_generation']['error'])
         self.assertEqual('success', result['sources'][FII_DATASET]['status'])
+
+    def test_vahan_connection_reset_then_valid_fetch_advances_source_success(self):
+        self.seed([observation('two_wheeler_sales', '2026-09', 200, segment='domestic')])
+        connector = Mock()
+        connector.fetch.side_effect = [URLError(ConnectionResetError('Connection reset by peer')),
+                                      FetchResult('vahan_vehicle_registrations', 'success', 'test', SOURCE_URL, 'json', {})]
+        connector.parse.return_value = [observation('two_wheeler_sales', '2026-10', 250, segment='domestic')]
+        with patch('app.pipelines.cloud_refresh.time.sleep') as sleep:
+            result = refresh_cloud_data(self.data, now=NOW, fii_refresher=good_fii, collectors={
+                'vahan_vehicle_registrations': _connector_runner(connector, network_attempts=3),
+            })
+        self.assertEqual(2, connector.fetch.call_count)
+        connector.parse.assert_called_once()
+        sleep.assert_called_once_with(1)
+        self.assertEqual('success', result['update_status'])
+        self.assertEqual(NOW.isoformat(), result['sources']['vahan_vehicle_registrations']['last_success_at'])
+        self.assertEqual([200, 250], [point['value'] for point in result['series']['two_wheeler_sales']['level']['points']])
+
+    def test_network_retry_budget_exhaustion_retains_verified_history(self):
+        self.seed([observation('two_wheeler_sales', '2026-09', 200, segment='domestic')])
+        connector = Mock()
+        connector.fetch.side_effect = ConnectionResetError('Connection reset by peer')
+        with patch('app.pipelines.cloud_refresh.time.sleep') as sleep:
+            result = refresh_cloud_data(self.data, now=NOW, fii_refresher=good_fii, collectors={
+                'vahan_vehicle_registrations': _connector_runner(connector, network_attempts=3),
+            })
+        self.assertEqual(3, connector.fetch.call_count)
+        self.assertEqual([1, 2], [call.args[0] for call in sleep.call_args_list])
+        connector.parse.assert_not_called()
+        self.assertEqual('partial', result['update_status'])
+        self.assertEqual('2026-09', result['sources']['vahan_vehicle_registrations']['last_successful_period'])
+        self.assertEqual([{'period': '2026-09', 'value': 200}], result['series']['two_wheeler_sales']['level']['points'])
+
+    def test_http_client_errors_and_parser_failures_are_not_retried(self):
+        raw = FetchResult('vahan_vehicle_registrations', 'success', 'test', SOURCE_URL, 'json', {})
+        connector = Mock()
+        connector.fetch.side_effect = HTTPError(SOURCE_URL, 403, 'Forbidden', {}, None)
+        with patch('app.pipelines.cloud_refresh.time.sleep') as sleep:
+            with self.assertRaises(HTTPError):
+                _connector_runner(connector, network_attempts=3)()
+        self.assertEqual(1, connector.fetch.call_count)
+        sleep.assert_not_called()
+        connector = Mock()
+        connector.fetch.return_value = raw
+        connector.parse.side_effect = ValueError('Expected registration table missing')
+        with patch('app.pipelines.cloud_refresh.time.sleep') as sleep:
+            with self.assertRaisesRegex(ValueError, 'table missing'):
+                _connector_runner(connector, network_attempts=3)()
+        self.assertEqual(1, connector.fetch.call_count)
+        sleep.assert_not_called()
+
+    def test_http_server_error_is_retried_but_source_deadline_is_not(self):
+        raw = FetchResult('vahan_vehicle_registrations', 'success', 'test', SOURCE_URL, 'json', {})
+        connector = Mock()
+        connector.fetch.side_effect = [HTTPError(SOURCE_URL, 503, 'Unavailable', {}, None), raw]
+        connector.parse.return_value = [observation('two_wheeler_sales', '2026-10', 250)]
+        with patch('app.pipelines.cloud_refresh.time.sleep'):
+            result = _connector_runner(connector, network_attempts=3)()
+        self.assertEqual(250, result[0].value)
+        self.assertEqual(2, connector.fetch.call_count)
+        connector = Mock()
+        connector.fetch.side_effect = SourceDeadline('Time budget exhausted')
+        with patch('app.pipelines.cloud_refresh.time.sleep') as sleep:
+            with self.assertRaises(SourceDeadline):
+                _connector_runner(connector, network_attempts=3)()
+        self.assertEqual(1, connector.fetch.call_count)
+        sleep.assert_not_called()
 
     def test_legacy_aggregate_timestamp_keeps_latest_actual_prior_source_success(self):
         self.seed([])

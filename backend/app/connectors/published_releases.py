@@ -14,7 +14,7 @@ from calendar import monthrange
 from datetime import date, datetime
 from html import unescape
 from typing import Callable
-from urllib.parse import quote, urljoin, urlsplit, urlunsplit
+from urllib.parse import quote, urlencode, urljoin, urlsplit, urlunsplit
 from urllib.request import Request, urlopen
 
 from app.connectors.icra_cement import ICRACementMonthlyUpdatesConnector
@@ -26,6 +26,7 @@ MOSPI_ORIGIN = 'https://www.mospi.gov.in/'
 MOSPI_RELEASE_API = MOSPI_ORIGIN + 'api/latest-release/get-web-latest-release-list'
 JLL_SITEMAP = 'https://www.jll.com/en-in/sitemap.xml'
 EQUITY_SITEMAP = 'https://www.equitybulls.com/sitemap.xml'
+ICRA_ORIGINS = ('https://www.icra.in', 'https://beta.icra.in')
 MONTH_NAMES = ('January February March April May June July August September October November December').split()
 MONTH_PATTERN = '(?:' + '|'.join(MONTH_NAMES) + ')'
 NUMBER = r'(-?\d[\d,]*(?:\.\d+)?)'
@@ -174,18 +175,72 @@ def parse_cement(contents: bytes | str, source_url: str, released: date | None =
     return _dedupe(output)
 
 
+class _ICRAListing(ICRACementMonthlyUpdatesConnector):
+    """Keep the verification cookie, token and AJAX request on the same origin.
+
+    ICRA maintains both www and beta public frontends. Some cloud egress routes
+    return 404 for one frontend even while the other serves its live listing.
+    """
+
+    def _read_url(self, url: str, opener=None) -> bytes:
+        request = Request(url, headers={'User-Agent': UA})
+        try:
+            with (opener.open(request, timeout=20) if opener else urlopen(request, timeout=20)) as response:
+                return response.read(8 * 1024 * 1024)
+        except Exception as error:
+            raise ValueError(f'ICRA GET {url}: {error}') from error
+
+    def _post_listing_page(self, opener, token: str, page: int) -> str:
+        origin = '{0.scheme}://{0.netloc}'.format(urlsplit(self.source_url))
+        url = f'{origin}/Research/GetSectorResearchReportDetails?IndustryId=1&page={page}&isSpecialComments=false'
+        data = urlencode({'__RequestVerificationToken': token, 'SelectedSector.SectorId': '40',
+                          'ResearchReportCategoryId': '6', 'DateFrom': '', 'DateTo': '', 'KeyWord': ''}).encode()
+        headers = {'User-Agent': UA, 'Referer': self.source_url, 'Origin': origin,
+                   'X-Requested-With': 'XMLHttpRequest', 'Accept': 'text/html, */*; q=0.01',
+                   'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}
+        try:
+            with opener.open(Request(url, data=data, headers=headers), timeout=20) as response:
+                return response.read(8 * 1024 * 1024).decode('utf-8', 'ignore')
+        except Exception as error:
+            raise ValueError(f'ICRA POST {url}: {error}') from error
+
+
+def _cement_reports() -> list:
+    errors = []
+    for origin in ICRA_ORIGINS:
+        try:
+            listing = _ICRAListing(source_url=origin + '/Research/ResearchDetails/1', max_pages=1,
+                                   request_delay_seconds=0)
+            reports = listing._fetch_report_listing()[0]
+            if reports:
+                return reports
+            errors.append(f'{origin}: live cement listing returned no reports')
+        except Exception as error:
+            errors.append(str(error))
+    raise ValueError('ICRA live listing unavailable on both official origins: ' + '; '.join(errors))
+
+
+def _icra_report_urls(url: str) -> list[str]:
+    parts = urlsplit(url)
+    if parts.netloc not in ('www.icra.in', 'beta.icra.in'):
+        raise ValueError('ICRA listing returned a report outside its official origins')
+    alternate = 'beta.icra.in' if parts.netloc == 'www.icra.in' else 'www.icra.in'
+    return [url, urlunsplit((parts.scheme, alternate, parts.path, parts.query, ''))]
+
+
 def fetch_cement(*, reader: Reader = _read, reports_loader=None) -> list[CanonicalObservation]:
     connector = ICRACementMonthlyUpdatesConnector(max_pages=1, request_delay_seconds=0)
-    reports = reports_loader() if reports_loader else connector._fetch_report_listing()[0]
+    reports = reports_loader() if reports_loader else _cement_reports()
     if not reports:
         raise ValueError('ICRA monthly cement listing returned no reports')
     output, errors = [], []
     for report in sorted(reports, key=lambda item: connector._parse_release_date(item.release_date) or date.min, reverse=True)[:3]:
-        try:
-            output.extend(parse_cement(reader(report.report_url), report.report_url,
-                                       connector._parse_release_date(report.release_date)))
-        except Exception as error:
-            errors.append(str(error))
+        for url in _icra_report_urls(report.report_url):
+            try:
+                output.extend(parse_cement(reader(url), url, connector._parse_release_date(report.release_date)))
+                break
+            except Exception as error:
+                errors.append(f'ICRA report {url}: {error}')
     if not output:
         raise ValueError('No ICRA monthly cement report parsed: ' + '; '.join(errors))
     return _dedupe(output)

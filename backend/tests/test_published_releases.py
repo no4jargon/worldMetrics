@@ -1,11 +1,13 @@
 import unittest
 from datetime import date
 from unittest.mock import patch
+from urllib.error import HTTPError
 
 from app.connectors.icra_cement import ICRAReport
 from app.connectors.published_releases import (
     EQUITY_SITEMAP, JLL_SITEMAP, fetch_cement, fetch_cpi, fetch_jll,
     parse_cement, parse_cpi, parse_jll,
+    _ICRAListing,
 )
 
 CPI = '''PRESS RELEASE OF CONSUMER PRICE INDEX ON BASE 2024=100 FOR OCTOBER, 2026
@@ -78,6 +80,57 @@ class PublishedReleaseTests(unittest.TestCase):
         text = 'Cement production volumes in August 2026 to 39.7 million tonnes. Cement production volumes in August 2026 to 40.2 million tonnes.'
         with self.assertRaisesRegex(ValueError, 'Conflicting'):
             parse_cement(text, 'https://www.icra.in/report', date(2026, 9, 30))
+
+    def test_cement_listing_404_uses_fresh_alternate_official_listing(self):
+        attempts = []
+        report = ICRAReport('99999', 'Cement volumes October 2026',
+                            'https://beta.icra.in/Research/ViewResearchReport/99999', '24 Nov 2026', 1)
+        class Listing:
+            def __init__(self, **kwargs):
+                self.url = kwargs['source_url']
+            def _fetch_report_listing(self):
+                attempts.append(self.url)
+                if self.url.startswith('https://www.'):
+                    raise HTTPError(self.url, 404, 'Not Found', {}, None)
+                return [report], [1]
+        with patch('app.connectors.published_releases._ICRAListing', Listing):
+            obs = fetch_cement(reader=lambda url: b'Cement production volumes in October 2026 to 40.5 million metric tonnes.')
+        self.assertEqual(['https://www.icra.in/Research/ResearchDetails/1',
+                          'https://beta.icra.in/Research/ResearchDetails/1'], attempts)
+        self.assertEqual('2026-10', obs[0].period_label)
+        self.assertEqual(report.report_url, obs[0].source_url)
+
+    def test_cement_report_404_tries_same_discovered_report_on_official_alternate(self):
+        report = ICRAReport('99999', 'October cement',
+                            'https://www.icra.in/Research/ViewResearchReport/99999', '24 Nov 2026', 1)
+        def reader(url):
+            if url.startswith('https://www.'):
+                raise HTTPError(url, 404, 'Not Found', {}, None)
+            return b'Cement production volumes to 40.5 million tonnes in October 2026.'
+        obs = fetch_cement(reader=reader, reports_loader=lambda: [report])
+        self.assertEqual('https://beta.icra.in/Research/ViewResearchReport/99999', obs[0].source_url)
+
+    def test_icra_alternate_ajax_keeps_cookie_and_token_on_its_own_origin(self):
+        seen = []
+        class Response:
+            def __enter__(self): return self
+            def __exit__(self, *args): pass
+            def read(self, _limit): return b'<table>fresh listing</table>'
+        class Opener:
+            def open(self, request, timeout):
+                seen.append(request)
+                self.assert_timeout = timeout
+                return Response()
+        listing = _ICRAListing(source_url='https://beta.icra.in/Research/ResearchDetails/1')
+        listing._post_listing_page(Opener(), 'session-csrf-value', 1)
+        self.assertTrue(seen[0].full_url.startswith('https://beta.icra.in/Research/GetSectorResearchReportDetails'))
+        self.assertEqual('https://beta.icra.in', seen[0].get_header('Origin'))
+        self.assertIn(b'__RequestVerificationToken=session-csrf-value', seen[0].data)
+
+    def test_icra_both_live_listings_fail_without_using_cached_report_ids(self):
+        with patch.object(_ICRAListing, '_fetch_report_listing', side_effect=ValueError('HTTP 404')):
+            with self.assertRaisesRegex(ValueError, 'both official origins'):
+                fetch_cement(reader=lambda url: self.fail('Must not read reports without live discovery'))
 
     def test_jll_uses_quarter_sales_table_not_ytd_or_launches(self):
         obs = parse_jll(JLL, 'https://www.equitybulls.com/news/report')
