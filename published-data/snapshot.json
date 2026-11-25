@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T07:20:12.982149+00:00",
-  "last_attempt_at": "2026-11-25T07:20:12.982149+00:00",
-  "last_success_at": "2026-11-25T07:20:12.982149+00:00",
+  "generated_at": "2026-11-25T07:28:52.096946+00:00",
+  "last_attempt_at": "2026-11-25T07:28:52.096946+00:00",
+  "last_success_at": "2026-11-25T07:28:52.096946+00:00",
   "overview": {
     "cards": [
       {
@@ -792,7 +792,7 @@
         "latest_retrieved_for": null,
         "segment": null,
         "status": "missing",
-        "status_note": "Connector failed: HTTPError: HTTP Error 404: Not Found",
+        "status_note": "Connector failed: ValueError: No ICRA monthly cement report parsed: ICRA report https://beta.icra.in/Research/ViewResearchReport/6798: No explicit named-calendar-month cement production level found; ICRA report https://www.icra.in/Research/ViewResearchReport/6798: No explicit named-calendar-month cement production level found; ICRA report https://beta.icra.in/Research/ViewResearchReport/6748: No explicit named-calendar-month cement production level found; ICRA report https://www.icra.in/Research/ViewResearchReport/6748: No explicit named-calendar-month cement production level found; ICRA report https://beta.icr",
         "retrieval_skill": null,
         "source_url": null
       },
@@ -5034,7 +5034,7 @@
         "points": [],
         "source": "Estimated",
         "status": "missing",
-        "status_note": "Connector failed: HTTPError: HTTP Error 404: Not Found",
+        "status_note": "Connector failed: ValueError: No ICRA monthly cement report parsed: ICRA report https://beta.icra.in/Research/ViewResearchReport/6798: No explicit named-calendar-month cement production level found; ICRA report https://www.icra.in/Research/ViewResearchReport/6798: No explicit named-calendar-month cement production level found; ICRA report https://beta.icra.in/Research/ViewResearchReport/6748: No explicit named-calendar-month cement production level found; ICRA report https://www.icra.in/Research/ViewResearchReport/6748: No explicit named-calendar-month cement production level found; ICRA report https://beta.icr",
         "retrieval_skill": null,
         "source_url": null
       }
@@ -8244,7 +8244,7 @@
       "cadence": "monthly",
       "next_expected_window": "based on release_lag_days metadata",
       "observations_emitted": 0,
-      "error_message": "HTTPError: HTTP Error 404: Not Found"
+      "error_message": "ValueError: No ICRA monthly cement report parsed: ICRA report https://beta.icra.in/Research/ViewResearchReport/6798: No explicit named-calendar-month cement production level found; ICRA report https://www.icra.in/Research/ViewResearchReport/6798: No explicit named-calendar-month cement production level found; ICRA report https://beta.icra.in/Research/ViewResearchReport/6748: No explicit named-calendar-month cement production level found; ICRA report https://www.icra.in/Research/ViewResearchReport/6748: No explicit named-calendar-month cement production level found; ICRA report https://beta.icr"
     },
     {
       "dataset_code": "jll_residential_sales",
@@ -9629,8 +9629,8 @@
     "scope": "Combined NSE, BSE and MSEI equity cash market",
     "unit": "₹ crore",
     "is_provisional": true,
-    "last_checked_at": "2026-11-25T07:20:12.982149+00:00",
-    "last_success_at": "2026-11-25T07:20:12.982149+00:00",
+    "last_checked_at": "2026-11-25T07:28:52.096946+00:00",
+    "last_success_at": "2026-11-25T07:28:52.096946+00:00",
     "error": null,
     "status": "available",
     "coverage_start": "2025-11-03",
@@ -9698,8 +9698,8 @@
   "sources": {
     "npp_monthly_generation": {
       "status": "success",
-      "last_checked_at": "2026-11-25T07:20:12.982149+00:00",
-      "last_success_at": "2026-11-25T07:20:12.982149+00:00",
+      "last_checked_at": "2026-11-25T07:28:52.096946+00:00",
+      "last_success_at": "2026-11-25T07:28:52.096946+00:00",
       "last_successful_period": "2026-10",
       "error": null
     },
@@ -9712,36 +9712,36 @@
     },
     "oea_core_industries": {
       "status": "failed",
-      "last_checked_at": "2026-11-25T07:20:12.982149+00:00",
+      "last_checked_at": "2026-11-25T07:28:52.096946+00:00",
       "last_success_at": "2026-11-18T11:36:55.980932+00:00",
       "last_successful_period": "2026-09",
-      "error": "HTTPError: HTTP Error 404: Not Found"
+      "error": "ValueError: No ICRA monthly cement report parsed: ICRA report https://beta.icra.in/Research/ViewResearchReport/6798: No explicit named-calendar-month cement production level found; ICRA report https://www.icra.in/Research/ViewResearchReport/6798: No explicit named-calendar-month cement production level found; ICRA report https://beta.icra.in/Research/ViewResearchReport/6748: No explicit named-calendar-month cement production level found; ICRA report https://www.icra.in/Research/ViewResearchReport/6748: No explicit named-calendar-month cement production level found; ICRA report https://beta.icr"
     },
     "jll_residential_sales": {
       "status": "success",
-      "last_checked_at": "2026-11-25T07:20:12.982149+00:00",
-      "last_success_at": "2026-11-25T07:20:12.982149+00:00",
+      "last_checked_at": "2026-11-25T07:28:52.096946+00:00",
+      "last_success_at": "2026-11-25T07:28:52.096946+00:00",
       "last_successful_period": "2026-Q3",
       "error": null
     },
     "vahan_vehicle_registrations": {
       "status": "failed",
-      "last_checked_at": "2026-11-25T07:20:12.982149+00:00",
+      "last_checked_at": "2026-11-25T07:28:52.096946+00:00",
       "last_success_at": "2026-11-18T11:36:55.980932+00:00",
       "last_successful_period": "2026-10",
       "error": "URLError: <urlopen error [Errno 104] Connection reset by peer>"
     },
     "mospi_cpi": {
       "status": "success",
-      "last_checked_at": "2026-11-25T07:20:12.982149+00:00",
-      "last_success_at": "2026-11-25T07:20:12.982149+00:00",
+      "last_checked_at": "2026-11-25T07:28:52.096946+00:00",
+      "last_success_at": "2026-11-25T07:28:52.096946+00:00",
       "last_successful_period": "2026-10",
       "error": null
     },
     "nse_fii_flows": {
       "status": "success",
-      "last_checked_at": "2026-11-25T07:20:12.982149+00:00",
-      "last_success_at": "2026-11-25T07:20:12.982149+00:00",
+      "last_checked_at": "2026-11-25T07:28:52.096946+00:00",
+      "last_success_at": "2026-11-25T07:28:52.096946+00:00",
       "last_successful_period": "2026-11-23",
       "error": null
     }

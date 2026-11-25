@@ -787,7 +787,7 @@
       "latest_retrieved_for": null,
       "segment": null,
       "status": "missing",
-      "status_note": "Connector failed: HTTPError: HTTP Error 404: Not Found",
+      "status_note": "Connector failed: ValueError: No ICRA monthly cement report parsed: ICRA report https://beta.icra.in/Research/ViewResearchReport/6798: No explicit named-calendar-month cement production level found; ICRA report https://www.icra.in/Research/ViewResearchReport/6798: No explicit named-calendar-month cement production level found; ICRA report https://beta.icra.in/Research/ViewResearchReport/6748: No explicit named-calendar-month cement production level found; ICRA report https://www.icra.in/Research/ViewResearchReport/6748: No explicit named-calendar-month cement production level found; ICRA report https://beta.icr",
       "retrieval_skill": null,
       "source_url": null
     },
