@@ -1,12 +1,9 @@
 'use client';
 
 import { createContext, useContext, useEffect, useRef, useState, type ReactNode } from 'react';
-import { validateSnapshot, type SnapshotBundle } from './lib/live-snapshot';
+import type { SnapshotBundle } from './lib/live-snapshot';
+import { fetchPublishedSnapshot, SNAPSHOT_CHECK_INTERVAL_MS } from './lib/fetch-snapshot';
 import { retainLatestSnapshot } from './lib/snapshot-retention';
-
-export const LIVE_SNAPSHOT_URL = 'https://raw.githubusercontent.com/no4jargon/worldMetrics/main/published-data/snapshot.json';
-const CHECK_INTERVAL_MS = 15 * 60 * 1000;
-const MAX_SNAPSHOT_BYTES = 3 * 1024 * 1024;
 
 type SnapshotContext = {
   snapshot: SnapshotBundle;
@@ -16,28 +13,6 @@ type SnapshotContext = {
   now: number | null;
 };
 const SnapshotContext = createContext<SnapshotContext | null>(null);
-
-async function readBoundedResponse(response: Response): Promise<string> {
-  const declaredSize = Number(response.headers.get('content-length'));
-  if (Number.isFinite(declaredSize) && declaredSize > MAX_SNAPSHOT_BYTES) throw new Error('Update exceeds size limit');
-  if (!response.body) throw new Error('Update has no body');
-  const reader = response.body.getReader();
-  const decoder = new TextDecoder();
-  let bytes = 0;
-  let text = '';
-  try {
-    while (true) {
-      const { done, value } = await reader.read();
-      if (done) break;
-      bytes += value.byteLength;
-      if (bytes > MAX_SNAPSHOT_BYTES) { await reader.cancel(); throw new Error('Update exceeds size limit'); }
-      text += decoder.decode(value, { stream: true });
-    }
-    return text + decoder.decode();
-  } finally {
-    reader.releaseLock();
-  }
-}
 
 export function LiveSnapshotProvider({ initialSnapshot, children }: { initialSnapshot: SnapshotBundle; children: ReactNode }) {
   const [snapshot, setSnapshot] = useState(initialSnapshot);
@@ -59,13 +34,8 @@ export function LiveSnapshotProvider({ initialSnapshot, children }: { initialSna
       setNow(lastAttempt);
       setChecking(true);
       controller = new AbortController();
-      const timeout = window.setTimeout(() => controller?.abort(), 15_000);
       try {
-        // A bounded 15-minute cache key avoids a fresh CDN URL for every render.
-        const url = `${LIVE_SNAPSHOT_URL}?window=${Math.floor(lastAttempt / CHECK_INTERVAL_MS)}`;
-        const response = await fetch(url, { cache: 'no-store', signal: controller.signal, credentials: 'omit' });
-        if (!response.ok) throw new Error('Published update unavailable');
-        const incoming = validateSnapshot(JSON.parse(await readBoundedResponse(response)), new Date(), current.current);
+        const incoming = await fetchPublishedSnapshot(current.current, { signal: controller.signal, now: new Date(lastAttempt) });
         if (!active) return;
         const next = retainLatestSnapshot(current.current, incoming);
         current.current = next;
@@ -74,16 +44,15 @@ export function LiveSnapshotProvider({ initialSnapshot, children }: { initialSna
       } catch {
         if (active) setFetchError(true);
       } finally {
-        clearTimeout(timeout);
         inFlight = false;
         if (active) { setChecking(false); setNow(Date.now()); setCheckedAt(new Date().toISOString()); }
       }
     }
     function onVisible() {
-      if (document.visibilityState === 'visible' && Date.now() - lastAttempt >= CHECK_INTERVAL_MS) void refresh();
+      if (document.visibilityState === 'visible' && Date.now() - lastAttempt >= SNAPSHOT_CHECK_INTERVAL_MS) void refresh();
     }
     void refresh();
-    const timer = window.setInterval(() => { void refresh(); }, CHECK_INTERVAL_MS);
+    const timer = window.setInterval(() => { void refresh(); }, SNAPSHOT_CHECK_INTERVAL_MS);
     document.addEventListener('visibilitychange', onVisible);
     return () => { active = false; clearInterval(timer); controller?.abort(); document.removeEventListener('visibilitychange', onVisible); };
   }, []);

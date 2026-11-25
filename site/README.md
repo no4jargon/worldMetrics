@@ -6,7 +6,9 @@ validated bundle from the public `no4jargon/worldMetrics` repository:
 `https://raw.githubusercontent.com/no4jargon/worldMetrics/main/published-data/snapshot.json`
 
 GitHub Actions checks published sources daily at 20:30 Asia/Kolkata. The browser checks
-on load and every 15 minutes while visible. Provider state is shared by all pages,
+on load and every 15 minutes while visible. If the raw-data CDN is slow or unavailable,
+it tries the public GitHub content API with the same validation and no credentials.
+Provider state is shared by all pages,
 charts, source statuses, and current-data downloads; a reload is not required.
 
 Incoming bundles are bounded and validated before use. Future, older, invalid, or
