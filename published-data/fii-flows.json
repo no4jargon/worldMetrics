@@ -1349,6 +1349,12 @@
       "buy": 24309.87,
       "sell": 19830.79,
       "net": 4479.08
+    },
+    {
+      "date": "2026-11-26",
+      "buy": 17879.74,
+      "sell": 12036.41,
+      "net": 5843.33
     }
   ],
   "source_name": "NSE",
@@ -1356,12 +1362,12 @@
   "scope": "Combined NSE, BSE and MSEI equity cash market",
   "unit": "₹ crore",
   "is_provisional": true,
-  "last_checked_at": "2026-11-25T23:32:45.735286+00:00",
-  "last_success_at": "2026-11-25T23:32:45.735286+00:00",
+  "last_checked_at": "2026-11-26T23:39:55.454211+00:00",
+  "last_success_at": "2026-11-26T23:39:55.454211+00:00",
   "error": null,
   "status": "available",
   "coverage_start": "2025-11-03",
-  "coverage_end": "2026-11-25",
+  "coverage_end": "2026-11-26",
   "refresh_status": "success",
   "data_url": "https://www.nseindia.com/api/fiidiiTradeReact",
   "history_source_url": "https://groww.in/fii-dii-data",

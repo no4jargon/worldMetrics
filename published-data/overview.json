@@ -844,11 +844,11 @@
       "metric_code": "two_wheeler_sales",
       "title": "Two-wheeler sales",
       "latest_period": "2026-10",
-      "latest_value": 2332786.0,
+      "latest_value": 2333039.0,
       "unit": "units",
-      "change_prev": 29.31,
+      "change_prev": 29.32,
       "change_prev_unit": "percent",
-      "change_yoy": -28.02,
+      "change_yoy": -28.01,
       "change_yoy_unit": "percent",
       "sparkline": [
         {
@@ -1053,7 +1053,7 @@
         },
         {
           "period": "2025-03",
-          "value": 1577270.0
+          "value": 1577271.0
         },
         {
           "period": "2025-04",
@@ -1081,35 +1081,35 @@
         },
         {
           "period": "2025-10",
-          "value": 3240674.0
+          "value": 3240675.0
         },
         {
           "period": "2025-11",
-          "value": 2646012.0
+          "value": 2646014.0
         },
         {
           "period": "2025-12",
-          "value": 1395550.0
+          "value": 1395552.0
         },
         {
           "period": "2026-01",
-          "value": 1925351.0
+          "value": 1925352.0
         },
         {
           "period": "2026-02",
-          "value": 1774397.0
+          "value": 1774398.0
         },
         {
           "period": "2026-03",
-          "value": 2028493.0
+          "value": 2028498.0
         },
         {
           "period": "2026-04",
-          "value": 1991825.0
+          "value": 1991826.0
         },
         {
           "period": "2026-05",
-          "value": 1862957.0
+          "value": 1862958.0
         },
         {
           "period": "2026-06",
@@ -1121,15 +1121,15 @@
         },
         {
           "period": "2026-08",
-          "value": 1729048.0
+          "value": 1729057.0
         },
         {
           "period": "2026-09",
-          "value": 1804000.0
+          "value": 1804038.0
         },
         {
           "period": "2026-10",
-          "value": 2332786.0
+          "value": 2333039.0
         }
       ],
       "source": "VAHAN registration proxy",
@@ -1145,11 +1145,11 @@
       "metric_code": "four_wheeler_sales",
       "title": "Four-wheeler sales",
       "latest_period": "2026-10",
-      "latest_value": 561085.0,
+      "latest_value": 561363.0,
       "unit": "units",
-      "change_prev": 16.42,
+      "change_prev": 16.47,
       "change_prev_unit": "percent",
-      "change_yoy": -10.65,
+      "change_yoy": -10.6,
       "change_yoy_unit": "percent",
       "sparkline": [
         {
@@ -1346,7 +1346,7 @@
         },
         {
           "period": "2025-01",
-          "value": 558880.0
+          "value": 558881.0
         },
         {
           "period": "2025-02",
@@ -1354,7 +1354,7 @@
         },
         {
           "period": "2025-03",
-          "value": 419372.0
+          "value": 419373.0
         },
         {
           "period": "2025-04",
@@ -1362,15 +1362,15 @@
         },
         {
           "period": "2025-05",
-          "value": 372716.0
+          "value": 372717.0
         },
         {
           "period": "2025-06",
-          "value": 371864.0
+          "value": 371862.0
         },
         {
           "period": "2025-07",
-          "value": 406733.0
+          "value": 406734.0
         },
         {
           "period": "2025-08",
@@ -1382,27 +1382,27 @@
         },
         {
           "period": "2025-10",
-          "value": 627928.0
+          "value": 627929.0
         },
         {
           "period": "2025-11",
-          "value": 524291.0
+          "value": 524296.0
         },
         {
           "period": "2025-12",
-          "value": 492200.0
+          "value": 492201.0
         },
         {
           "period": "2026-01",
-          "value": 630404.0
+          "value": 630407.0
         },
         {
           "period": "2026-02",
-          "value": 473794.0
+          "value": 473793.0
         },
         {
           "period": "2026-03",
-          "value": 518267.0
+          "value": 518270.0
         },
         {
           "period": "2026-04",
@@ -1410,27 +1410,27 @@
         },
         {
           "period": "2026-05",
-          "value": 467434.0
+          "value": 467433.0
         },
         {
           "period": "2026-06",
-          "value": 489654.0
+          "value": 489658.0
         },
         {
           "period": "2026-07",
-          "value": 508416.0
+          "value": 508422.0
         },
         {
           "period": "2026-08",
-          "value": 467097.0
+          "value": 467103.0
         },
         {
           "period": "2026-09",
-          "value": 481950.0
+          "value": 481982.0
         },
         {
           "period": "2026-10",
-          "value": 561085.0
+          "value": 561363.0
         }
       ],
       "source": "VAHAN registration proxy",
