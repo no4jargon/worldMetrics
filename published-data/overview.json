@@ -557,12 +557,12 @@
     {
       "metric_code": "cement_output",
       "title": "Cement output",
-      "latest_period": "2026-09",
-      "latest_value": 39.2,
+      "latest_period": "2026-10",
+      "latest_value": 43.5,
       "unit": "MT",
-      "change_prev": -1.26,
+      "change_prev": 10.97,
       "change_prev_unit": "percent",
-      "change_yoy": 9.5,
+      "change_yoy": 15.38,
       "change_yoy_unit": "percent",
       "sparkline": [
         {
@@ -760,16 +760,20 @@
         {
           "period": "2026-09",
           "value": 39.2
+        },
+        {
+          "period": "2026-10",
+          "value": 43.5
         }
       ],
       "source": "ICRA",
-      "release_date": "2026-10-28",
-      "latest_retrieved_for": "2026-09-30",
+      "release_date": "2026-11-27",
+      "latest_retrieved_for": "2026-10-31",
       "segment": null,
       "status": "available",
       "status_note": null,
       "retrieval_skill": null,
-      "source_url": "https://www.icra.in/Research/ViewResearchReport/7184"
+      "source_url": "https://www.icra.in/Research/ViewResearchReport/7216"
     },
     {
       "metric_code": "cement_utilization_est",
@@ -799,7 +803,7 @@
       "unit": "units",
       "change_prev": 12.44,
       "change_prev_unit": "percent",
-      "change_yoy": 12.07,
+      "change_yoy": 12.06,
       "change_yoy_unit": "percent",
       "sparkline": [
         {
@@ -816,7 +820,7 @@
         },
         {
           "period": "2025-Q3",
-          "value": 67974.0
+          "value": 67980.0
         },
         {
           "period": "2026-Q1",
@@ -844,11 +848,11 @@
       "metric_code": "two_wheeler_sales",
       "title": "Two-wheeler sales",
       "latest_period": "2026-10",
-      "latest_value": 2333039.0,
+      "latest_value": 2333317.0,
       "unit": "units",
-      "change_prev": 29.32,
+      "change_prev": 29.33,
       "change_prev_unit": "percent",
-      "change_yoy": -28.01,
+      "change_yoy": -28.0,
       "change_yoy_unit": "percent",
       "sparkline": [
         {
@@ -1081,7 +1085,7 @@
         },
         {
           "period": "2025-10",
-          "value": 3240675.0
+          "value": 3240678.0
         },
         {
           "period": "2025-11",
@@ -1089,15 +1093,15 @@
         },
         {
           "period": "2025-12",
-          "value": 1395552.0
+          "value": 1395553.0
         },
         {
           "period": "2026-01",
-          "value": 1925352.0
+          "value": 1925350.0
         },
         {
           "period": "2026-02",
-          "value": 1774398.0
+          "value": 1774400.0
         },
         {
           "period": "2026-03",
@@ -1105,7 +1109,7 @@
         },
         {
           "period": "2026-04",
-          "value": 1991826.0
+          "value": 1991828.0
         },
         {
           "period": "2026-05",
@@ -1117,19 +1121,19 @@
         },
         {
           "period": "2026-07",
-          "value": 1832176.0
+          "value": 1832182.0
         },
         {
           "period": "2026-08",
-          "value": 1729057.0
+          "value": 1729064.0
         },
         {
           "period": "2026-09",
-          "value": 1804038.0
+          "value": 1804090.0
         },
         {
           "period": "2026-10",
-          "value": 2333039.0
+          "value": 2333317.0
         }
       ],
       "source": "VAHAN registration proxy",
@@ -1145,11 +1149,11 @@
       "metric_code": "four_wheeler_sales",
       "title": "Four-wheeler sales",
       "latest_period": "2026-10",
-      "latest_value": 561363.0,
+      "latest_value": 561743.0,
       "unit": "units",
-      "change_prev": 16.47,
+      "change_prev": 16.54,
       "change_prev_unit": "percent",
-      "change_yoy": -10.6,
+      "change_yoy": -10.54,
       "change_yoy_unit": "percent",
       "sparkline": [
         {
@@ -1346,15 +1350,15 @@
         },
         {
           "period": "2025-01",
-          "value": 558881.0
+          "value": 558884.0
         },
         {
           "period": "2025-02",
-          "value": 366482.0
+          "value": 366481.0
         },
         {
           "period": "2025-03",
-          "value": 419373.0
+          "value": 419371.0
         },
         {
           "period": "2025-04",
@@ -1362,35 +1366,35 @@
         },
         {
           "period": "2025-05",
-          "value": 372717.0
+          "value": 372716.0
         },
         {
           "period": "2025-06",
-          "value": 371862.0
+          "value": 371863.0
         },
         {
           "period": "2025-07",
-          "value": 406734.0
+          "value": 406735.0
         },
         {
           "period": "2025-08",
-          "value": 402015.0
+          "value": 402014.0
         },
         {
           "period": "2025-09",
-          "value": 366509.0
+          "value": 366511.0
         },
         {
           "period": "2025-10",
-          "value": 627929.0
+          "value": 627930.0
         },
         {
           "period": "2025-11",
-          "value": 524296.0
+          "value": 524301.0
         },
         {
           "period": "2025-12",
-          "value": 492201.0
+          "value": 492207.0
         },
         {
           "period": "2026-01",
@@ -1398,7 +1402,7 @@
         },
         {
           "period": "2026-02",
-          "value": 473793.0
+          "value": 473795.0
         },
         {
           "period": "2026-03",
@@ -1410,27 +1414,27 @@
         },
         {
           "period": "2026-05",
-          "value": 467433.0
+          "value": 467437.0
         },
         {
           "period": "2026-06",
-          "value": 489658.0
+          "value": 489663.0
         },
         {
           "period": "2026-07",
-          "value": 508422.0
+          "value": 508431.0
         },
         {
           "period": "2026-08",
-          "value": 467103.0
+          "value": 467116.0
         },
         {
           "period": "2026-09",
-          "value": 481982.0
+          "value": 482026.0
         },
         {
           "period": "2026-10",
-          "value": 561363.0
+          "value": 561743.0
         }
       ],
       "source": "VAHAN registration proxy",
@@ -1480,5 +1484,5 @@
       "source_url": "https://www.mospi.gov.in/uploads/latestReleases/latest_release_1794478693814_7c90e80f-9e64-4aa4-b44a-1dc727b0fed9_Press_Release_of_CPI_for_October_2026_.pdf"
     }
   ],
-  "summary": "Power is accelerating, cement softened, housing remains firm, two-wheelers improved, four-wheelers improved, inflation ticked up."
+  "summary": "Power is accelerating, cement is accelerating, housing remains firm, two-wheelers improved, four-wheelers improved, inflation ticked up."
 }

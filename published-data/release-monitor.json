@@ -22,8 +22,8 @@
   {
     "dataset_code": "oea_core_industries",
     "status": "success",
-    "last_successful_period": "2026-09",
-    "last_release_date": "2026-10-28",
+    "last_successful_period": "2026-10",
+    "last_release_date": "2026-11-27",
     "cadence": "monthly",
     "next_expected_window": "based on release_lag_days metadata",
     "observations_emitted": 3,
@@ -36,7 +36,7 @@
     "last_release_date": "2026-11-08",
     "cadence": "quarterly",
     "next_expected_window": "based on release_lag_days metadata",
-    "observations_emitted": 6,
+    "observations_emitted": 5,
     "error_message": null
   },
   {

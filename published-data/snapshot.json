@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T23:39:55.454211+00:00",
-  "last_attempt_at": "2026-11-26T23:39:55.454211+00:00",
-  "last_success_at": "2026-11-26T23:39:55.454211+00:00",
+  "generated_at": "2026-11-27T23:21:13.041615+00:00",
+  "last_attempt_at": "2026-11-27T23:21:13.041615+00:00",
+  "last_success_at": "2026-11-27T23:21:13.041615+00:00",
   "overview": {
     "cards": [
       {
@@ -562,12 +562,12 @@
       {
         "metric_code": "cement_output",
         "title": "Cement output",
-        "latest_period": "2026-09",
-        "latest_value": 39.2,
+        "latest_period": "2026-10",
+        "latest_value": 43.5,
         "unit": "MT",
-        "change_prev": -1.26,
+        "change_prev": 10.97,
         "change_prev_unit": "percent",
-        "change_yoy": 9.5,
+        "change_yoy": 15.38,
         "change_yoy_unit": "percent",
         "sparkline": [
           {
@@ -765,16 +765,20 @@
           {
             "period": "2026-09",
             "value": 39.2
+          },
+          {
+            "period": "2026-10",
+            "value": 43.5
           }
         ],
         "source": "ICRA",
-        "release_date": "2026-10-28",
-        "latest_retrieved_for": "2026-09-30",
+        "release_date": "2026-11-27",
+        "latest_retrieved_for": "2026-10-31",
         "segment": null,
         "status": "available",
         "status_note": null,
         "retrieval_skill": null,
-        "source_url": "https://www.icra.in/Research/ViewResearchReport/7184"
+        "source_url": "https://www.icra.in/Research/ViewResearchReport/7216"
       },
       {
         "metric_code": "cement_utilization_est",
@@ -804,7 +808,7 @@
         "unit": "units",
         "change_prev": 12.44,
         "change_prev_unit": "percent",
-        "change_yoy": 12.07,
+        "change_yoy": 12.06,
         "change_yoy_unit": "percent",
         "sparkline": [
           {
@@ -821,7 +825,7 @@
           },
           {
             "period": "2025-Q3",
-            "value": 67974.0
+            "value": 67980.0
           },
           {
             "period": "2026-Q1",
@@ -849,11 +853,11 @@
         "metric_code": "two_wheeler_sales",
         "title": "Two-wheeler sales",
         "latest_period": "2026-10",
-        "latest_value": 2333039.0,
+        "latest_value": 2333317.0,
         "unit": "units",
-        "change_prev": 29.32,
+        "change_prev": 29.33,
         "change_prev_unit": "percent",
-        "change_yoy": -28.01,
+        "change_yoy": -28.0,
         "change_yoy_unit": "percent",
         "sparkline": [
           {
@@ -1086,7 +1090,7 @@
           },
           {
             "period": "2025-10",
-            "value": 3240675.0
+            "value": 3240678.0
           },
           {
             "period": "2025-11",
@@ -1094,15 +1098,15 @@
           },
           {
             "period": "2025-12",
-            "value": 1395552.0
+            "value": 1395553.0
           },
           {
             "period": "2026-01",
-            "value": 1925352.0
+            "value": 1925350.0
           },
           {
             "period": "2026-02",
-            "value": 1774398.0
+            "value": 1774400.0
           },
           {
             "period": "2026-03",
@@ -1110,7 +1114,7 @@
           },
           {
             "period": "2026-04",
-            "value": 1991826.0
+            "value": 1991828.0
           },
           {
             "period": "2026-05",
@@ -1122,19 +1126,19 @@
           },
           {
             "period": "2026-07",
-            "value": 1832176.0
+            "value": 1832182.0
           },
           {
             "period": "2026-08",
-            "value": 1729057.0
+            "value": 1729064.0
           },
           {
             "period": "2026-09",
-            "value": 1804038.0
+            "value": 1804090.0
           },
           {
             "period": "2026-10",
-            "value": 2333039.0
+            "value": 2333317.0
           }
         ],
         "source": "VAHAN registration proxy",
@@ -1150,11 +1154,11 @@
         "metric_code": "four_wheeler_sales",
         "title": "Four-wheeler sales",
         "latest_period": "2026-10",
-        "latest_value": 561363.0,
+        "latest_value": 561743.0,
         "unit": "units",
-        "change_prev": 16.47,
+        "change_prev": 16.54,
         "change_prev_unit": "percent",
-        "change_yoy": -10.6,
+        "change_yoy": -10.54,
         "change_yoy_unit": "percent",
         "sparkline": [
           {
@@ -1351,15 +1355,15 @@
           },
           {
             "period": "2025-01",
-            "value": 558881.0
+            "value": 558884.0
           },
           {
             "period": "2025-02",
-            "value": 366482.0
+            "value": 366481.0
           },
           {
             "period": "2025-03",
-            "value": 419373.0
+            "value": 419371.0
           },
           {
             "period": "2025-04",
@@ -1367,35 +1371,35 @@
           },
           {
             "period": "2025-05",
-            "value": 372717.0
+            "value": 372716.0
           },
           {
             "period": "2025-06",
-            "value": 371862.0
+            "value": 371863.0
           },
           {
             "period": "2025-07",
-            "value": 406734.0
+            "value": 406735.0
           },
           {
             "period": "2025-08",
-            "value": 402015.0
+            "value": 402014.0
           },
           {
             "period": "2025-09",
-            "value": 366509.0
+            "value": 366511.0
           },
           {
             "period": "2025-10",
-            "value": 627929.0
+            "value": 627930.0
           },
           {
             "period": "2025-11",
-            "value": 524296.0
+            "value": 524301.0
           },
           {
             "period": "2025-12",
-            "value": 492201.0
+            "value": 492207.0
           },
           {
             "period": "2026-01",
@@ -1403,7 +1407,7 @@
           },
           {
             "period": "2026-02",
-            "value": 473793.0
+            "value": 473795.0
           },
           {
             "period": "2026-03",
@@ -1415,27 +1419,27 @@
           },
           {
             "period": "2026-05",
-            "value": 467433.0
+            "value": 467437.0
           },
           {
             "period": "2026-06",
-            "value": 489658.0
+            "value": 489663.0
           },
           {
             "period": "2026-07",
-            "value": 508422.0
+            "value": 508431.0
           },
           {
             "period": "2026-08",
-            "value": 467103.0
+            "value": 467116.0
           },
           {
             "period": "2026-09",
-            "value": 481982.0
+            "value": 482026.0
           },
           {
             "period": "2026-10",
-            "value": 561363.0
+            "value": 561743.0
           }
         ],
         "source": "VAHAN registration proxy",
@@ -1485,7 +1489,7 @@
         "source_url": "https://www.mospi.gov.in/uploads/latestReleases/latest_release_1794478693814_7c90e80f-9e64-4aa4-b44a-1dc727b0fed9_Press_Release_of_CPI_for_October_2026_.pdf"
       }
     ],
-    "summary": "Power is accelerating, cement softened, housing remains firm, two-wheelers improved, four-wheelers improved, inflation ticked up."
+    "summary": "Power is accelerating, cement is accelerating, housing remains firm, two-wheelers improved, four-wheelers improved, inflation ticked up."
   },
   "series": {
     "power_output_total": {
@@ -4254,13 +4258,17 @@
           {
             "period": "2026-09",
             "value": 39.2
+          },
+          {
+            "period": "2026-10",
+            "value": 43.5
           }
         ],
         "source": "ICRA",
         "status": "available",
         "status_note": null,
         "retrieval_skill": null,
-        "source_url": "https://www.icra.in/Research/ViewResearchReport/7184"
+        "source_url": "https://www.icra.in/Research/ViewResearchReport/7216"
       },
       "yoy": {
         "metric_code": "cement_output",
@@ -4409,13 +4417,17 @@
           {
             "period": "2026-09",
             "value": 9.5
+          },
+          {
+            "period": "2026-10",
+            "value": 15.38
           }
         ],
         "source": "ICRA",
         "status": "available",
         "status_note": null,
         "retrieval_skill": null,
-        "source_url": "https://www.icra.in/Research/ViewResearchReport/7184"
+        "source_url": "https://www.icra.in/Research/ViewResearchReport/7216"
       },
       "indexed_100": {
         "metric_code": "cement_output",
@@ -4616,13 +4628,17 @@
           {
             "period": "2026-09",
             "value": 123.66
+          },
+          {
+            "period": "2026-10",
+            "value": 137.22
           }
         ],
         "source": "ICRA",
         "status": "available",
         "status_note": null,
         "retrieval_skill": null,
-        "source_url": "https://www.icra.in/Research/ViewResearchReport/7184"
+        "source_url": "https://www.icra.in/Research/ViewResearchReport/7216"
       },
       "change_prev_pct": {
         "metric_code": "cement_output",
@@ -4819,13 +4835,17 @@
           {
             "period": "2026-09",
             "value": -1.26
+          },
+          {
+            "period": "2026-10",
+            "value": 10.97
           }
         ],
         "source": "ICRA",
         "status": "available",
         "status_note": null,
         "retrieval_skill": null,
-        "source_url": "https://www.icra.in/Research/ViewResearchReport/7184"
+        "source_url": "https://www.icra.in/Research/ViewResearchReport/7216"
       },
       "rolling_3p_avg": {
         "metric_code": "cement_output",
@@ -5018,13 +5038,17 @@
           {
             "period": "2026-09",
             "value": 40.4
+          },
+          {
+            "period": "2026-10",
+            "value": 40.8
           }
         ],
         "source": "ICRA",
         "status": "available",
         "status_note": null,
         "retrieval_skill": null,
-        "source_url": "https://www.icra.in/Research/ViewResearchReport/7184"
+        "source_url": "https://www.icra.in/Research/ViewResearchReport/7216"
       }
     },
     "cement_utilization_est": {
@@ -5058,7 +5082,7 @@
           },
           {
             "period": "2025-Q3",
-            "value": 67974.0
+            "value": 67980.0
           },
           {
             "period": "2026-Q1",
@@ -5085,7 +5109,7 @@
         "points": [
           {
             "period": "2025-Q3",
-            "value": -9.39
+            "value": -9.38
           },
           {
             "period": "2026-Q1",
@@ -5097,7 +5121,7 @@
           },
           {
             "period": "2026-Q3",
-            "value": 12.07
+            "value": 12.06
           }
         ],
         "source": "JLL India",
@@ -5124,7 +5148,7 @@
           },
           {
             "period": "2025-Q3",
-            "value": 90.61
+            "value": 90.62
           },
           {
             "period": "2026-Q1",
@@ -5159,11 +5183,11 @@
           },
           {
             "period": "2025-Q3",
-            "value": -2.24
+            "value": -2.23
           },
           {
             "period": "2026-Q1",
-            "value": 3.91
+            "value": 3.9
           },
           {
             "period": "2026-Q2",
@@ -5190,15 +5214,15 @@
           },
           {
             "period": "2025-Q3",
-            "value": 67583.33
+            "value": 67585.33
           },
           {
             "period": "2026-Q1",
-            "value": 69378.33
+            "value": 69380.33
           },
           {
             "period": "2026-Q2",
-            "value": 68785.33
+            "value": 68787.33
           },
           {
             "period": "2026-Q3",
@@ -5459,7 +5483,7 @@
           },
           {
             "period": "2025-10",
-            "value": 3240675.0
+            "value": 3240678.0
           },
           {
             "period": "2025-11",
@@ -5467,15 +5491,15 @@
           },
           {
             "period": "2025-12",
-            "value": 1395552.0
+            "value": 1395553.0
           },
           {
             "period": "2026-01",
-            "value": 1925352.0
+            "value": 1925350.0
           },
           {
             "period": "2026-02",
-            "value": 1774398.0
+            "value": 1774400.0
           },
           {
             "period": "2026-03",
@@ -5483,7 +5507,7 @@
           },
           {
             "period": "2026-04",
-            "value": 1991826.0
+            "value": 1991828.0
           },
           {
             "period": "2026-05",
@@ -5495,19 +5519,19 @@
           },
           {
             "period": "2026-07",
-            "value": 1832176.0
+            "value": 1832182.0
           },
           {
             "period": "2026-08",
-            "value": 1729057.0
+            "value": 1729064.0
           },
           {
             "period": "2026-09",
-            "value": 1804038.0
+            "value": 1804090.0
           },
           {
             "period": "2026-10",
-            "value": 2333039.0
+            "value": 2333317.0
           }
         ],
         "source": "VAHAN registration proxy",
@@ -5746,11 +5770,11 @@
           },
           {
             "period": "2026-09",
-            "value": 34.01
+            "value": 34.02
           },
           {
             "period": "2026-10",
-            "value": -28.01
+            "value": -28.0
           }
         ],
         "source": "VAHAN registration proxy",
@@ -6041,7 +6065,7 @@
           },
           {
             "period": "2026-10",
-            "value": 163.85
+            "value": 163.87
           }
         ],
         "source": "VAHAN registration proxy",
@@ -6328,7 +6352,7 @@
           },
           {
             "period": "2026-10",
-            "value": 29.32
+            "value": 29.33
           }
         ],
         "source": "VAHAN registration proxy",
@@ -6563,23 +6587,23 @@
           },
           {
             "period": "2025-10",
-            "value": 2006686.33
+            "value": 2006687.33
           },
           {
             "period": "2025-11",
-            "value": 2410950.33
+            "value": 2410951.33
           },
           {
             "period": "2025-12",
-            "value": 2427413.67
+            "value": 2427415.0
           },
           {
             "period": "2026-01",
-            "value": 1988972.67
+            "value": 1988972.33
           },
           {
             "period": "2026-02",
-            "value": 1698434.0
+            "value": 1698434.33
           },
           {
             "period": "2026-03",
@@ -6587,31 +6611,31 @@
           },
           {
             "period": "2026-04",
-            "value": 1931574.0
+            "value": 1931575.33
           },
           {
             "period": "2026-05",
-            "value": 1961094.0
+            "value": 1961094.67
           },
           {
             "period": "2026-06",
-            "value": 1899603.0
+            "value": 1899603.67
           },
           {
             "period": "2026-07",
-            "value": 1846386.33
+            "value": 1846388.33
           },
           {
             "period": "2026-08",
-            "value": 1801752.67
+            "value": 1801757.0
           },
           {
             "period": "2026-09",
-            "value": 1788423.67
+            "value": 1788445.33
           },
           {
             "period": "2026-10",
-            "value": 1955378.0
+            "value": 1955490.33
           }
         ],
         "source": "VAHAN registration proxy",
@@ -6820,15 +6844,15 @@
           },
           {
             "period": "2025-01",
-            "value": 558881.0
+            "value": 558884.0
           },
           {
             "period": "2025-02",
-            "value": 366482.0
+            "value": 366481.0
           },
           {
             "period": "2025-03",
-            "value": 419373.0
+            "value": 419371.0
           },
           {
             "period": "2025-04",
@@ -6836,35 +6860,35 @@
           },
           {
             "period": "2025-05",
-            "value": 372717.0
+            "value": 372716.0
           },
           {
             "period": "2025-06",
-            "value": 371862.0
+            "value": 371863.0
           },
           {
             "period": "2025-07",
-            "value": 406734.0
+            "value": 406735.0
           },
           {
             "period": "2025-08",
-            "value": 402015.0
+            "value": 402014.0
           },
           {
             "period": "2025-09",
-            "value": 366509.0
+            "value": 366511.0
           },
           {
             "period": "2025-10",
-            "value": 627929.0
+            "value": 627930.0
           },
           {
             "period": "2025-11",
-            "value": 524296.0
+            "value": 524301.0
           },
           {
             "period": "2025-12",
-            "value": 492201.0
+            "value": 492207.0
           },
           {
             "period": "2026-01",
@@ -6872,7 +6896,7 @@
           },
           {
             "period": "2026-02",
-            "value": 473793.0
+            "value": 473795.0
           },
           {
             "period": "2026-03",
@@ -6884,27 +6908,27 @@
           },
           {
             "period": "2026-05",
-            "value": 467433.0
+            "value": 467437.0
           },
           {
             "period": "2026-06",
-            "value": 489658.0
+            "value": 489663.0
           },
           {
             "period": "2026-07",
-            "value": 508422.0
+            "value": 508431.0
           },
           {
             "period": "2026-08",
-            "value": 467103.0
+            "value": 467116.0
           },
           {
             "period": "2026-09",
-            "value": 481982.0
+            "value": 482026.0
           },
           {
             "period": "2026-10",
-            "value": 561363.0
+            "value": 561743.0
           }
         ],
         "source": "VAHAN registration proxy",
@@ -7095,7 +7119,7 @@
           },
           {
             "period": "2025-09",
-            "value": 9.36
+            "value": 9.37
           },
           {
             "period": "2025-10",
@@ -7107,7 +7131,7 @@
           },
           {
             "period": "2025-12",
-            "value": 25.24
+            "value": 25.25
           },
           {
             "period": "2026-01",
@@ -7143,11 +7167,11 @@
           },
           {
             "period": "2026-09",
-            "value": 31.51
+            "value": 31.52
           },
           {
             "period": "2026-10",
-            "value": -10.6
+            "value": -10.54
           }
         ],
         "source": "VAHAN registration proxy",
@@ -7378,7 +7402,7 @@
           },
           {
             "period": "2025-07",
-            "value": 99.31
+            "value": 99.32
           },
           {
             "period": "2025-08",
@@ -7398,7 +7422,7 @@
           },
           {
             "period": "2025-12",
-            "value": 120.18
+            "value": 120.19
           },
           {
             "period": "2026-01",
@@ -7426,7 +7450,7 @@
           },
           {
             "period": "2026-07",
-            "value": 124.14
+            "value": 124.15
           },
           {
             "period": "2026-08",
@@ -7434,11 +7458,11 @@
           },
           {
             "period": "2026-09",
-            "value": 117.69
+            "value": 117.7
           },
           {
             "period": "2026-10",
-            "value": 137.07
+            "value": 137.16
           }
         ],
         "source": "VAHAN registration proxy",
@@ -7725,7 +7749,7 @@
           },
           {
             "period": "2026-10",
-            "value": 16.47
+            "value": 16.54
           }
         ],
         "source": "VAHAN registration proxy",
@@ -7924,11 +7948,11 @@
           },
           {
             "period": "2025-01",
-            "value": 453441.67
+            "value": 453442.67
           },
           {
             "period": "2025-02",
-            "value": 439451.67
+            "value": 439452.33
           },
           {
             "period": "2025-03",
@@ -7936,11 +7960,11 @@
           },
           {
             "period": "2025-04",
-            "value": 399082.33
+            "value": 399081.33
           },
           {
             "period": "2025-05",
-            "value": 401160.67
+            "value": 401159.67
           },
           {
             "period": "2025-06",
@@ -7948,67 +7972,67 @@
           },
           {
             "period": "2025-07",
-            "value": 383771.0
+            "value": 383771.33
           },
           {
             "period": "2025-08",
-            "value": 393537.0
+            "value": 393537.33
           },
           {
             "period": "2025-09",
-            "value": 391752.67
+            "value": 391753.33
           },
           {
             "period": "2025-10",
-            "value": 465484.33
+            "value": 465485.0
           },
           {
             "period": "2025-11",
-            "value": 506244.67
+            "value": 506247.33
           },
           {
             "period": "2025-12",
-            "value": 548142.0
+            "value": 548146.0
           },
           {
             "period": "2026-01",
-            "value": 548968.0
+            "value": 548971.67
           },
           {
             "period": "2026-02",
-            "value": 532133.67
+            "value": 532136.33
           },
           {
             "period": "2026-03",
-            "value": 540823.33
+            "value": 540824.0
           },
           {
             "period": "2026-04",
-            "value": 488165.0
+            "value": 488165.67
           },
           {
             "period": "2026-05",
-            "value": 486045.0
+            "value": 486046.33
           },
           {
             "period": "2026-06",
-            "value": 476507.67
+            "value": 476510.67
           },
           {
             "period": "2026-07",
-            "value": 488504.33
+            "value": 488510.33
           },
           {
             "period": "2026-08",
-            "value": 488394.33
+            "value": 488403.33
           },
           {
             "period": "2026-09",
-            "value": 485835.67
+            "value": 485857.67
           },
           {
             "period": "2026-10",
-            "value": 503482.67
+            "value": 503628.33
           }
         ],
         "source": "VAHAN registration proxy",
@@ -8239,8 +8263,8 @@
     {
       "dataset_code": "oea_core_industries",
       "status": "success",
-      "last_successful_period": "2026-09",
-      "last_release_date": "2026-10-28",
+      "last_successful_period": "2026-10",
+      "last_release_date": "2026-11-27",
       "cadence": "monthly",
       "next_expected_window": "based on release_lag_days metadata",
       "observations_emitted": 3,
@@ -8253,7 +8277,7 @@
       "last_release_date": "2026-11-08",
       "cadence": "quarterly",
       "next_expected_window": "based on release_lag_days metadata",
-      "observations_emitted": 6,
+      "observations_emitted": 5,
       "error_message": null
     },
     {
@@ -9634,6 +9658,12 @@
         "buy": 17879.74,
         "sell": 12036.41,
         "net": 5843.33
+      },
+      {
+        "date": "2026-11-27",
+        "buy": 14259.45,
+        "sell": 12625.12,
+        "net": 1634.33
       }
     ],
     "source_name": "NSE",
@@ -9641,12 +9671,12 @@
     "scope": "Combined NSE, BSE and MSEI equity cash market",
     "unit": "₹ crore",
     "is_provisional": true,
-    "last_checked_at": "2026-11-26T23:39:55.454211+00:00",
-    "last_success_at": "2026-11-26T23:39:55.454211+00:00",
+    "last_checked_at": "2026-11-27T23:21:13.041615+00:00",
+    "last_success_at": "2026-11-27T23:21:13.041615+00:00",
     "error": null,
     "status": "available",
     "coverage_start": "2025-11-03",
-    "coverage_end": "2026-11-26",
+    "coverage_end": "2026-11-27",
     "refresh_status": "success",
     "data_url": "https://www.nseindia.com/api/fiidiiTradeReact",
     "history_source_url": "https://groww.in/fii-dii-data",
@@ -9710,8 +9740,8 @@
   "sources": {
     "npp_monthly_generation": {
       "status": "success",
-      "last_checked_at": "2026-11-26T23:39:55.454211+00:00",
-      "last_success_at": "2026-11-26T23:39:55.454211+00:00",
+      "last_checked_at": "2026-11-27T23:21:13.041615+00:00",
+      "last_success_at": "2026-11-27T23:21:13.041615+00:00",
       "last_successful_period": "2026-10",
       "error": null
     },
@@ -9724,37 +9754,37 @@
     },
     "oea_core_industries": {
       "status": "success",
-      "last_checked_at": "2026-11-26T23:39:55.454211+00:00",
-      "last_success_at": "2026-11-26T23:39:55.454211+00:00",
-      "last_successful_period": "2026-09",
+      "last_checked_at": "2026-11-27T23:21:13.041615+00:00",
+      "last_success_at": "2026-11-27T23:21:13.041615+00:00",
+      "last_successful_period": "2026-10",
       "error": null
     },
     "jll_residential_sales": {
       "status": "success",
-      "last_checked_at": "2026-11-26T23:39:55.454211+00:00",
-      "last_success_at": "2026-11-26T23:39:55.454211+00:00",
+      "last_checked_at": "2026-11-27T23:21:13.041615+00:00",
+      "last_success_at": "2026-11-27T23:21:13.041615+00:00",
       "last_successful_period": "2026-Q3",
       "error": null
     },
     "vahan_vehicle_registrations": {
       "status": "success",
-      "last_checked_at": "2026-11-26T23:39:55.454211+00:00",
-      "last_success_at": "2026-11-26T23:39:55.454211+00:00",
+      "last_checked_at": "2026-11-27T23:21:13.041615+00:00",
+      "last_success_at": "2026-11-27T23:21:13.041615+00:00",
       "last_successful_period": "2026-10",
       "error": null
     },
     "mospi_cpi": {
       "status": "success",
-      "last_checked_at": "2026-11-26T23:39:55.454211+00:00",
-      "last_success_at": "2026-11-26T23:39:55.454211+00:00",
+      "last_checked_at": "2026-11-27T23:21:13.041615+00:00",
+      "last_success_at": "2026-11-27T23:21:13.041615+00:00",
       "last_successful_period": "2026-10",
       "error": null
     },
     "nse_fii_flows": {
       "status": "success",
-      "last_checked_at": "2026-11-26T23:39:55.454211+00:00",
-      "last_success_at": "2026-11-26T23:39:55.454211+00:00",
-      "last_successful_period": "2026-11-26",
+      "last_checked_at": "2026-11-27T23:21:13.041615+00:00",
+      "last_success_at": "2026-11-27T23:21:13.041615+00:00",
+      "last_successful_period": "2026-11-27",
       "error": null
     }
   },
